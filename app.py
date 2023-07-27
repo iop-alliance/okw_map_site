@@ -14,15 +14,19 @@ def serve_index():
     return app.send_static_file('open-know-where-2.html')
 
 
-@app.route('/geomap')
+@app.route('/geo')
 def generate_map():
     # Extract parameters from the URL
     country = request.args.get('country')
     region = request.args.get('region')
+    #Americas Africa Europe Asia MENA
     source = request.args.get('source')
     machines = request.args.get('machines')
     people = request.args.get('people')
+    # makers, researchers, startups, gig
     facilities = request.args.get('facilities')
+    project = request.args.get('project')
+    #GIG IMA MAKE DATA AWARDS
 
     # Generate the Folium map based on the parameters
     # Customize the map creation code according to your requirements

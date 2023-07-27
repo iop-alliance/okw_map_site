@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6eb20041a150991629230cba3d497e63 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    
+                <style>
+                    #float_image_2977397ee14799c8b52707a401e2e141 {
+                        position: absolute;
+                        bottom: 1%;
+                        left: 1%;
+                          width: 10;
+                          height: 10;
+                        }
+                </style>
+            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_6eb20041a150991629230cba3d497e63" ></div>
+        
+    
+            <img id="float_image_2977397ee14799c8b52707a401e2e141" alt="float_image"
+                 src="https://github.com/kny5/data_reports/raw/main/assets/img/iopa_logo_okw_sm.png"
+                 style="z-index: 999999">
+            </img>
+            
+</body>
+<script>
+    
+    
+            var map_6eb20041a150991629230cba3d497e63 = L.map(
+                "map_6eb20041a150991629230cba3d497e63",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: false,
+                    preferCanvas: true,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6a363b26d94fa2d1ddad46dca0317d80 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_6eb20041a150991629230cba3d497e63);
+        
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": true, "position": "topleft", "title": "Full Screen", "titleCancel": "Exit Full Screen"}
+            ).addTo(map_6eb20041a150991629230cba3d497e63);
+        
+    
+            var locate_control_8bb19832d82450547c7a3ee27c51cf99 = L.control.locate(
+                {"zindex": 50}
+            ).addTo(map_6eb20041a150991629230cba3d497e63);
+            
+        
+    
+            var marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e = L.markerClusterGroup(
+                {"spiderLegPolylineOptions": {"color": "#FFF", "opacity": 0.5, "weight": 0.5}}
+            );
+            marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e.options.iconCreateFunction =
+                function(cluster) {
+    var iconSize = new L.Point(20, 20); // Adjust the size of the marker as needed
+    var text = cluster.getChildCount(); // Example text to display, you can modify this as per your requirement
+
+    var textX = iconSize.x + 10; // X-coordinate of the text
+    var textY = iconSize.y / 2; // Y-coordinate of the text
+
+    var rectWidth = iconSize.x; // Width of the rectangle
+    var rectHeight = iconSize.y; // Height of the rectangle
+    var rectCornerRadius = 2; // Rounded corner radius of the rectangle
+    var rectFill = 'rgba(236, 93, 51, 1)'; // Fill color of the rectangle
+
+    var polylineStartX = iconSize.x / 2; // X-coordinate of the polyline start
+    var polylineStartY = iconSize.y / 2; // Y-coordinate of the polyline start
+    var polylineEndX = iconSize.x + 40; // X-coordinate of the polyline end
+    var polylineEndY = textY; // Y-coordinate of the polyline end
+
+    var svgContent = `<svg height="${iconSize.y + textY}" width="${iconSize.x + textX}" viewBox="0 0 ${iconSize.x + textX} ${iconSize.y + textY}">
+        <rect x="0" y="0" width="${rectWidth}" height="${rectHeight}" rx="${rectCornerRadius}" ry="${rectCornerRadius}" style="fill: ${rectFill};"></rect>
+        <text x="${iconSize.x + 20}" y="${iconSize.y / 2}" text-anchor="middle" alignment-baseline="middle" style="fill: black; font-size: 10px;">${text}</text>
+        <polyline points="${polylineStartX},${polylineStartY} ${polylineEndX},${polylineEndY}" style="fill: none; stroke: rgba(0,0,0,0.5); stroke-width: 1px;"></polyline>
+    </svg>`;
+
+    return L.divIcon({
+        html: svgContent,
+        className: 'marker-cluster',
+        iconSize: [iconSize.x + textX, iconSize.y + textY]
+    });
+};
+            map_6eb20041a150991629230cba3d497e63.addLayer(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var marker_d28be86c8f33791b629262eef41e8fda = L.marker(
+                [5.652746, -0.163267],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_a75148cd73b7796af4ef11b8309c74f7 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_d28be86c8f33791b629262eef41e8fda.setIcon(div_icon_a75148cd73b7796af4ef11b8309c74f7);
+        
+    
+        var popup_083cb0bd5ca2c03cfdf97043317f04a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2900b6a644b0b23c0f0e791870bd9d67 = $(`<div id="html_2900b6a644b0b23c0f0e791870bd9d67" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Dti Makerspace</p>                 <p><strong>City:</strong>	 Accra</p>                 <p><strong>Country:</strong>	 Ghana</p>                 <p><strong>URL:</strong>	 Https://Dtiafrica.Com/</p>                 <p><strong>Primary contact:</strong>	 Melinawo Vowotor</p>                 <p><strong>E-mail:</strong>	 Melinawo.Vowotor@Dtiafrica.Edu.Gh</p>                 <p><strong>Adress precision:</strong>	 Precise</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_083cb0bd5ca2c03cfdf97043317f04a4.setContent(html_2900b6a644b0b23c0f0e791870bd9d67);
+            
+        
+
+        marker_d28be86c8f33791b629262eef41e8fda.bindPopup(popup_083cb0bd5ca2c03cfdf97043317f04a4)
+        ;
+
+        
+    
+    
+            var marker_bd13d0fc9950851575ce1a739b7512a1 = L.marker(
+                [-0.139594, 34.795725],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_5be95a4972158c1a7266f889e4ed58ed = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_bd13d0fc9950851575ce1a739b7512a1.setIcon(div_icon_5be95a4972158c1a7266f889e4ed58ed);
+        
+    
+        var popup_80640f7182a1054d8166dc40d018015a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5d32d35e9d4ad01838290efd2cb37b99 = $(`<div id="html_5d32d35e9d4ad01838290efd2cb37b99" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Fablab Winam</p>                 <p><strong>City:</strong>	 Kisumu</p>                 <p><strong>Country:</strong>	 Kenya</p>                 <p><strong>URL:</strong>	 Https://Fablabwinam.Org/</p>                 <p><strong>Primary contact:</strong>	 Martin Oloo</p>                 <p><strong>E-mail:</strong>	 Info@Fablabwinam.Org</p>                 <p><strong>Adress precision:</strong>	 Precise</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_80640f7182a1054d8166dc40d018015a.setContent(html_5d32d35e9d4ad01838290efd2cb37b99);
+            
+        
+
+        marker_bd13d0fc9950851575ce1a739b7512a1.bindPopup(popup_80640f7182a1054d8166dc40d018015a)
+        ;
+
+        
+    
+    
+            var marker_070dbe655582c37daad280f25d98b0bb = L.marker(
+                [-33.926652, 18.444082],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_ba6d8992fa736a1a7358b4f9b5d4f43f = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_070dbe655582c37daad280f25d98b0bb.setIcon(div_icon_ba6d8992fa736a1a7358b4f9b5d4f43f);
+        
+    
+        var popup_c73fbf28e4d64e26620846ed39b94042 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a8cb787a512419cfe3e7e0c8523a6ce5 = $(`<div id="html_a8cb787a512419cfe3e7e0c8523a6ce5" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Flat Rock Studio /M-Club</p>                 <p><strong>City:</strong>	 Kisumu</p>                 <p><strong>Country:</strong>	 South Africa</p>                 <p><strong>URL:</strong>	 Nan</p>                 <p><strong>Primary contact:</strong>	 Felix</p>                 <p><strong>E-mail:</strong>	 Handmadechange@Gmail.Com</p>                 <p><strong>Adress precision:</strong>	 Precise</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_c73fbf28e4d64e26620846ed39b94042.setContent(html_a8cb787a512419cfe3e7e0c8523a6ce5);
+            
+        
+
+        marker_070dbe655582c37daad280f25d98b0bb.bindPopup(popup_c73fbf28e4d64e26620846ed39b94042)
+        ;
+
+        
+    
+    
+            var marker_ae2d5d11ffaedc9213c2cebb487db3d5 = L.marker(
+                [-1.303673, 36.838525],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_0430027ff9a509ad6143a6cb72cb10b3 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_ae2d5d11ffaedc9213c2cebb487db3d5.setIcon(div_icon_0430027ff9a509ad6143a6cb72cb10b3);
+        
+    
+        var popup_55bef3c393bb62173c07ff7df36c6c69 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_91ee328125fece0ad5bcfa208fad7abe = $(`<div id="html_91ee328125fece0ad5bcfa208fad7abe" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Gearbox Pan African Network</p>                 <p><strong>City:</strong>	 Nairobi</p>                 <p><strong>Country:</strong>	 Kenya</p>                 <p><strong>URL:</strong>	 Https://Www.Gearbox.Co.Ke/</p>                 <p><strong>Primary contact:</strong>	 Mark</p>                 <p><strong>E-mail:</strong>	 Info@Gearbox.Co.Ke</p>                 <p><strong>Adress precision:</strong>	 Precise</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_55bef3c393bb62173c07ff7df36c6c69.setContent(html_91ee328125fece0ad5bcfa208fad7abe);
+            
+        
+
+        marker_ae2d5d11ffaedc9213c2cebb487db3d5.bindPopup(popup_55bef3c393bb62173c07ff7df36c6c69)
+        ;
+
+        
+    
+    
+            var marker_4ba5da4f77e04acc732102ccc59999bc = L.marker(
+                [-2.193901, 40.817695],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_dd3981e4a4c9db5ecd082150a62e7643 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_4ba5da4f77e04acc732102ccc59999bc.setIcon(div_icon_dd3981e4a4c9db5ecd082150a62e7643);
+        
+    
+        var popup_1e004f6ff7499cba4f9b183b0727f14b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6a2b53313bfa77cba9816fd2b61b72f6 = $(`<div id="html_6a2b53313bfa77cba9816fd2b61b72f6" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Iome254</p>                 <p><strong>City:</strong>	 Mombasa</p>                 <p><strong>Country:</strong>	 Kenya</p>                 <p><strong>URL:</strong>	 Https://Twitter.Com/Iome254</p>                 <p><strong>Primary contact:</strong>	 Derrick Mugasia</p>                 <p><strong>E-mail:</strong>	 Mugasia.Derrick@Redcross.Or.Ke</p>                 <p><strong>Adress precision:</strong>	 Precise</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_1e004f6ff7499cba4f9b183b0727f14b.setContent(html_6a2b53313bfa77cba9816fd2b61b72f6);
+            
+        
+
+        marker_4ba5da4f77e04acc732102ccc59999bc.bindPopup(popup_1e004f6ff7499cba4f9b183b0727f14b)
+        ;
+
+        
+    
+    
+            var marker_4032070bd8fbba8e374521fab16f71f5 = L.marker(
+                [6.69506, -1.549389],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_98cda54fc4351645b1cfba4466cd4477 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_4032070bd8fbba8e374521fab16f71f5.setIcon(div_icon_98cda54fc4351645b1cfba4466cd4477);
+        
+    
+        var popup_6130643c24161842a2e0e32b5450039d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e5809b2d8b820d411b4f47bb1d66c9a8 = $(`<div id="html_e5809b2d8b820d411b4f47bb1d66c9a8" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Kumasi Hive Makerspace</p>                 <p><strong>City:</strong>	 Kumasi</p>                 <p><strong>Country:</strong>	 Ghana</p>                 <p><strong>URL:</strong>	 Https://Kumasihive.Com/Makers-Space/</p>                 <p><strong>Primary contact:</strong>	 Isaac Nyankum</p>                 <p><strong>E-mail:</strong>	 Info@Kumasihive.Com, Makerspace@Kumasihive.Com</p>                 <p><strong>Adress precision:</strong>	 Precise</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_6130643c24161842a2e0e32b5450039d.setContent(html_e5809b2d8b820d411b4f47bb1d66c9a8);
+            
+        
+
+        marker_4032070bd8fbba8e374521fab16f71f5.bindPopup(popup_6130643c24161842a2e0e32b5450039d)
+        ;
+
+        
+    
+    
+            var marker_2298148c3b3aaa90226483704d42d29a = L.marker(
+                [-29.820087, 31.027731],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_b5dab626e898a791edf9679370992394 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_2298148c3b3aaa90226483704d42d29a.setIcon(div_icon_b5dab626e898a791edf9679370992394);
+        
+    
+        var popup_e5fd7d7818f0fe048275345d6f04ece0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_93cd5d2866cb844f1e5d97965aa63a9e = $(`<div id="html_93cd5d2866cb844f1e5d97965aa63a9e" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 The Makerspace Foundation</p>                 <p><strong>City:</strong>	 Durban</p>                 <p><strong>Country:</strong>	 South Africa</p>                 <p><strong>URL:</strong>	 Https://Themakerspace.Co.Za/</p>                 <p><strong>Primary contact:</strong>	 Gray Steve</p>                 <p><strong>E-mail:</strong>	 Steve@Themakerspace.Co.Za</p>                 <p><strong>Adress precision:</strong>	 Precise</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_e5fd7d7818f0fe048275345d6f04ece0.setContent(html_93cd5d2866cb844f1e5d97965aa63a9e);
+            
+        
+
+        marker_2298148c3b3aaa90226483704d42d29a.bindPopup(popup_e5fd7d7818f0fe048275345d6f04ece0)
+        ;
+
+        
+    
+    
+            var marker_d96426ec04c386c1e6a36f37070c6db6 = L.marker(
+                [-26.194575, 28.03189],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_acd351ffcf7c1ff17cda87a157398b83 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_d96426ec04c386c1e6a36f37070c6db6.setIcon(div_icon_acd351ffcf7c1ff17cda87a157398b83);
+        
+    
+        var popup_95cd9f59893add897bb7c554255210e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_627d448a2c83aa44f05b3ccbb87ee9f9 = $(`<div id="html_627d448a2c83aa44f05b3ccbb87ee9f9" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Tmg Makerspace</p>                 <p><strong>City:</strong>	 Johannesburg</p>                 <p><strong>Country:</strong>	 South Africa</p>                 <p><strong>URL:</strong>	 Https://Tmgmakerspace.Africa/</p>                 <p><strong>Primary contact:</strong>	 Nelson Sekgota</p>                 <p><strong>E-mail:</strong>	 Nelson@Tmgmakerspace.Africa, Tmgmakerspace@Tshimologong.Joburg</p>                 <p><strong>Adress precision:</strong>	 Precise</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_95cd9f59893add897bb7c554255210e2.setContent(html_627d448a2c83aa44f05b3ccbb87ee9f9);
+            
+        
+
+        marker_d96426ec04c386c1e6a36f37070c6db6.bindPopup(popup_95cd9f59893add897bb7c554255210e2)
+        ;
+
+        
+    
+    
+            var marker_e224865577d0707c17a49749e651c29f = L.marker(
+                [6.672933, -1.54567],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_cc2f7cb185d494252a6eef3669deef46 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_e224865577d0707c17a49749e651c29f.setIcon(div_icon_cc2f7cb185d494252a6eef3669deef46);
+        
+    
+        var popup_abef953552e08d3e9d4117f119d521f9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_01e17053e6d1790cc9edbd0fb0a0c3fd = $(`<div id="html_01e17053e6d1790cc9edbd0fb0a0c3fd" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Triple Dimension</p>                 <p><strong>City:</strong>	 Kumasi</p>                 <p><strong>Country:</strong>	 Ghana</p>                 <p><strong>URL:</strong>	 Nan</p>                 <p><strong>Primary contact:</strong>	 Micheal Afrifa Asante</p>                 <p><strong>E-mail:</strong>	 Masante.Afrifa@Gmail.Com</p>                 <p><strong>Adress precision:</strong>	 Precise</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_abef953552e08d3e9d4117f119d521f9.setContent(html_01e17053e6d1790cc9edbd0fb0a0c3fd);
+            
+        
+
+        marker_e224865577d0707c17a49749e651c29f.bindPopup(popup_abef953552e08d3e9d4117f119d521f9)
+        ;
+
+        
+    
+    
+            var marker_1206fb65d8c069f389a480e54e2c4caa = L.marker(
+                [7.3696495, 12.3445856],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_1b56541fcc81f468eeb2242cd757d54b = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_1206fb65d8c069f389a480e54e2c4caa.setIcon(div_icon_1b56541fcc81f468eeb2242cd757d54b);
+        
+    
+        var popup_7e22ef16e02645d3b97dbd21b5d20835 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3d3b4ba4949f67bc9cb27c17050821ed = $(`<div id="html_3d3b4ba4949f67bc9cb27c17050821ed" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Africa Robot</p>                 <p><strong>City:</strong>	 Nan</p>                 <p><strong>Country:</strong>	 Cameroon</p>                 <p><strong>URL:</strong>	 Https://Www.Facebook.Com/Africarobot/</p>                 <p><strong>Primary contact:</strong>	 Teiffouet Feudjo Fabrice,Guimazeu Peka'A Leonce Iness</p>                 <p><strong>E-mail:</strong>	 Nan</p>                 <p><strong>Adress precision:</strong>	 Country</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_7e22ef16e02645d3b97dbd21b5d20835.setContent(html_3d3b4ba4949f67bc9cb27c17050821ed);
+            
+        
+
+        marker_1206fb65d8c069f389a480e54e2c4caa.bindPopup(popup_7e22ef16e02645d3b97dbd21b5d20835)
+        ;
+
+        
+    
+    
+            var marker_4b11e5c1b87a51340ae0376ed272ae7c = L.marker(
+                [3.8667, 11.5167],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_f8f2ac627ae1d5721ad2ba359e6f741d = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_4b11e5c1b87a51340ae0376ed272ae7c.setIcon(div_icon_f8f2ac627ae1d5721ad2ba359e6f741d);
+        
+    
+        var popup_8dab7e9221e4f89dbb4be9df82fe1d42 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7166b8202d879bd4c19924170e84b087 = $(`<div id="html_7166b8202d879bd4c19924170e84b087" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Anasta Hub</p>                 <p><strong>City:</strong>	 Yaoundé</p>                 <p><strong>Country:</strong>	 Cameroon</p>                 <p><strong>URL:</strong>	 Https://Www.Facebook.Com/People/Anasta-Hub/100090146933717</p>                 <p><strong>Primary contact:</strong>	 Sophie Ngassa</p>                 <p><strong>E-mail:</strong>	 Nan</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_8dab7e9221e4f89dbb4be9df82fe1d42.setContent(html_7166b8202d879bd4c19924170e84b087);
+            
+        
+
+        marker_4b11e5c1b87a51340ae0376ed272ae7c.bindPopup(popup_8dab7e9221e4f89dbb4be9df82fe1d42)
+        ;
+
+        
+    
+    
+            var marker_0adbcce3e960cbd32d5966cc8f7ee02e = L.marker(
+                [37.9753, 23.7361],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_6d0fdfdf756e56bde2507585a1080fc0 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_0adbcce3e960cbd32d5966cc8f7ee02e.setIcon(div_icon_6d0fdfdf756e56bde2507585a1080fc0);
+        
+    
+        var popup_f3ebd09a89ad3c791d2bb7c704dad143 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_841f3bef5ad41ba178d66eaea9b738d0 = $(`<div id="html_841f3bef5ad41ba178d66eaea9b738d0" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Astrolab By Odyssea</p>                 <p><strong>City:</strong>	 Athens</p>                 <p><strong>Country:</strong>	 Greece</p>                 <p><strong>URL:</strong>	 Https://Odyssea.Com/Makerspace/</p>                 <p><strong>Primary contact:</strong>	 Oikonomakis Loukas</p>                 <p><strong>E-mail:</strong>	 Nan</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_f3ebd09a89ad3c791d2bb7c704dad143.setContent(html_841f3bef5ad41ba178d66eaea9b738d0);
+            
+        
+
+        marker_0adbcce3e960cbd32d5966cc8f7ee02e.bindPopup(popup_f3ebd09a89ad3c791d2bb7c704dad143)
+        ;
+
+        
+    
+    
+            var marker_c89490953fa77ff7e74a8b87f6b12fed = L.marker(
+                [9.0107934, 38.7612525],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_e7e6669ff22f3596f2cd42ea4046aeab = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_c89490953fa77ff7e74a8b87f6b12fed.setIcon(div_icon_e7e6669ff22f3596f2cd42ea4046aeab);
+        
+    
+        var popup_3fef6068b99c890b1958d1758deda989 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9dc235345609949e2c4ef025812274b4 = $(`<div id="html_9dc235345609949e2c4ef025812274b4" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Bitec Makerspace</p>                 <p><strong>City:</strong>	 Addis Ababa</p>                 <p><strong>Country:</strong>	 Ethiopia</p>                 <p><strong>URL:</strong>	 Https://Www.Facebook.Com/Bitecbitbdu/</p>                 <p><strong>Primary contact:</strong>	 Nagarajan Kalaiyarasan</p>                 <p><strong>E-mail:</strong>	 Nan</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_3fef6068b99c890b1958d1758deda989.setContent(html_9dc235345609949e2c4ef025812274b4);
+            
+        
+
+        marker_c89490953fa77ff7e74a8b87f6b12fed.bindPopup(popup_3fef6068b99c890b1958d1758deda989)
+        ;
+
+        
+    
+    
+            var marker_416c0844ceacc83146f6d400b4198fc7 = L.marker(
+                [9.0107934, 38.7612525],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_8bf89d2896e90f2e0a99430b9ef01acf = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_416c0844ceacc83146f6d400b4198fc7.setIcon(div_icon_8bf89d2896e90f2e0a99430b9ef01acf);
+        
+    
+        var popup_9463dd3e84dab13ea02cd05de32c892c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_133e2f69f5e0397e6811e5d827c20036 = $(`<div id="html_133e2f69f5e0397e6811e5d827c20036" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Bitmakerspace</p>                 <p><strong>City:</strong>	 Addis Ababa</p>                 <p><strong>Country:</strong>	 Ethiopia</p>                 <p><strong>URL:</strong>	 Https://Www.Linkedin.Com/Company/Business-Incubation-And-Techno-Entrepreneurship-Center-Bitec</p>                 <p><strong>Primary contact:</strong>	 Bezawork Tilahun Mindaye</p>                 <p><strong>E-mail:</strong>	 Nan</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_9463dd3e84dab13ea02cd05de32c892c.setContent(html_133e2f69f5e0397e6811e5d827c20036);
+            
+        
+
+        marker_416c0844ceacc83146f6d400b4198fc7.bindPopup(popup_9463dd3e84dab13ea02cd05de32c892c)
+        ;
+
+        
+    
+    
+            var marker_616e58d32fe7b0e15d5500e6879f1ef9 = L.marker(
+                [-6.818, 39.279],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_ef783a835d6d46d2e0b91af45ad6e60e = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_616e58d32fe7b0e15d5500e6879f1ef9.setIcon(div_icon_ef783a835d6d46d2e0b91af45ad6e60e);
+        
+    
+        var popup_eaeff51da04ddaa54a6f85b310a4fd51 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_968d88ca219a5534de605f33329364fc = $(`<div id="html_968d88ca219a5534de605f33329364fc" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Bongo Tech & Research Labs</p>                 <p><strong>City:</strong>	 Dar Es Salaam</p>                 <p><strong>Country:</strong>	 Tanzania</p>                 <p><strong>URL:</strong>	 Https://Btech.Co.Tz/</p>                 <p><strong>Primary contact:</strong>	 Unnamed Record</p>                 <p><strong>E-mail:</strong>	 Jambo@Btech.Co.Tz</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_eaeff51da04ddaa54a6f85b310a4fd51.setContent(html_968d88ca219a5534de605f33329364fc);
+            
+        
+
+        marker_616e58d32fe7b0e15d5500e6879f1ef9.bindPopup(popup_eaeff51da04ddaa54a6f85b310a4fd51)
+        ;
+
+        
+    
+    
+            var marker_cc41eea8848f3b0eab75671fcaebc97d = L.marker(
+                [-20.1560599, 28.5887063],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_f16b3c38611100fb73be9df5595f57fa = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_cc41eea8848f3b0eab75671fcaebc97d.setIcon(div_icon_f16b3c38611100fb73be9df5595f57fa);
+        
+    
+        var popup_e3d1737f5c818abfef03e86f320efe2d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ef86abaad4d040373827cf17b3a3283f = $(`<div id="html_ef86abaad4d040373827cf17b3a3283f" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Brig Labs</p>                 <p><strong>City:</strong>	 Bulawayo</p>                 <p><strong>Country:</strong>	 Zimbabwe</p>                 <p><strong>URL:</strong>	 Briglabs.Co.Zw</p>                 <p><strong>Primary contact:</strong>	 Unnamed Record</p>                 <p><strong>E-mail:</strong>	 Info@Briglabs.Co.Zw</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_e3d1737f5c818abfef03e86f320efe2d.setContent(html_ef86abaad4d040373827cf17b3a3283f);
+            
+        
+
+        marker_cc41eea8848f3b0eab75671fcaebc97d.bindPopup(popup_e3d1737f5c818abfef03e86f320efe2d)
+        ;
+
+        
+    
+    
+            var marker_720c51b1f951ef79e6322e13d13e50b5 = L.marker(
+                [46.0514, 14.506],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_8f17faf1a551e0029d2c9e80304769da = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_720c51b1f951ef79e6322e13d13e50b5.setIcon(div_icon_8f17faf1a551e0029d2c9e80304769da);
+        
+    
+        var popup_9f38e88a0b1fb2c1083d0398d7b49fed = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bfc22c4555106b38cf809a7a004d549e = $(`<div id="html_bfc22c4555106b38cf809a7a004d549e" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Center Rog Creative Hub</p>                 <p><strong>City:</strong>	 Ljubljana</p>                 <p><strong>Country:</strong>	 Slovenia</p>                 <p><strong>URL:</strong>	 Https://Center-Rog.Si/En/</p>                 <p><strong>Primary contact:</strong>	 Lucija Jankovec</p>                 <p><strong>E-mail:</strong>	 Nan</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_9f38e88a0b1fb2c1083d0398d7b49fed.setContent(html_bfc22c4555106b38cf809a7a004d549e);
+            
+        
+
+        marker_720c51b1f951ef79e6322e13d13e50b5.bindPopup(popup_9f38e88a0b1fb2c1083d0398d7b49fed)
+        ;
+
+        
+    
+    
+            var marker_8a5dc0b384a1d171677f10fa911b1aef = L.marker(
+                [12.1191543, 15.0502758],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_c151d01baf12d89027c1c6bf5c0f5173 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_8a5dc0b384a1d171677f10fa911b1aef.setIcon(div_icon_c151d01baf12d89027c1c6bf5c0f5173);
+        
+    
+        var popup_c1758a352df4ad1cdf85012584227090 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_951fa191d92f13ecb0c0b4b0bd2b8716 = $(`<div id="html_951fa191d92f13ecb0c0b4b0bd2b8716" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Chad Innovation Hub</p>                 <p><strong>City:</strong>	 N'Djamena</p>                 <p><strong>Country:</strong>	 Chad</p>                 <p><strong>URL:</strong>	 Https://Chadinnovation.Org/</p>                 <p><strong>Primary contact:</strong>	 Hamid Khayar </p>                 <p><strong>E-mail:</strong>	 Infos@Chadinnovation.Org</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_c1758a352df4ad1cdf85012584227090.setContent(html_951fa191d92f13ecb0c0b4b0bd2b8716);
+            
+        
+
+        marker_8a5dc0b384a1d171677f10fa911b1aef.bindPopup(popup_c1758a352df4ad1cdf85012584227090)
+        ;
+
+        
+    
+    
+            var marker_af292e53e7fb92c08ed4000a40b4adc6 = L.marker(
+                [3.0191, 30.9121],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_0db3e6b5b05a30a7394a7e228684e695 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_af292e53e7fb92c08ed4000a40b4adc6.setIcon(div_icon_0db3e6b5b05a30a7394a7e228684e695);
+        
+    
+        var popup_2e44c421c47d0ea82ed463eaa64f6d79 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8d0a43492784a1a197ffffd395318d69 = $(`<div id="html_8d0a43492784a1a197ffffd395318d69" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Community Creative For Development (Cc4D)</p>                 <p><strong>City:</strong>	 Arua</p>                 <p><strong>Country:</strong>	 Uganda</p>                 <p><strong>URL:</strong>	 Https://Www.Facebook.Com/Cc4D.Uganda/</p>                 <p><strong>Primary contact:</strong>	 Lubari Mathew </p>                 <p><strong>E-mail:</strong>	 Info@Cc4Duganda.Org</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_2e44c421c47d0ea82ed463eaa64f6d79.setContent(html_8d0a43492784a1a197ffffd395318d69);
+            
+        
+
+        marker_af292e53e7fb92c08ed4000a40b4adc6.bindPopup(popup_2e44c421c47d0ea82ed463eaa64f6d79)
+        ;
+
+        
+    
+    
+            var marker_ff827ac692335c228340ab4122892513 = L.marker(
+                [7.3167, 13.5833],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_2bae37884c651ec626949a000193953c = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_ff827ac692335c228340ab4122892513.setIcon(div_icon_2bae37884c651ec626949a000193953c);
+        
+    
+        var popup_42e1c500d84d577262582c48e2fe8473 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7b9e347b84836734eefa2b561845a819 = $(`<div id="html_7b9e347b84836734eefa2b561845a819" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 De Fara Lab'S</p>                 <p><strong>City:</strong>	 Ngaoundéré</p>                 <p><strong>Country:</strong>	 Cameroon</p>                 <p><strong>URL:</strong>	 Https://Www.Facebook.Com/Defaralabs?_Rdc=1&_Rdr</p>                 <p><strong>Primary contact:</strong>	 Apollinaire Batoure</p>                 <p><strong>E-mail:</strong>	 Defaralabs@Gmail.Com</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_42e1c500d84d577262582c48e2fe8473.setContent(html_7b9e347b84836734eefa2b561845a819);
+            
+        
+
+        marker_ff827ac692335c228340ab4122892513.bindPopup(popup_42e1c500d84d577262582c48e2fe8473)
+        ;
+
+        
+    
+    
+            var marker_12aeb500121b5e0076891a87bae67073 = L.marker(
+                [-3389925.0, 29374829.0],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_396e51659145638d29642f80796349bb = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_12aeb500121b5e0076891a87bae67073.setIcon(div_icon_396e51659145638d29642f80796349bb);
+        
+    
+        var popup_37a2f5aaa0b7e843dfc53302986588ab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1d3f50ab1a0cf448ea5edb46d6a85f9b = $(`<div id="html_1d3f50ab1a0cf448ea5edb46d6a85f9b" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Dicos Incubator Llp</p>                 <p><strong>City:</strong>	 Bujumbura Mairie</p>                 <p><strong>Country:</strong>	 Burundi</p>                 <p><strong>URL:</strong>	 Https://Www.Linkedin.Com/Company/Dicos-Incubator/About/</p>                 <p><strong>Primary contact:</strong>	 Oscar Ndayisenga</p>                 <p><strong>E-mail:</strong>	 Ecofitextnaturalfiber@Gmail.Com</p>                 <p><strong>Adress precision:</strong>	 Country</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_37a2f5aaa0b7e843dfc53302986588ab.setContent(html_1d3f50ab1a0cf448ea5edb46d6a85f9b);
+            
+        
+
+        marker_12aeb500121b5e0076891a87bae67073.bindPopup(popup_37a2f5aaa0b7e843dfc53302986588ab)
+        ;
+
+        
+    
+    
+            var marker_cbcf222c891555df5a052b317b897e41 = L.marker(
+                [-6.818, 39.279],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_27152bb6c6e605812624f7a6b52fa80d = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_cbcf222c891555df5a052b317b897e41.setIcon(div_icon_27152bb6c6e605812624f7a6b52fa80d);
+        
+    
+        var popup_fd111a646a6dc0be30aa37fccfb289ba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8b45db984833ad32d9e97ecc4f77bc19 = $(`<div id="html_8b45db984833ad32d9e97ecc4f77bc19" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Dit Design Studio</p>                 <p><strong>City:</strong>	 Dar Es Salaam</p>                 <p><strong>Country:</strong>	 Tanzania</p>                 <p><strong>URL:</strong>	 Https://Designstudio.Ditnet.Ac.Tz/</p>                 <p><strong>Primary contact:</strong>	 Unnamed Record</p>                 <p><strong>E-mail:</strong>	 Designstudiodit@Gmail.Com</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_fd111a646a6dc0be30aa37fccfb289ba.setContent(html_8b45db984833ad32d9e97ecc4f77bc19);
+            
+        
+
+        marker_cbcf222c891555df5a052b317b897e41.bindPopup(popup_fd111a646a6dc0be30aa37fccfb289ba)
+        ;
+
+        
+    
+    
+            var marker_62d87c6007b3d13886929b5e9a6bd13e = L.marker(
+                [7.9527706, -1.0307118],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_b771fd938c1a4f709012ac78592ae075 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_62d87c6007b3d13886929b5e9a6bd13e.setIcon(div_icon_b771fd938c1a4f709012ac78592ae075);
+        
+    
+        var popup_ae9717c40bed0b986d97997100dc357b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_226a39ad4199bb54d602fdb6fe5b019b = $(`<div id="html_226a39ad4199bb54d602fdb6fe5b019b" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Fablab Makejewel</p>                 <p><strong>City:</strong>	 Nan</p>                 <p><strong>Country:</strong>	 Ghana</p>                 <p><strong>URL:</strong>	 Http://Www.Makejewel.Co/Home</p>                 <p><strong>Primary contact:</strong>	 Naa Nueki Otu</p>                 <p><strong>E-mail:</strong>	 Nan</p>                 <p><strong>Adress precision:</strong>	 Country</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_ae9717c40bed0b986d97997100dc357b.setContent(html_226a39ad4199bb54d602fdb6fe5b019b);
+            
+        
+
+        marker_62d87c6007b3d13886929b5e9a6bd13e.bindPopup(popup_ae9717c40bed0b986d97997100dc357b)
+        ;
+
+        
+    
+    
+            var marker_4c458c26003296ae4bb359e61ea831b0 = L.marker(
+                [-1.5583, 13.2196],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_58daf10655a9bcef3af9b638572a62c8 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_4c458c26003296ae4bb359e61ea831b0.setIcon(div_icon_58daf10655a9bcef3af9b638572a62c8);
+        
+    
+        var popup_c2b16e5b71411ade256581476e420ca1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_861e1012806a6b9baa5f839ca3c98515 = $(`<div id="html_861e1012806a6b9baa5f839ca3c98515" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Fablab Moanda</p>                 <p><strong>City:</strong>	 Moanda</p>                 <p><strong>Country:</strong>	 Gabon</p>                 <p><strong>URL:</strong>	 Https://Fablabmoanda.Com/Site/</p>                 <p><strong>Primary contact:</strong>	 Dimitri Ongoua</p>                 <p><strong>E-mail:</strong>	 Contact@Fablabmoanda.Com</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_c2b16e5b71411ade256581476e420ca1.setContent(html_861e1012806a6b9baa5f839ca3c98515);
+            
+        
+
+        marker_4c458c26003296ae4bb359e61ea831b0.bindPopup(popup_c2b16e5b71411ade256581476e420ca1)
+        ;
+
+        
+    
+    
+            var marker_804187fb7470b6773a5fee8221dd0a88 = L.marker(
+                [-33.9253, 18.4239],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_b5dbd7f5132026937c5b4132b82b939b = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_804187fb7470b6773a5fee8221dd0a88.setIcon(div_icon_b5dbd7f5132026937c5b4132b82b939b);
+        
+    
+        var popup_694f19841e54820fc3f21a1a0bc6a36a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ab6eebe7077067bc4b6d8aaca47e5e76 = $(`<div id="html_ab6eebe7077067bc4b6d8aaca47e5e76" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Flat Rock Studio, Cape Town</p>                 <p><strong>City:</strong>	 Cape Town</p>                 <p><strong>Country:</strong>	 South Africa</p>                 <p><strong>URL:</strong>	 Https://Flatrockstudio.Co.Za/Contact/</p>                 <p><strong>Primary contact:</strong>	 Unnamed Record</p>                 <p><strong>E-mail:</strong>	 Felix@Flatrockstudio.Co.Za</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_694f19841e54820fc3f21a1a0bc6a36a.setContent(html_ab6eebe7077067bc4b6d8aaca47e5e76);
+            
+        
+
+        marker_804187fb7470b6773a5fee8221dd0a88.bindPopup(popup_694f19841e54820fc3f21a1a0bc6a36a)
+        ;
+
+        
+    
+    
+            var marker_14e29acb86bf9667632b1bff9bfd1773 = L.marker(
+                [0.3901, 9.4544],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_f6f747401d752f55c8c31affdcb07dda = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_14e29acb86bf9667632b1bff9bfd1773.setIcon(div_icon_f6f747401d752f55c8c31affdcb07dda);
+        
+    
+        var popup_38dcee95d3af91651114ad3ad8857405 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7b96e9086a90744c369c51b47d05fdbc = $(`<div id="html_7b96e9086a90744c369c51b47d05fdbc" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Gabtrotter</p>                 <p><strong>City:</strong>	 Libreville</p>                 <p><strong>Country:</strong>	 Gabon</p>                 <p><strong>URL:</strong>	 Nan</p>                 <p><strong>Primary contact:</strong>	 Pascal Darryl Ango</p>                 <p><strong>E-mail:</strong>	 Nan</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_38dcee95d3af91651114ad3ad8857405.setContent(html_7b96e9086a90744c369c51b47d05fdbc);
+            
+        
+
+        marker_14e29acb86bf9667632b1bff9bfd1773.bindPopup(popup_38dcee95d3af91651114ad3ad8857405)
+        ;
+
+        
+    
+    
+            var marker_927d680d659df7975c49699fa13b7a98 = L.marker(
+                [5.5645, -0.2257],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_cb494564ada3a7a162919fbccbbe1d96 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_927d680d659df7975c49699fa13b7a98.setIcon(div_icon_cb494564ada3a7a162919fbccbbe1d96);
+        
+    
+        var popup_a59031cd282a9b88db3263762d3a53b8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9afde109755b3cc5e396954f77c347f3 = $(`<div id="html_9afde109755b3cc5e396954f77c347f3" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Ghana Tech Lab</p>                 <p><strong>City:</strong>	 Accra</p>                 <p><strong>Country:</strong>	 Ghana</p>                 <p><strong>URL:</strong>	 Https://Www.Ghanatechlab.Com/</p>                 <p><strong>Primary contact:</strong>	 Fosu Kelvin,Amissah Laureate </p>                 <p><strong>E-mail:</strong>	 Akwaaba@Ghanatechlab.Com</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_a59031cd282a9b88db3263762d3a53b8.setContent(html_9afde109755b3cc5e396954f77c347f3);
+            
+        
+
+        marker_927d680d659df7975c49699fa13b7a98.bindPopup(popup_a59031cd282a9b88db3263762d3a53b8)
+        ;
+
+        
+    
+    
+            var marker_4728147e1169131c55d8c69dcc83467e = L.marker(
+                [5.320357, -4.016107],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_56d9c1bb4e1bcb2d8812b83b91d51381 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_4728147e1169131c55d8c69dcc83467e.setIcon(div_icon_56d9c1bb4e1bcb2d8812b83b91d51381);
+        
+    
+        var popup_86863b5a59598744f68a8fcb938baebd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cedd538fa0dca0671047372da5fc0e89 = $(`<div id="html_cedd538fa0dca0671047372da5fc0e89" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 H-Fablab</p>                 <p><strong>City:</strong>	 Abidjan</p>                 <p><strong>Country:</strong>	 Cote D'Ivoire (Ivory Coast)</p>                 <p><strong>URL:</strong>	 Https://H-Fablab.Org/Index.Html</p>                 <p><strong>Primary contact:</strong>	 Dodji Honou</p>                 <p><strong>E-mail:</strong>	 Contact@H-Fablab.Org</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_86863b5a59598744f68a8fcb938baebd.setContent(html_cedd538fa0dca0671047372da5fc0e89);
+            
+        
+
+        marker_4728147e1169131c55d8c69dcc83467e.bindPopup(popup_86863b5a59598744f68a8fcb938baebd)
+        ;
+
+        
+    
+    
+            var marker_992d75cd672a80d4c443c00d5c178999 = L.marker(
+                [-25.8585, 28.1896],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_89dc8e46fe0a24ff2e38c1299ba93291 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_992d75cd672a80d4c443c00d5c178999.setIcon(div_icon_89dc8e46fe0a24ff2e38c1299ba93291);
+        
+    
+        var popup_4969602dea76ba57c4db9652452d13e1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_46dd856f73889cf8848a7108482afdcb = $(`<div id="html_46dd856f73889cf8848a7108482afdcb" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 House4Hack, Centurion</p>                 <p><strong>City:</strong>	 Centurion, South Africa</p>                 <p><strong>Country:</strong>	 South Africa</p>                 <p><strong>URL:</strong>	 Http://Www.House4Hack.Co.Za/</p>                 <p><strong>Primary contact:</strong>	 Unnamed Record</p>                 <p><strong>E-mail:</strong>	 Schalk.Heunis@Gmail.Com</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_4969602dea76ba57c4db9652452d13e1.setContent(html_46dd856f73889cf8848a7108482afdcb);
+            
+        
+
+        marker_992d75cd672a80d4c443c00d5c178999.bindPopup(popup_4969602dea76ba57c4db9652452d13e1)
+        ;
+
+        
+    
+    
+            var marker_713a9cfd290eb1fffcde6bb35daa0a7d = L.marker(
+                [5.5645, -0.2257],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_c2faca344317983fd4e3e1575001ecc3 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_713a9cfd290eb1fffcde6bb35daa0a7d.setIcon(div_icon_c2faca344317983fd4e3e1575001ecc3);
+        
+    
+        var popup_5e42622b768a03ccd76239fc81587630 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac05748f59bc9f4c635d26e4dd3e9986 = $(`<div id="html_ac05748f59bc9f4c635d26e4dd3e9986" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Impact Hub</p>                 <p><strong>City:</strong>	 Accra</p>                 <p><strong>Country:</strong>	 Ghana</p>                 <p><strong>URL:</strong>	 Https://Accra.Impacthub.Net/</p>                 <p><strong>Primary contact:</strong>	 Unnamed Record</p>                 <p><strong>E-mail:</strong>	 Accra@Impacthub.Net</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_5e42622b768a03ccd76239fc81587630.setContent(html_ac05748f59bc9f4c635d26e4dd3e9986);
+            
+        
+
+        marker_713a9cfd290eb1fffcde6bb35daa0a7d.bindPopup(popup_5e42622b768a03ccd76239fc81587630)
+        ;
+
+        
+    
+    
+            var marker_d4a1c232de4046942de081b87eb6581a = L.marker(
+                [6.3333, 7.4167],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_a43b9829ce434e298c258f07be93a9f4 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_d4a1c232de4046942de081b87eb6581a.setIcon(div_icon_a43b9829ce434e298c258f07be93a9f4);
+        
+    
+        var popup_51d7f7447204013d876fa7b8d8facf49 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_47a9b3fd9c61353844a8aff7c13c36db = $(`<div id="html_47a9b3fd9c61353844a8aff7c13c36db" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Innovation Growth Hub </p>                 <p><strong>City:</strong>	 Abia, Nigeria</p>                 <p><strong>Country:</strong>	 Nigeria</p>                 <p><strong>URL:</strong>	 Https://Ighub.Com.Ng/</p>                 <p><strong>Primary contact:</strong>	 Martins Obiefule</p>                 <p><strong>E-mail:</strong>	 Info@Ighub.Com.Ng</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_51d7f7447204013d876fa7b8d8facf49.setContent(html_47a9b3fd9c61353844a8aff7c13c36db);
+            
+        
+
+        marker_d4a1c232de4046942de081b87eb6581a.bindPopup(popup_51d7f7447204013d876fa7b8d8facf49)
+        ;
+
+        
+    
+    
+            var marker_aa3a2dd7df8a6e6ac7e3b397f0989253 = L.marker(
+                [5.5645, -0.2257],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_82e6689183bc09da81327868c9e15e18 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_aa3a2dd7df8a6e6ac7e3b397f0989253.setIcon(div_icon_82e6689183bc09da81327868c9e15e18);
+        
+    
+        var popup_14c79b83c419da017bd314371cd28c23 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_086c0165753ce7244633bf83b2f2459a = $(`<div id="html_086c0165753ce7244633bf83b2f2459a" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Iot Network Hub Africa.</p>                 <p><strong>City:</strong>	 Accra</p>                 <p><strong>Country:</strong>	 Ghana</p>                 <p><strong>URL:</strong>	 Https://Iotnetworkhub.Org/</p>                 <p><strong>Primary contact:</strong>	 Josh</p>                 <p><strong>E-mail:</strong>	 Iotnetworkhub@Gmail.Com</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_14c79b83c419da017bd314371cd28c23.setContent(html_086c0165753ce7244633bf83b2f2459a);
+            
+        
+
+        marker_aa3a2dd7df8a6e6ac7e3b397f0989253.bindPopup(popup_14c79b83c419da017bd314371cd28c23)
+        ;
+
+        
+    
+    
+            var marker_48331e7b4d737d040c191ec3b65b858c = L.marker(
+                [-17.8639, 31.0297],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_82368514c3af9195068c4b1190dfa129 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_48331e7b4d737d040c191ec3b65b858c.setIcon(div_icon_82368514c3af9195068c4b1190dfa129);
+        
+    
+        var popup_c2845e3b16e107ca4b92cb3597c9c52b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5d3a2f634573f01bfa1f719e6be3ab6e = $(`<div id="html_5d3a2f634573f01bfa1f719e6be3ab6e" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Izone Hub</p>                 <p><strong>City:</strong>	 Harare</p>                 <p><strong>Country:</strong>	 Zimbabwe</p>                 <p><strong>URL:</strong>	 Https://Izonehub.Org.Zw/</p>                 <p><strong>Primary contact:</strong>	 Unnamed Record,Tsatsi Ronald</p>                 <p><strong>E-mail:</strong>	 Info@Izonehub.Org.Zw</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_c2845e3b16e107ca4b92cb3597c9c52b.setContent(html_5d3a2f634573f01bfa1f719e6be3ab6e);
+            
+        
+
+        marker_48331e7b4d737d040c191ec3b65b858c.bindPopup(popup_c2845e3b16e107ca4b92cb3597c9c52b)
+        ;
+
+        
+    
+    
+            var marker_e021cd860f377cb791a96dfb3ffeb8a7 = L.marker(
+                [-1.9508938, 30.0588764],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_321b90b55cc3c12f6592251c1f956385 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_e021cd860f377cb791a96dfb3ffeb8a7.setIcon(div_icon_321b90b55cc3c12f6592251c1f956385);
+        
+    
+        var popup_7f90c2d57b08d8a61a40eab0703f38cf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_46ffaaf55d7dcd8128988675021508a1 = $(`<div id="html_46ffaaf55d7dcd8128988675021508a1" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Klab</p>                 <p><strong>City:</strong>	 Kigali</p>                 <p><strong>Country:</strong>	 Rwanda</p>                 <p><strong>URL:</strong>	 Https://Klab.Rw/</p>                 <p><strong>Primary contact:</strong>	 Yeetah Kamikazi Sharon</p>                 <p><strong>E-mail:</strong>	 Info@Klab.Rw</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_7f90c2d57b08d8a61a40eab0703f38cf.setContent(html_46ffaaf55d7dcd8128988675021508a1);
+            
+        
+
+        marker_e021cd860f377cb791a96dfb3ffeb8a7.bindPopup(popup_7f90c2d57b08d8a61a40eab0703f38cf)
+        ;
+
+        
+    
+    
+            var marker_c8fb8094843823684292f370108efe55 = L.marker(
+                [-26.2015, 28.0455],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_51a7716fa1e67a7b53a26189d41f81df = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_c8fb8094843823684292f370108efe55.setIcon(div_icon_51a7716fa1e67a7b53a26189d41f81df);
+        
+    
+        var popup_d03f3cea3e2489433acc7b9d128d2beb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4afb891ac1acffedc6587ec74084451e = $(`<div id="html_4afb891ac1acffedc6587ec74084451e" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Made In Workshop, Johannesburg</p>                 <p><strong>City:</strong>	 Johannesburg</p>                 <p><strong>Country:</strong>	 South Africa</p>                 <p><strong>URL:</strong>	 Https://Www.Madeinworkshop.Co.Za/</p>                 <p><strong>Primary contact:</strong>	 Unnamed Record</p>                 <p><strong>E-mail:</strong>	 Info@Madeinworkshop.Co.Za</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_d03f3cea3e2489433acc7b9d128d2beb.setContent(html_4afb891ac1acffedc6587ec74084451e);
+            
+        
+
+        marker_c8fb8094843823684292f370108efe55.bindPopup(popup_d03f3cea3e2489433acc7b9d128d2beb)
+        ;
+
+        
+    
+    
+            var marker_697ebff783035129423ac2c55f45086b = L.marker(
+                [-25.7461, 28.1881],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_689508f72d106f02d943f5145c899d52 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_697ebff783035129423ac2c55f45086b.setIcon(div_icon_689508f72d106f02d943f5145c899d52);
+        
+    
+        var popup_29384e0e90280513cbeceeb10a541154 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f5b19a64edb9aeb4c8f2816fb2a2b009 = $(`<div id="html_f5b19a64edb9aeb4c8f2816fb2a2b009" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Makers Village, Irene</p>                 <p><strong>City:</strong>	 Pretoria</p>                 <p><strong>Country:</strong>	 South Africa</p>                 <p><strong>URL:</strong>	 Http://Makersvillage.Co.Za/Makers-Irene/</p>                 <p><strong>Primary contact:</strong>	 Unnamed Record</p>                 <p><strong>E-mail:</strong>	 Tania@Makersvillage.Co.Za</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_29384e0e90280513cbeceeb10a541154.setContent(html_f5b19a64edb9aeb4c8f2816fb2a2b009);
+            
+        
+
+        marker_697ebff783035129423ac2c55f45086b.bindPopup(popup_29384e0e90280513cbeceeb10a541154)
+        ;
+
+        
+    
+    
+            var marker_527a4cd0374ac6d6324b5b238a93be07 = L.marker(
+                [11.8053, 3.4739],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_6193fbe6a2e69c59a8b3fa144685d9e0 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_527a4cd0374ac6d6324b5b238a93be07.setIcon(div_icon_6193fbe6a2e69c59a8b3fa144685d9e0);
+        
+    
+        var popup_678333f3a47b45aec16414b37ce85402 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bda9230f1abaa35183845a9d6df4621e = $(`<div id="html_bda9230f1abaa35183845a9d6df4621e" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Makerspace Garoua 2</p>                 <p><strong>City:</strong>	 Garou, Benin</p>                 <p><strong>Country:</strong>	 Cameroon</p>                 <p><strong>URL:</strong>	 Https://Www.Facebook.Com/People/Makerspace-Garoua/100083019702282</p>                 <p><strong>Primary contact:</strong>	 Mfetie Mfochingoue Vianney </p>                 <p><strong>E-mail:</strong>	 Nan</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_678333f3a47b45aec16414b37ce85402.setContent(html_bda9230f1abaa35183845a9d6df4621e);
+            
+        
+
+        marker_527a4cd0374ac6d6324b5b238a93be07.bindPopup(popup_678333f3a47b45aec16414b37ce85402)
+        ;
+
+        
+    
+    
+            var marker_2024f8f038b02166e8b9198fe2c49a69 = L.marker(
+                [3.8667, 11.5167],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_67b83b254642e05dc5105d5c6a7cfdc6 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_2024f8f038b02166e8b9198fe2c49a69.setIcon(div_icon_67b83b254642e05dc5105d5c6a7cfdc6);
+        
+    
+        var popup_1792c345f710a29045aff2ee19e8c4d6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a57c4c1fe46bb7253a2a7e1bd64bfc70 = $(`<div id="html_a57c4c1fe46bb7253a2a7e1bd64bfc70" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Mboalab</p>                 <p><strong>City:</strong>	 Yaoundé</p>                 <p><strong>Country:</strong>	 Cameroon</p>                 <p><strong>URL:</strong>	 Http://Mboalab.Africa/</p>                 <p><strong>Primary contact:</strong>	 Yanick Diapa Nana,Wapouo Fadanka Stephane</p>                 <p><strong>E-mail:</strong>	 Nan</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_1792c345f710a29045aff2ee19e8c4d6.setContent(html_a57c4c1fe46bb7253a2a7e1bd64bfc70);
+            
+        
+
+        marker_2024f8f038b02166e8b9198fe2c49a69.bindPopup(popup_1792c345f710a29045aff2ee19e8c4d6)
+        ;
+
+        
+    
+    
+            var marker_cceec53ae797cf70df925438cc139e7b = L.marker(
+                [4.5859, 9.6618],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_4f6ab1eb3883768ddee876f5aa0fe222 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_cceec53ae797cf70df925438cc139e7b.setIcon(div_icon_4f6ab1eb3883768ddee876f5aa0fe222);
+        
+    
+        var popup_4830571391fda42df4c70600cf087b83 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e6e419c50953cdcd30a48bbdbb68b72e = $(`<div id="html_e6e419c50953cdcd30a48bbdbb68b72e" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Njombe Innovation Academy</p>                 <p><strong>City:</strong>	 Njombé</p>                 <p><strong>Country:</strong>	 Nan</p>                 <p><strong>URL:</strong>	 Https://Www.Teachtanzania.Org/Nia.Html</p>                 <p><strong>Primary contact:</strong>	 Gaztelu Unai</p>                 <p><strong>E-mail:</strong>	 Nan</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_4830571391fda42df4c70600cf087b83.setContent(html_e6e419c50953cdcd30a48bbdbb68b72e);
+            
+        
+
+        marker_cceec53ae797cf70df925438cc139e7b.bindPopup(popup_4830571391fda42df4c70600cf087b83)
+        ;
+
+        
+    
+    
+            var marker_ac8729d1f816b7aaea5d46354202f877 = L.marker(
+                [10.0628, -2.5032],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_a090ea3e035a0337d753cc0fcd394772 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_ac8729d1f816b7aaea5d46354202f877.setIcon(div_icon_a090ea3e035a0337d753cc0fcd394772);
+        
+    
+        var popup_47201bb8c479395d6187bc35c3a68a01 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6b98cec81aba434caeb7214e457ef20f = $(`<div id="html_6b98cec81aba434caeb7214e457ef20f" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Noni Hub Makerspace</p>                 <p><strong>City:</strong>	 Wa, Ghana</p>                 <p><strong>Country:</strong>	 Ghana</p>                 <p><strong>URL:</strong>	 Https://Nonihub.Org/</p>                 <p><strong>Primary contact:</strong>	 Dauda Mustapha</p>                 <p><strong>E-mail:</strong>	 Hi@Nonihub.Org</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_47201bb8c479395d6187bc35c3a68a01.setContent(html_6b98cec81aba434caeb7214e457ef20f);
+            
+        
+
+        marker_ac8729d1f816b7aaea5d46354202f877.bindPopup(popup_47201bb8c479395d6187bc35c3a68a01)
+        ;
+
+        
+    
+    
+            var marker_3da90a7de7b7d47a4b7fc5e0d549cc45 = L.marker(
+                [3.8667, 11.5167],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_87273d283517251fd8e196580662e2e3 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_3da90a7de7b7d47a4b7fc5e0d549cc45.setIcon(div_icon_87273d283517251fd8e196580662e2e3);
+        
+    
+        var popup_31967801d7a2b8f6aae4ac11cb5da964 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4e6858d8da90dafc025e85e46bfc61f4 = $(`<div id="html_4e6858d8da90dafc025e85e46bfc61f4" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Ongolab Fablab</p>                 <p><strong>City:</strong>	 Yaoundé</p>                 <p><strong>Country:</strong>	 Cameroon</p>                 <p><strong>URL:</strong>	 Https://Www.Fablabs.Io/Labs/Ongolafablab</p>                 <p><strong>Primary contact:</strong>	 Mohamet Bassirou</p>                 <p><strong>E-mail:</strong>	 Ongolafablab@Auf.Org</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Fablabs.Io</p>             </div>         </div>`)[0];
+                popup_31967801d7a2b8f6aae4ac11cb5da964.setContent(html_4e6858d8da90dafc025e85e46bfc61f4);
+            
+        
+
+        marker_3da90a7de7b7d47a4b7fc5e0d549cc45.bindPopup(popup_31967801d7a2b8f6aae4ac11cb5da964)
+        ;
+
+        
+    
+    
+            var marker_11a262002f8e64e6396eb24a9ee64fa9 = L.marker(
+                [7.633333, 2.866667],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_783fe7072bec5801f18f7640b3b6ff1d = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_11a262002f8e64e6396eb24a9ee64fa9.setIcon(div_icon_783fe7072bec5801f18f7640b3b6ff1d);
+        
+    
+        var popup_6740375492099b4be4916893e396f454 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f9b725a94d3b9caee0b77d4f1e5fdec3 = $(`<div id="html_f9b725a94d3b9caee0b77d4f1e5fdec3" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Prikkle Academy Makerspace</p>                 <p><strong>City:</strong>	 Afon</p>                 <p><strong>Country:</strong>	 Nigeria</p>                 <p><strong>URL:</strong>	 Https://Prikkleacademy.Org/</p>                 <p><strong>Primary contact:</strong>	 Unnamed Record</p>                 <p><strong>E-mail:</strong>	 Info@Prikkleacademy.Org</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Africa Makerspace Network</p>             </div>         </div>`)[0];
+                popup_6740375492099b4be4916893e396f454.setContent(html_f9b725a94d3b9caee0b77d4f1e5fdec3);
+            
+        
+
+        marker_11a262002f8e64e6396eb24a9ee64fa9.bindPopup(popup_6740375492099b4be4916893e396f454)
+        ;
+
+        
+    
+    
+            var marker_dd410fe73fbd53a01de42058158c1f63 = L.marker(
+                [-17.8639, 31.0297],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_5dca6a3955985da148573ac8331f6b61 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_dd410fe73fbd53a01de42058158c1f63.setIcon(div_icon_5dca6a3955985da148573ac8331f6b61);
+        
+    
+        var popup_96e5ce710111e839f172a0b0ceb78a60 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_77169e6c4d9a1654a0116a02b819a509 = $(`<div id="html_77169e6c4d9a1654a0116a02b819a509" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Purple Future Trust</p>                 <p><strong>City:</strong>	 Harare</p>                 <p><strong>Country:</strong>	 Zimbabwe</p>                 <p><strong>URL:</strong>	 Https://Purpletrust.Org/</p>                 <p><strong>Primary contact:</strong>	 Unnamed Record</p>                 <p><strong>E-mail:</strong>	 Info@Purpletrust.Org</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_96e5ce710111e839f172a0b0ceb78a60.setContent(html_77169e6c4d9a1654a0116a02b819a509);
+            
+        
+
+        marker_dd410fe73fbd53a01de42058158c1f63.bindPopup(popup_96e5ce710111e839f172a0b0ceb78a60)
+        ;
+
+        
+    
+    
+            var marker_a19032c90f4ee7bcee8913eba667f753 = L.marker(
+                [-28.4792625, 24.6727135],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_baf8ffb1af2c7e30269234beeee67136 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_a19032c90f4ee7bcee8913eba667f753.setIcon(div_icon_baf8ffb1af2c7e30269234beeee67136);
+        
+    
+        var popup_200aba0cf0dc97779f3d458d3da51438 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_23e7e956937b65531b11243b489c06ec = $(`<div id="html_23e7e956937b65531b11243b489c06ec" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Red Hub</p>                 <p><strong>City:</strong>	 Nan</p>                 <p><strong>Country:</strong>	 South Africa</p>                 <p><strong>URL:</strong>	 Https://Honoris.Net/Education-For-Impact/Learning-Environments/Redhub/</p>                 <p><strong>Primary contact:</strong>	 Unnamed Record</p>                 <p><strong>E-mail:</strong>	 Nan</p>                 <p><strong>Adress precision:</strong>	 Country</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_200aba0cf0dc97779f3d458d3da51438.setContent(html_23e7e956937b65531b11243b489c06ec);
+            
+        
+
+        marker_a19032c90f4ee7bcee8913eba667f753.bindPopup(popup_200aba0cf0dc97779f3d458d3da51438)
+        ;
+
+        
+    
+    
+            var marker_09dfe16aab2e79f9e2ebe67bf88d749d = L.marker(
+                [46.71109, 1.7191036],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_bde0dfd19e7fbd42920e17c67737eb39 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_09dfe16aab2e79f9e2ebe67bf88d749d.setIcon(div_icon_bde0dfd19e7fbd42920e17c67737eb39);
+        
+    
+        var popup_b7dbcedb9ffdc81e3c34b1f30308cce8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2b7bc5ca161c06d42618079ec26d38dc = $(`<div id="html_2b7bc5ca161c06d42618079ec26d38dc" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Reseau Français Des Fablabs</p>                 <p><strong>City:</strong>	 Nan</p>                 <p><strong>Country:</strong>	 France</p>                 <p><strong>URL:</strong>	 Https://Rfflabs.Fr/</p>                 <p><strong>Primary contact:</strong>	 Nan</p>                 <p><strong>E-mail:</strong>	 Nan</p>                 <p><strong>Adress precision:</strong>	 Country</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_b7dbcedb9ffdc81e3c34b1f30308cce8.setContent(html_2b7bc5ca161c06d42618079ec26d38dc);
+            
+        
+
+        marker_09dfe16aab2e79f9e2ebe67bf88d749d.bindPopup(popup_b7dbcedb9ffdc81e3c34b1f30308cce8)
+        ;
+
+        
+    
+    
+            var marker_662ff64ab7f55d43c69975cecbe5c01b = L.marker(
+                [-6.818, 39.279],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_7224b5656526f2b2fc10325e277f2a76 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_662ff64ab7f55d43c69975cecbe5c01b.setIcon(div_icon_7224b5656526f2b2fc10325e277f2a76);
+        
+    
+        var popup_cc487c249bce25f30542cec17d8f551d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d51eb8fa72c668cf4bbea7c95f822e63 = $(`<div id="html_d51eb8fa72c668cf4bbea7c95f822e63" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Robotech Labs</p>                 <p><strong>City:</strong>	 Dar Es Salaam</p>                 <p><strong>Country:</strong>	 Tanzania</p>                 <p><strong>URL:</strong>	 Https://Robotech.Co.Tz/</p>                 <p><strong>Primary contact:</strong>	 Unnamed Record</p>                 <p><strong>E-mail:</strong>	 Info@Robotech.Co.Tz</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_cc487c249bce25f30542cec17d8f551d.setContent(html_d51eb8fa72c668cf4bbea7c95f822e63);
+            
+        
+
+        marker_662ff64ab7f55d43c69975cecbe5c01b.bindPopup(popup_cc487c249bce25f30542cec17d8f551d)
+        ;
+
+        
+    
+    
+            var marker_6e4105560612dea3bf69d1cf299c5e38 = L.marker(
+                [40.4667, 19.4881],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_76f3eb4d2e53e56f7a4d331a9c90eaf4 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_6e4105560612dea3bf69d1cf299c5e38.setIcon(div_icon_76f3eb4d2e53e56f7a4d331a9c90eaf4);
+        
+    
+        var popup_54e42a1501ca6bbaeefa3decee3ff205 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3ebf3e16e5880e3f27c91e54a9f063c5 = $(`<div id="html_3ebf3e16e5880e3f27c91e54a9f063c5" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Src-Fe (Research Center)</p>                 <p><strong>City:</strong>	 Vlorë</p>                 <p><strong>Country:</strong>	 Nan</p>                 <p><strong>URL:</strong>	 Https://Srcfe.Univlora.Edu.Al/ </p>                 <p><strong>Primary contact:</strong>	 Serjanaj Lorena</p>                 <p><strong>E-mail:</strong>	 Src-Fe@Univlora.Edu.Al</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_54e42a1501ca6bbaeefa3decee3ff205.setContent(html_3ebf3e16e5880e3f27c91e54a9f063c5);
+            
+        
+
+        marker_6e4105560612dea3bf69d1cf299c5e38.bindPopup(popup_54e42a1501ca6bbaeefa3decee3ff205)
+        ;
+
+        
+    
+    
+            var marker_1f4497a35b47419655ba80bc467a3322 = L.marker(
+                [-4.0537, 39.6631],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_0360a0601c0153a1d4a8b5603a7514ce = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_1f4497a35b47419655ba80bc467a3322.setIcon(div_icon_0360a0601c0153a1d4a8b5603a7514ce);
+        
+    
+        var popup_0b33d0af200fec04ecfac4c7057dfd2e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_08b2ecbc7c40a948232b08d3182ed27e = $(`<div id="html_08b2ecbc7c40a948232b08d3182ed27e" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Swahilibox</p>                 <p><strong>City:</strong>	 Mombasa</p>                 <p><strong>Country:</strong>	 Kenya</p>                 <p><strong>URL:</strong>	 Https://C.Swahilibox.Co.Ke/</p>                 <p><strong>Primary contact:</strong>	 Unnamed Record</p>                 <p><strong>E-mail:</strong>	 Info@Swahilibox.Co.Ke</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_0b33d0af200fec04ecfac4c7057dfd2e.setContent(html_08b2ecbc7c40a948232b08d3182ed27e);
+            
+        
+
+        marker_1f4497a35b47419655ba80bc467a3322.bindPopup(popup_0b33d0af200fec04ecfac4c7057dfd2e)
+        ;
+
+        
+    
+    
+            var marker_bcdc1b048f8690cbfa4cd36d36694aa2 = L.marker(
+                [-5.0667, 39.1],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_f1aa39bcda51db680a24ff0cf5cc4038 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_bcdc1b048f8690cbfa4cd36d36694aa2.setIcon(div_icon_f1aa39bcda51db680a24ff0cf5cc4038);
+        
+    
+        var popup_27b234d0b4264968b20b74b5415d71a9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2995ecf1e41d5a409059e0e081212596 = $(`<div id="html_2995ecf1e41d5a409059e0e081212596" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Tanzania Open Innovation Organisation</p>                 <p><strong>City:</strong>	 Tanga, Tanzania</p>                 <p><strong>Country:</strong>	 Tanzania</p>                 <p><strong>URL:</strong>	 Https://Toio.Or.Tz</p>                 <p><strong>Primary contact:</strong>	 Hussein Shaukatali</p>                 <p><strong>E-mail:</strong>	 Nan</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_27b234d0b4264968b20b74b5415d71a9.setContent(html_2995ecf1e41d5a409059e0e081212596);
+            
+        
+
+        marker_bcdc1b048f8690cbfa4cd36d36694aa2.bindPopup(popup_27b234d0b4264968b20b74b5415d71a9)
+        ;
+
+        
+    
+    
+            var marker_44348f893f7a25e16ce0b3d819da0716 = L.marker(
+                [4.0549, 9.6987],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_00bbdccef2096880fe7bde3a09cc3074 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_44348f893f7a25e16ce0b3d819da0716.setIcon(div_icon_00bbdccef2096880fe7bde3a09cc3074);
+        
+    
+        var popup_6e913e6144629ae9e2b7e8f25b679824 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_da587ca10281f21c04a8a41c04c1b285 = $(`<div id="html_da587ca10281f21c04a8a41c04c1b285" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 The Manufactory Laboratory</p>                 <p><strong>City:</strong>	 Douala</p>                 <p><strong>Country:</strong>	 Cameroon</p>                 <p><strong>URL:</strong>	 Manlab.Ovh</p>                 <p><strong>Primary contact:</strong>	 Denis Ngoupeyou</p>                 <p><strong>E-mail:</strong>	 Nan</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_6e913e6144629ae9e2b7e8f25b679824.setContent(html_da587ca10281f21c04a8a41c04c1b285);
+            
+        
+
+        marker_44348f893f7a25e16ce0b3d819da0716.bindPopup(popup_6e913e6144629ae9e2b7e8f25b679824)
+        ;
+
+        
+    
+    
+            var marker_eaa26e6325c7c63b25d8398a7b575166 = L.marker(
+                [-3.3667, 36.6833],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_ccbd4a20410d605a30c52fdd7795a757 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_eaa26e6325c7c63b25d8398a7b575166.setIcon(div_icon_ccbd4a20410d605a30c52fdd7795a757);
+        
+    
+        var popup_810c00ba75a38f0844a52622b4fab4bb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c8c7b60f5994d7f63fa2ee74f401ec2a = $(`<div id="html_c8c7b60f5994d7f63fa2ee74f401ec2a" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Twende</p>                 <p><strong>City:</strong>	 Arusha</p>                 <p><strong>Country:</strong>	 Tanzania</p>                 <p><strong>URL:</strong>	 Https://Twende.Or.Tz/</p>                 <p><strong>Primary contact:</strong>	 Unnamed Record</p>                 <p><strong>E-mail:</strong>	 Info@Twende-Tanzania.Org</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Africa Makerspace Network</p>             </div>         </div>`)[0];
+                popup_810c00ba75a38f0844a52622b4fab4bb.setContent(html_c8c7b60f5994d7f63fa2ee74f401ec2a);
+            
+        
+
+        marker_eaa26e6325c7c63b25d8398a7b575166.bindPopup(popup_810c00ba75a38f0844a52622b4fab4bb)
+        ;
+
+        
+    
+    
+            var marker_1487007bbb533984c7568aafcae7e2d7 = L.marker(
+                [-4.2694, 15.2712],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_58e7bd596ca3e2f55d77a9c8491b8172 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_1487007bbb533984c7568aafcae7e2d7.setIcon(div_icon_58e7bd596ca3e2f55d77a9c8491b8172);
+        
+    
+        var popup_b9fa583112716435647a32b476c6bed3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d01bfb3c0c45153e74e474be127b1a30 = $(`<div id="html_d01bfb3c0c45153e74e474be127b1a30" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Unionlab</p>                 <p><strong>City:</strong>	 Brazzaville</p>                 <p><strong>Country:</strong>	 Democratic Republic Of The Congo</p>                 <p><strong>URL:</strong>	 Unionlabfablab.Wixsite.Com/Website</p>                 <p><strong>Primary contact:</strong>	 Bertrand Gildas Moboula Mokoty</p>                 <p><strong>E-mail:</strong>	 Unionlab.Fablab@Gmail.Com</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_b9fa583112716435647a32b476c6bed3.setContent(html_d01bfb3c0c45153e74e474be127b1a30);
+            
+        
+
+        marker_1487007bbb533984c7568aafcae7e2d7.bindPopup(popup_b9fa583112716435647a32b476c6bed3)
+        ;
+
+        
+    
+    
+            var marker_3a3ed9e4a2c4cf84bda4767f2b45fa8f = L.marker(
+                [7.9527706, -1.0307118],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_1d347e98e49f9ad773f33a6495fe2839 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_3a3ed9e4a2c4cf84bda4767f2b45fa8f.setIcon(div_icon_1d347e98e49f9ad773f33a6495fe2839);
+        
+    
+        var popup_301b2fc25f8e7d2893c00f75e1ee3335 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4651e82bf428fb6f6e168fd57d4ad076 = $(`<div id="html_4651e82bf428fb6f6e168fd57d4ad076" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 University Of Ghana Makerspace</p>                 <p><strong>City:</strong>	 Nan</p>                 <p><strong>Country:</strong>	 Ghana</p>                 <p><strong>URL:</strong>	 Https://Www.Makerspace.Ug.Edu.Gh/</p>                 <p><strong>Primary contact:</strong>	 Unnamed Record</p>                 <p><strong>E-mail:</strong>	 Nan</p>                 <p><strong>Adress precision:</strong>	 Country</p>                 <p><strong>Data source:</strong>	 Africa Makerspace Network</p>             </div>         </div>`)[0];
+                popup_301b2fc25f8e7d2893c00f75e1ee3335.setContent(html_4651e82bf428fb6f6e168fd57d4ad076);
+            
+        
+
+        marker_3a3ed9e4a2c4cf84bda4767f2b45fa8f.bindPopup(popup_301b2fc25f8e7d2893c00f75e1ee3335)
+        ;
+
+        
+    
+    
+            var marker_4778b6f60e8fd4ecdbb2a974a3346cb6 = L.marker(
+                [51.1642292, 10.4541194],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_cdea5d424414643aaa85812256aa9436 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_4778b6f60e8fd4ecdbb2a974a3346cb6.setIcon(div_icon_cdea5d424414643aaa85812256aa9436);
+        
+    
+        var popup_d35d1bdea5274d85b1f9655f1bd8c001 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fb62c48daa07bfda9af881e3606f6b0f = $(`<div id="html_fb62c48daa07bfda9af881e3606f6b0f" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Verbund Offener Werkstätten</p>                 <p><strong>City:</strong>	 Nan</p>                 <p><strong>Country:</strong>	 Germany</p>                 <p><strong>URL:</strong>	 Https://Www.Offene-Werkstaetten.Org/</p>                 <p><strong>Primary contact:</strong>	 Nan</p>                 <p><strong>E-mail:</strong>	 Nan</p>                 <p><strong>Adress precision:</strong>	 Country</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_d35d1bdea5274d85b1f9655f1bd8c001.setContent(html_fb62c48daa07bfda9af881e3606f6b0f);
+            
+        
+
+        marker_4778b6f60e8fd4ecdbb2a974a3346cb6.bindPopup(popup_d35d1bdea5274d85b1f9655f1bd8c001)
+        ;
+
+        
+    
+    
+            var marker_ac724aae69e9e4d785653f8900e6bcd8 = L.marker(
+                [12.1191543, 15.0502758],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_3f8e344e61ec83028b7fa45123950f24 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_ac724aae69e9e4d785653f8900e6bcd8.setIcon(div_icon_3f8e344e61ec83028b7fa45123950f24);
+        
+    
+        var popup_4fb9e5a558b8cc5b778a801c54a612cc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_22cb07cf1f8a03948f89b1753bc121c9 = $(`<div id="html_22cb07cf1f8a03948f89b1753bc121c9" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Wenaklabs</p>                 <p><strong>City:</strong>	 N'Djamena</p>                 <p><strong>Country:</strong>	 Chad</p>                 <p><strong>URL:</strong>	 Https://Wenaklabs.Org/</p>                 <p><strong>Primary contact:</strong>	 Fadoul Hissein Abba</p>                 <p><strong>E-mail:</strong>	 Contact@Wenaklabs.Org</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Iopa</p>             </div>         </div>`)[0];
+                popup_4fb9e5a558b8cc5b778a801c54a612cc.setContent(html_22cb07cf1f8a03948f89b1753bc121c9);
+            
+        
+
+        marker_ac724aae69e9e4d785653f8900e6bcd8.bindPopup(popup_4fb9e5a558b8cc5b778a801c54a612cc)
+        ;
+
+        
+    
+    
+            var marker_9b22b2d510490a55b27e59a428bf08bb = L.marker(
+                [-33.9581, 25.6],
+                {}
+            ).addTo(marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e);
+        
+    
+            var div_icon_c14212e70febc79e1717ab31c6e5ef27 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EC5D33; fill-opacity: 0.4;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_9b22b2d510490a55b27e59a428bf08bb.setIcon(div_icon_c14212e70febc79e1717ab31c6e5ef27);
+        
+    
+        var popup_9337d439b70c25e49f0b295dc192925f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_90967716d3b08b0ced9d86f0cc5be307 = $(`<div id="html_90967716d3b08b0ced9d86f0cc5be307" style="width: 100.0%; height: 100.0%;">             <div style="padding: 5px; width: 200px">                 <p><strong>Name:</strong>	 Werk</p>                 <p><strong>City:</strong>	 Gqeberha</p>                 <p><strong>Country:</strong>	 South Africa</p>                 <p><strong>URL:</strong>	 Http://Www.Werkspace.Co.Za/</p>                 <p><strong>Primary contact:</strong>	 Unnamed Record</p>                 <p><strong>E-mail:</strong>	 Us@Werkspace.Co.Za</p>                 <p><strong>Adress precision:</strong>	 City</p>                 <p><strong>Data source:</strong>	 Facebook</p>             </div>         </div>`)[0];
+                popup_9337d439b70c25e49f0b295dc192925f.setContent(html_90967716d3b08b0ced9d86f0cc5be307);
+            
+        
+
+        marker_9b22b2d510490a55b27e59a428bf08bb.bindPopup(popup_9337d439b70c25e49f0b295dc192925f)
+        ;
+
+        
+    
+    
+            map_6eb20041a150991629230cba3d497e63.fitBounds(
+                [[37.84, -20.0], [11.94, 51.13]],
+                {}
+            );
+        
+    
+            var layer_control_61f84f6e81765f7831fb89ca55a430bd = {
+                base_layers : {
+                },
+                overlays :  {
+                    "\u003ci class=\"fas fa-square\" style=\"color: #EC5D33;\"\u003e\u003c/i\u003e mAkE" : marker_cluster_5418305dd0a56bb47ee5a82372ed2e8e,
+                },
+            };
+            L.control.layers(
+                layer_control_61f84f6e81765f7831fb89ca55a430bd.base_layers,
+                layer_control_61f84f6e81765f7831fb89ca55a430bd.overlays,
+                {"autoZIndex": false, "collapsed": false, "position": "topright"}
+            ).addTo(map_6eb20041a150991629230cba3d497e63);
+        
+</script>
+</html>
