@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8e9ada6adf309174d2dc5247bf2c604b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://unpkg.com/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js"></script>
+    
+                <style>
+                    #float_image_880b19ea6215e8951924799e48097deb {
+                        position: absolute;
+                        bottom: 1%;
+                        left: 1%;
+                          width: 10;
+                          height: 10;
+                        }
+                </style>
+            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8e9ada6adf309174d2dc5247bf2c604b" >
+                <a href="https://map.internetofproduction.org/world_map.html" target="_blank">
+                    <img id="float_image_880b19ea6215e8951924799e48097deb" alt="float_image"
+                     src="https://github.com/kny5/data_reports/raw/main/assets/img/iopa_logo_okw_sm.png"
+                     style="z-index: 9999;">
+                    </img>
+                </a>
+            </div>
+        
+    
+            
+            
+</body>
+<script>
+    
+    
+            var map_8e9ada6adf309174d2dc5247bf2c604b = L.map(
+                "map_8e9ada6adf309174d2dc5247bf2c604b",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: false,
+                    preferCanvas: true,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_dae4edae7dde221601f22225b6878e78 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8e9ada6adf309174d2dc5247bf2c604b);
+        
+    
+            var marker_cluster_bfafba3d76882135a98b5546ede9cf49 = L.markerClusterGroup(
+                {"spiderLegPolylineOptions": {"color": "#FFF", "opacity": 0.5, "weight": 0.5}}
+            );
+            marker_cluster_bfafba3d76882135a98b5546ede9cf49.options.iconCreateFunction =
+                function(cluster) {
+        var iconSize = new L.Point(20 + cluster.getChildCount() * 0.5, 20 + cluster.getChildCount() * 0.5); // Adjust the size of the marker as needed
+        var text = cluster.getChildCount(); // Example text to display, you can modify this as per your requirement
+        
+        // Calculate the position of the text beside the SVG icon
+        var textX = iconSize.x / 2; // X-coordinate of the text
+        var textY = iconSize.y / 2; // Y-coordinate of the text
+        
+        return L.divIcon({
+            html: '<svg height="' + (iconSize.y + textY) + '" width="' + (iconSize.x + textX) + '" viewBox="0 0 ' + (iconSize.x + textX) + ' ' + (iconSize.y + textY) + '"><polygon points="0,0 ' + (iconSize.x / 2) + ',' + iconSize.y + ' ' + iconSize.x + ',0" style="fill: rgba(0, 166, 118, 1);"></polygon><text x="' + (iconSize.x / 2) + '" y="' + (iconSize.y / 2) + '" text-anchor="middle" alignment-baseline="middle" style="fill: black; font-size: 10px; z-index: 9999;">' + text + '</text></svg>',
+            className: 'marker-cluster',
+            iconSize: [iconSize.x + textX, iconSize.y + textY]
+        });
+    };
+            map_8e9ada6adf309174d2dc5247bf2c604b.addLayer(marker_cluster_bfafba3d76882135a98b5546ede9cf49);
+        
+    
+            var feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73 = L.featureGroup.subGroup(
+                marker_cluster_bfafba3d76882135a98b5546ede9cf49
+            );
+            feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73.addTo(map_8e9ada6adf309174d2dc5247bf2c604b);
+        
+    
+            var marker_57d87c6eb2b50c24cd7d4fba4d475dd8 = L.marker(
+                [5.652746, -0.163267],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_fc350d15bdb81af111f20c59a50615ec = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_57d87c6eb2b50c24cd7d4fba4d475dd8.setIcon(div_icon_fc350d15bdb81af111f20c59a50615ec);
+        
+    
+        var popup_d139a5ff2df67ab6b8290df37139b8c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1c85c7827aee4a9a52452ddf4c18fec4 = $(`<div id="html_1c85c7827aee4a9a52452ddf4c18fec4" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>ENDER 3</strong></h4><strong>Brand</strong>	: Creality<br><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Fdm<br><strong>X Travel</strong>	: 220Mm<br><strong>Y Travel</strong>	: 220Mm<br><strong>Z Travel</strong>	: 250Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 3<br><strong>Facility</strong>	: Dti Makerspace<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_d139a5ff2df67ab6b8290df37139b8c1.setContent(html_1c85c7827aee4a9a52452ddf4c18fec4);
+            
+        
+
+        marker_57d87c6eb2b50c24cd7d4fba4d475dd8.bindPopup(popup_d139a5ff2df67ab6b8290df37139b8c1)
+        ;
+
+        
+    
+    
+            var marker_f3c37ad041b97ffca46ddf7b4bb23017 = L.marker(
+                [5.652746, -0.163267],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_759d76728daae7f425924dfc94596a14 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_f3c37ad041b97ffca46ddf7b4bb23017.setIcon(div_icon_759d76728daae7f425924dfc94596a14);
+        
+    
+        var popup_0ca98a5c275f05ab103ac7a10f96d53a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_43dd253e2d8e022fd6a6906bd70c87e4 = $(`<div id="html_43dd253e2d8e022fd6a6906bd70c87e4" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>X-MAKER</strong></h4><strong>Brand</strong>	: Qidi<br><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Fdm<br><strong>X Travel</strong>	: 150Mm<br><strong>Y Travel</strong>	: 160Mm<br><strong>Z Travel</strong>	: 170Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Dti Makerspace<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_0ca98a5c275f05ab103ac7a10f96d53a.setContent(html_43dd253e2d8e022fd6a6906bd70c87e4);
+            
+        
+
+        marker_f3c37ad041b97ffca46ddf7b4bb23017.bindPopup(popup_0ca98a5c275f05ab103ac7a10f96d53a)
+        ;
+
+        
+    
+    
+            var marker_e739c3900228279f64d23c53521329cc = L.marker(
+                [5.652746, -0.163267],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_fc3cdfe65425209d47f03012503fb427 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_e739c3900228279f64d23c53521329cc.setIcon(div_icon_fc3cdfe65425209d47f03012503fb427);
+        
+    
+        var popup_3df8471f5e5f4b81c7f8b25fb62d703a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e91a360580345800e112cd6d70ce1639 = $(`<div id="html_e91a360580345800e112cd6d70ce1639" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>MA-10 MINI </strong></h4><strong>Brand</strong>	: Malyan<br><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Fdm<br><strong>X Travel</strong>	: 200Mm<br><strong>Y Travel</strong>	: 200Mm<br><strong>Z Travel</strong>	: 200Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Dti Makerspace<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_3df8471f5e5f4b81c7f8b25fb62d703a.setContent(html_e91a360580345800e112cd6d70ce1639);
+            
+        
+
+        marker_e739c3900228279f64d23c53521329cc.bindPopup(popup_3df8471f5e5f4b81c7f8b25fb62d703a)
+        ;
+
+        
+    
+    
+            var marker_7a495272cdaaaeae3d6c3b5b465a6072 = L.marker(
+                [5.652746, -0.163267],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_ea8950e63cc170f2823b5fa96979ea67 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_7a495272cdaaaeae3d6c3b5b465a6072.setIcon(div_icon_ea8950e63cc170f2823b5fa96979ea67);
+        
+    
+        var popup_96e6db480b24226e8e9c2b054df1c16d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5c4c197ef77d4ba8509cb9c3ee0de84f = $(`<div id="html_5c4c197ef77d4ba8509cb9c3ee0de84f" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>S100</strong></h4><strong>Brand</strong>	: Malyan<br><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Sla<br><strong>X Travel</strong>	: 118Mm<br><strong>Y Travel</strong>	: 65Mm<br><strong>Z Travel</strong>	: 110Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Dti Makerspace<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_96e6db480b24226e8e9c2b054df1c16d.setContent(html_5c4c197ef77d4ba8509cb9c3ee0de84f);
+            
+        
+
+        marker_7a495272cdaaaeae3d6c3b5b465a6072.bindPopup(popup_96e6db480b24226e8e9c2b054df1c16d)
+        ;
+
+        
+    
+    
+            var marker_696fd411e52bf61b8346dec1f0cb5b9a = L.marker(
+                [-0.139594, 34.795725],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_be4f2c94bb8fd70c43af13d37b821889 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_696fd411e52bf61b8346dec1f0cb5b9a.setIcon(div_icon_be4f2c94bb8fd70c43af13d37b821889);
+        
+    
+        var popup_2e05a7806105e0244df6d8d970d4ceec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f7949e94b93dc643a82835bebd17f5c0 = $(`<div id="html_f7949e94b93dc643a82835bebd17f5c0" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>I3 MK3</strong></h4><strong>Brand</strong>	: Prusa<br><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Fdm<br><strong>X Travel</strong>	: 9.8In<br><strong>Y Travel</strong>	: 8.3In<br><strong>Z Travel</strong>	: 8.3In<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 3<br><strong>Facility</strong>	: Fablab Winam<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_2e05a7806105e0244df6d8d970d4ceec.setContent(html_f7949e94b93dc643a82835bebd17f5c0);
+            
+        
+
+        marker_696fd411e52bf61b8346dec1f0cb5b9a.bindPopup(popup_2e05a7806105e0244df6d8d970d4ceec)
+        ;
+
+        
+    
+    
+            var marker_f2fa24dc709ef92b8a766eae6fec9093 = L.marker(
+                [-0.139594, 34.795725],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_db18c82b2686e8cbe8ba91ef6bc94247 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_f2fa24dc709ef92b8a766eae6fec9093.setIcon(div_icon_db18c82b2686e8cbe8ba91ef6bc94247);
+        
+    
+        var popup_44b27d2a069a689f98cc14fb6f96aff9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_376457a608e04380188e1437338f6bd6 = $(`<div id="html_376457a608e04380188e1437338f6bd6" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>3D WAX PRINTER</strong></h4><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Wax<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Fablab Winam<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_44b27d2a069a689f98cc14fb6f96aff9.setContent(html_376457a608e04380188e1437338f6bd6);
+            
+        
+
+        marker_f2fa24dc709ef92b8a766eae6fec9093.bindPopup(popup_44b27d2a069a689f98cc14fb6f96aff9)
+        ;
+
+        
+    
+    
+            var marker_dc27420c0d3bdce6ba3230e73648cd80 = L.marker(
+                [-2.193901, 40.817695],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_1e568d6cf008cc60afdebd657c83d60a = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_dc27420c0d3bdce6ba3230e73648cd80.setIcon(div_icon_1e568d6cf008cc60afdebd657c83d60a);
+        
+    
+        var popup_0b1f60c90de938a72ba61ec9c0c9df4a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_829e8a32dfdba0a85f8119e890bea218 = $(`<div id="html_829e8a32dfdba0a85f8119e890bea218" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>CR-10S</strong></h4><strong>Brand</strong>	: Creality<br><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Fdm<br><strong>Info</strong>	: Standard 0.4Mm Nozzle Dia, 60Mm/S  Max：100Mm/S Print Speed, 1.75Mm Filament Diameter<br><strong>X Travel</strong>	: 300Mm<br><strong>Y Travel</strong>	: 300Mm<br><strong>Z Travel</strong>	: 400Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 2<br><strong>Facility</strong>	: Iome254<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_0b1f60c90de938a72ba61ec9c0c9df4a.setContent(html_829e8a32dfdba0a85f8119e890bea218);
+            
+        
+
+        marker_dc27420c0d3bdce6ba3230e73648cd80.bindPopup(popup_0b1f60c90de938a72ba61ec9c0c9df4a)
+        ;
+
+        
+    
+    
+            var marker_6d3e65db3dbe172868f6c8a4df7dd316 = L.marker(
+                [-2.193901, 40.817695],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_15c3ae62cd4c4db01d53679f5e0e5ee7 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_6d3e65db3dbe172868f6c8a4df7dd316.setIcon(div_icon_15c3ae62cd4c4db01d53679f5e0e5ee7);
+        
+    
+        var popup_9f348c73549641371fe12ba2e2153ad0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_651ac4c1d3e6b90f514a8caa0ea903d5 = $(`<div id="html_651ac4c1d3e6b90f514a8caa0ea903d5" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>MK3</strong></h4><strong>Brand</strong>	: Prusa<br><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Fdm<br><strong>X Travel</strong>	: 9.8In<br><strong>Y Travel</strong>	: 8.3In<br><strong>Z Travel</strong>	: 8.3In<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Iome254<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_9f348c73549641371fe12ba2e2153ad0.setContent(html_651ac4c1d3e6b90f514a8caa0ea903d5);
+            
+        
+
+        marker_6d3e65db3dbe172868f6c8a4df7dd316.bindPopup(popup_9f348c73549641371fe12ba2e2153ad0)
+        ;
+
+        
+    
+    
+            var marker_43c5c61105d9ce640f6441fc6b45681b = L.marker(
+                [6.69506, -1.549389],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_fc853b56de70e05735db60ff2bb17df6 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_43c5c61105d9ce640f6441fc6b45681b.setIcon(div_icon_fc853b56de70e05735db60ff2bb17df6);
+        
+    
+        var popup_c407c8ca983b003d4971575322d690bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_11a36331bfca13e29c902a4a3a77cf5f = $(`<div id="html_11a36331bfca13e29c902a4a3a77cf5f" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>3D PRINTER</strong></h4><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Fdm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 4<br><strong>Facility</strong>	: Kumasi Hive Makerspace<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_c407c8ca983b003d4971575322d690bd.setContent(html_11a36331bfca13e29c902a4a3a77cf5f);
+            
+        
+
+        marker_43c5c61105d9ce640f6441fc6b45681b.bindPopup(popup_c407c8ca983b003d4971575322d690bd)
+        ;
+
+        
+    
+    
+            var marker_64019ced57b7af822517f5b59533c968 = L.marker(
+                [-29.820087, 31.027731],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_366932f5cdecdc6afb539f3d15dac4ae = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_64019ced57b7af822517f5b59533c968.setIcon(div_icon_366932f5cdecdc6afb539f3d15dac4ae);
+        
+    
+        var popup_573421a72ff108dacb4431b20498c436 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c129a3347efca31e98ceee4e55905ef3 = $(`<div id="html_c129a3347efca31e98ceee4e55905ef3" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>CUSTOM BUILT 3D PRINTER </strong></h4><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Ceramic_Extrusion<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: The Makerspace Foundation<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_573421a72ff108dacb4431b20498c436.setContent(html_c129a3347efca31e98ceee4e55905ef3);
+            
+        
+
+        marker_64019ced57b7af822517f5b59533c968.bindPopup(popup_573421a72ff108dacb4431b20498c436)
+        ;
+
+        
+    
+    
+            var marker_b9c77332866fda3538e642b6bab55dcc = L.marker(
+                [-29.820087, 31.027731],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_e42fba5b949768ddcb4f87197b45c6c7 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_b9c77332866fda3538e642b6bab55dcc.setIcon(div_icon_e42fba5b949768ddcb4f87197b45c6c7);
+        
+    
+        var popup_0ee5410970632e9df68eb32dfa18a71a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b2ce1e87a84efe86469c8a68ced4a962 = $(`<div id="html_b2ce1e87a84efe86469c8a68ced4a962" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>R3 ROBO BEAST</strong></h4><strong>Brand</strong>	: Robobeast<br><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Fdm<br><strong>X Travel</strong>	: 300Mm<br><strong>Y Travel</strong>	: 320Mm<br><strong>Z Travel</strong>	: 385Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: The Makerspace Foundation<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_0ee5410970632e9df68eb32dfa18a71a.setContent(html_b2ce1e87a84efe86469c8a68ced4a962);
+            
+        
+
+        marker_b9c77332866fda3538e642b6bab55dcc.bindPopup(popup_0ee5410970632e9df68eb32dfa18a71a)
+        ;
+
+        
+    
+    
+            var marker_ecb070bbaa1555316c209106b6e3edf8 = L.marker(
+                [-29.820087, 31.027731],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_25607f0af59a9731c5371389431d29e6 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_ecb070bbaa1555316c209106b6e3edf8.setIcon(div_icon_25607f0af59a9731c5371389431d29e6);
+        
+    
+        var popup_ac428c10768f59477b3f661f26e4c256 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_177f99a7bd066dded8ac6fb7a046e5e4 = $(`<div id="html_177f99a7bd066dded8ac6fb7a046e5e4" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>3D PRINTER [ ENDER]</strong></h4><strong>Brand</strong>	: Ender<br><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Fdm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: The Makerspace Foundation<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_ac428c10768f59477b3f661f26e4c256.setContent(html_177f99a7bd066dded8ac6fb7a046e5e4);
+            
+        
+
+        marker_ecb070bbaa1555316c209106b6e3edf8.bindPopup(popup_ac428c10768f59477b3f661f26e4c256)
+        ;
+
+        
+    
+    
+            var marker_16810eea4aacc584c7871e670d494e10 = L.marker(
+                [-29.820087, 31.027731],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_12b44551e990407eae4eb6e795f4bc41 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_16810eea4aacc584c7871e670d494e10.setIcon(div_icon_12b44551e990407eae4eb6e795f4bc41);
+        
+    
+        var popup_b41e73af973ee3c1e2a6908b57ec4682 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e270581fb8d38e74bf4d800882fb2b06 = $(`<div id="html_e270581fb8d38e74bf4d800882fb2b06" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>2 CR 20 </strong></h4><strong>Brand</strong>	: Creality<br><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Fdm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: The Makerspace Foundation<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_b41e73af973ee3c1e2a6908b57ec4682.setContent(html_e270581fb8d38e74bf4d800882fb2b06);
+            
+        
+
+        marker_16810eea4aacc584c7871e670d494e10.bindPopup(popup_b41e73af973ee3c1e2a6908b57ec4682)
+        ;
+
+        
+    
+    
+            var marker_d035ef3e5f4a852ce239970669d462a8 = L.marker(
+                [-29.820087, 31.027731],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_cfc2629c3ddcec9466eec83ff27093ca = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_d035ef3e5f4a852ce239970669d462a8.setIcon(div_icon_cfc2629c3ddcec9466eec83ff27093ca);
+        
+    
+        var popup_590e915b37efe9437b340fccd8bbe85c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7d6c566ad12874fb5f377442fcec8f06 = $(`<div id="html_7d6c566ad12874fb5f377442fcec8f06" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>CR20 </strong></h4><strong>Brand</strong>	: Creality<br><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Fdm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: The Makerspace Foundation<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_590e915b37efe9437b340fccd8bbe85c.setContent(html_7d6c566ad12874fb5f377442fcec8f06);
+            
+        
+
+        marker_d035ef3e5f4a852ce239970669d462a8.bindPopup(popup_590e915b37efe9437b340fccd8bbe85c)
+        ;
+
+        
+    
+    
+            var marker_3c24cedb208f89111062e2b8aa42f9cd = L.marker(
+                [-29.820087, 31.027731],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_aa7fa979bfb87767f48282b08d518147 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_3c24cedb208f89111062e2b8aa42f9cd.setIcon(div_icon_aa7fa979bfb87767f48282b08d518147);
+        
+    
+        var popup_e6cdb89fb5a989cf642f60c8154778d6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5af8c03b8d1dc08cddddf43446aad4e3 = $(`<div id="html_5af8c03b8d1dc08cddddf43446aad4e3" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>ANY CUBIC</strong></h4><strong>Brand</strong>	: Anycubic<br><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Sla<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: The Makerspace Foundation<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_e6cdb89fb5a989cf642f60c8154778d6.setContent(html_5af8c03b8d1dc08cddddf43446aad4e3);
+            
+        
+
+        marker_3c24cedb208f89111062e2b8aa42f9cd.bindPopup(popup_e6cdb89fb5a989cf642f60c8154778d6)
+        ;
+
+        
+    
+    
+            var marker_eff635aab5c419f7000148d635020934 = L.marker(
+                [-29.820087, 31.027731],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_2748fa1a3262103ee6566c519f9732a1 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_eff635aab5c419f7000148d635020934.setIcon(div_icon_2748fa1a3262103ee6566c519f9732a1);
+        
+    
+        var popup_1fea21c428482221f1651c4d83ec3907 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_942980ef864d49f033f35e2bea183e48 = $(`<div id="html_942980ef864d49f033f35e2bea183e48" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>RAPIDE LITE [SILVER P]</strong></h4><strong>Brand</strong>	: Rapide<br><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Fdm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: The Makerspace Foundation<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_1fea21c428482221f1651c4d83ec3907.setContent(html_942980ef864d49f033f35e2bea183e48);
+            
+        
+
+        marker_eff635aab5c419f7000148d635020934.bindPopup(popup_1fea21c428482221f1651c4d83ec3907)
+        ;
+
+        
+    
+    
+            var marker_bf9500a6f7eb64ed9356c8c852e56ed8 = L.marker(
+                [-26.194575, 28.03189],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_139e34abce086dfb8e7d88e6f9b24df4 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_bf9500a6f7eb64ed9356c8c852e56ed8.setIcon(div_icon_139e34abce086dfb8e7d88e6f9b24df4);
+        
+    
+        var popup_d4f2e05f41914e38ed8f43bf2bb30de0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e79d8b5a2b8e7bded3d75216711f5dbd = $(`<div id="html_e79d8b5a2b8e7bded3d75216711f5dbd" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>3D PRINTER (CREALITY CR 20)</strong></h4><strong>Brand</strong>	: Creality<br><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Fdm<br><strong>Info</strong>	: Cr2018001051<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Tmg Makerspace<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_d4f2e05f41914e38ed8f43bf2bb30de0.setContent(html_e79d8b5a2b8e7bded3d75216711f5dbd);
+            
+        
+
+        marker_bf9500a6f7eb64ed9356c8c852e56ed8.bindPopup(popup_d4f2e05f41914e38ed8f43bf2bb30de0)
+        ;
+
+        
+    
+    
+            var marker_d32b6dc1ac351c2535780dd6e35fd4d0 = L.marker(
+                [-26.194575, 28.03189],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_80483a86d5eb80cfa91bb6c169995efc = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_d32b6dc1ac351c2535780dd6e35fd4d0.setIcon(div_icon_80483a86d5eb80cfa91bb6c169995efc);
+        
+    
+        var popup_23edcd16138e8c64d976e893a4c6ed49 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_320205a1b38c71c8f644cab5557d393d = $(`<div id="html_320205a1b38c71c8f644cab5557d393d" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>3D PRINTER (LULZBOT MINI V2.0)</strong></h4><strong>Brand</strong>	: Lulzbot<br><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Fdm<br><strong>Info</strong>	: Kt-Pr0047Na-16436<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Tmg Makerspace<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_23edcd16138e8c64d976e893a4c6ed49.setContent(html_320205a1b38c71c8f644cab5557d393d);
+            
+        
+
+        marker_d32b6dc1ac351c2535780dd6e35fd4d0.bindPopup(popup_23edcd16138e8c64d976e893a4c6ed49)
+        ;
+
+        
+    
+    
+            var marker_95b8f97a731e87bcbd7e0c24eb988d0e = L.marker(
+                [-1.303673, 36.838525],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_c985b0cb42f95bc89623d228436b11f5 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_95b8f97a731e87bcbd7e0c24eb988d0e.setIcon(div_icon_c985b0cb42f95bc89623d228436b11f5);
+        
+    
+        var popup_5606e9d9c228507c8ef63f7bbe44cce5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_34f141f9692a58ac1820bcac22a19ab0 = $(`<div id="html_34f141f9692a58ac1820bcac22a19ab0" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>ULTIMAKER 3 EXTENDED</strong></h4><strong>Brand</strong>	: Ultimaker<br><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Fdm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 2<br><strong>Facility</strong>	: Gearbox Pan African Network<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_5606e9d9c228507c8ef63f7bbe44cce5.setContent(html_34f141f9692a58ac1820bcac22a19ab0);
+            
+        
+
+        marker_95b8f97a731e87bcbd7e0c24eb988d0e.bindPopup(popup_5606e9d9c228507c8ef63f7bbe44cce5)
+        ;
+
+        
+    
+    
+            var marker_f593676c5fa59de6f01456b340f39a5a = L.marker(
+                [-1.303673, 36.838525],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_10c77b3de79d7071f135b90d3605136b = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_f593676c5fa59de6f01456b340f39a5a.setIcon(div_icon_10c77b3de79d7071f135b90d3605136b);
+        
+    
+        var popup_54b4d606ef2b215d2f21b2e1be51bf25 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_94bc37c02f3b1322eaec0188b495482b = $(`<div id="html_94bc37c02f3b1322eaec0188b495482b" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>ULTIMAKER 2+</strong></h4><strong>Brand</strong>	: Ultimaker<br><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Fdm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Gearbox Pan African Network<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_54b4d606ef2b215d2f21b2e1be51bf25.setContent(html_94bc37c02f3b1322eaec0188b495482b);
+            
+        
+
+        marker_f593676c5fa59de6f01456b340f39a5a.bindPopup(popup_54b4d606ef2b215d2f21b2e1be51bf25)
+        ;
+
+        
+    
+    
+            var marker_3475e9f5475e74ad0f40d4cca2097b2a = L.marker(
+                [-1.303673, 36.838525],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_e641b9f9193401efbc218a4f7e10ffdd = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_3475e9f5475e74ad0f40d4cca2097b2a.setIcon(div_icon_e641b9f9193401efbc218a4f7e10ffdd);
+        
+    
+        var popup_6e55f7ba92c62a065d9fcba66a464881 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b36511bc7e22fc6a9e5c360c7799fc6d = $(`<div id="html_b36511bc7e22fc6a9e5c360c7799fc6d" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>MAKERBOT 3D PRINTER</strong></h4><strong>Brand</strong>	: Makerbot<br><strong>Type</strong>	: 3D_Printer<br><strong>Sub Type 1</strong>	: Fdm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 2<br><strong>Facility</strong>	: Gearbox Pan African Network<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_6e55f7ba92c62a065d9fcba66a464881.setContent(html_b36511bc7e22fc6a9e5c360c7799fc6d);
+            
+        
+
+        marker_3475e9f5475e74ad0f40d4cca2097b2a.bindPopup(popup_6e55f7ba92c62a065d9fcba66a464881)
+        ;
+
+        
+    
+    
+            var marker_a7afa81c7b0b4485d468cc7d81c914a1 = L.marker(
+                [6.672933, -1.54567],
+                {}
+            ).addTo(feature_group_sub_group_4f55dac2a455cd12234544e8212b9b73);
+        
+    
+            var div_icon_ef9526aa7515d631e1d9ee940baa15b9 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #7F3C8D;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_a7afa81c7b0b4485d468cc7d81c914a1.setIcon(div_icon_ef9526aa7515d631e1d9ee940baa15b9);
+        
+    
+        var popup_1b45a50db03247d021fa0d3d4693e13c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0d42922ba59b8bcf97df23376b5efab7 = $(`<div id="html_0d42922ba59b8bcf97df23376b5efab7" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #7F3C8D;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>3D PRINTER</strong></h4><strong>Type</strong>	: 3D_Printer<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Triple Dimension<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_1b45a50db03247d021fa0d3d4693e13c.setContent(html_0d42922ba59b8bcf97df23376b5efab7);
+            
+        
+
+        marker_a7afa81c7b0b4485d468cc7d81c914a1.bindPopup(popup_1b45a50db03247d021fa0d3d4693e13c)
+        ;
+
+        
+    
+    
+            var feature_group_sub_group_05acfe268f8f829acdc5980bc93c1a64 = L.featureGroup.subGroup(
+                marker_cluster_bfafba3d76882135a98b5546ede9cf49
+            );
+            feature_group_sub_group_05acfe268f8f829acdc5980bc93c1a64.addTo(map_8e9ada6adf309174d2dc5247bf2c604b);
+        
+    
+            var marker_ee65152c99a22d82c4dc899ce14313c4 = L.marker(
+                [5.652746, -0.163267],
+                {}
+            ).addTo(feature_group_sub_group_05acfe268f8f829acdc5980bc93c1a64);
+        
+    
+            var div_icon_a294d20ce380f1d0ecfb103f856c09a2 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #11A579;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_ee65152c99a22d82c4dc899ce14313c4.setIcon(div_icon_a294d20ce380f1d0ecfb103f856c09a2);
+        
+    
+        var popup_ba68ada2a6bed12650add2ad79745922 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b1a2a4c1e7d593ec745277ff2c3ce3d7 = $(`<div id="html_b1a2a4c1e7d593ec745277ff2c3ce3d7" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #11A579;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>LASER ENGRAVING</strong></h4><strong>Type</strong>	: Laser<br><strong>Sub Type 1</strong>	: Engraver<br><strong>Info</strong>	: Metal,Wood And Acrylic Cutting And Engraving, 1630Mm X 1150Mm X 800Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Dti Makerspace<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_ba68ada2a6bed12650add2ad79745922.setContent(html_b1a2a4c1e7d593ec745277ff2c3ce3d7);
+            
+        
+
+        marker_ee65152c99a22d82c4dc899ce14313c4.bindPopup(popup_ba68ada2a6bed12650add2ad79745922)
+        ;
+
+        
+    
+    
+            var marker_262b905ab330cdf4da950d0d0c9d7446 = L.marker(
+                [-0.139594, 34.795725],
+                {}
+            ).addTo(feature_group_sub_group_05acfe268f8f829acdc5980bc93c1a64);
+        
+    
+            var div_icon_1dc89f6b6da02ae96642207a44eb3b58 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #11A579;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_262b905ab330cdf4da950d0d0c9d7446.setIcon(div_icon_1dc89f6b6da02ae96642207a44eb3b58);
+        
+    
+        var popup_fcadca9ff4ecfddba921679c6706df8c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_33ca334275d91cacbb2d910b6c74e228 = $(`<div id="html_33ca334275d91cacbb2d910b6c74e228" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #11A579;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>LASER CUTTER</strong></h4><strong>Type</strong>	: Laser<br><strong>Sub Type 1</strong>	: Cutter<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Fablab Winam<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_fcadca9ff4ecfddba921679c6706df8c.setContent(html_33ca334275d91cacbb2d910b6c74e228);
+            
+        
+
+        marker_262b905ab330cdf4da950d0d0c9d7446.bindPopup(popup_fcadca9ff4ecfddba921679c6706df8c)
+        ;
+
+        
+    
+    
+            var marker_7169ed832c18fe7893959f99f92603e5 = L.marker(
+                [-2.193901, 40.817695],
+                {}
+            ).addTo(feature_group_sub_group_05acfe268f8f829acdc5980bc93c1a64);
+        
+    
+            var div_icon_1cc9b550227e3c0da46c9d3dd41ca60c = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #11A579;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_7169ed832c18fe7893959f99f92603e5.setIcon(div_icon_1cc9b550227e3c0da46c9d3dd41ca60c);
+        
+    
+        var popup_6031b6d33d094f0e5db5f4b81c0f9865 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_849f10002aefce7dc7e30e1a03f9917c = $(`<div id="html_849f10002aefce7dc7e30e1a03f9917c" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #11A579;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>MINI24 ENGRAVER</strong></h4><strong>Brand</strong>	: Epilog<br><strong>Type</strong>	: Laser<br><strong>Sub Type 1</strong>	: Engraver<br><strong>Info</strong>	: 40Watt Co2 Laser With A  24" X 12" Vector Grit. <br><strong>X Travel</strong>	: 24In<br><strong>Y Travel</strong>	: 12In<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Iome254<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_6031b6d33d094f0e5db5f4b81c0f9865.setContent(html_849f10002aefce7dc7e30e1a03f9917c);
+            
+        
+
+        marker_7169ed832c18fe7893959f99f92603e5.bindPopup(popup_6031b6d33d094f0e5db5f4b81c0f9865)
+        ;
+
+        
+    
+    
+            var marker_bc6847c8ecee349d4d3428564374cc02 = L.marker(
+                [6.69506, -1.549389],
+                {}
+            ).addTo(feature_group_sub_group_05acfe268f8f829acdc5980bc93c1a64);
+        
+    
+            var div_icon_8c250f2c5cac0cddebbd10bcc775d510 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #11A579;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_bc6847c8ecee349d4d3428564374cc02.setIcon(div_icon_8c250f2c5cac0cddebbd10bcc775d510);
+        
+    
+        var popup_c36f61f79655556c09aad46fe47b6307 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c45066490cba64a3a60c7ff695b03e91 = $(`<div id="html_c45066490cba64a3a60c7ff695b03e91" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #11A579;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>LASER CUTTING MACHINE</strong></h4><strong>Type</strong>	: Laser<br><strong>Sub Type 1</strong>	: Cutter<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 2<br><strong>Facility</strong>	: Kumasi Hive Makerspace<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_c36f61f79655556c09aad46fe47b6307.setContent(html_c45066490cba64a3a60c7ff695b03e91);
+            
+        
+
+        marker_bc6847c8ecee349d4d3428564374cc02.bindPopup(popup_c36f61f79655556c09aad46fe47b6307)
+        ;
+
+        
+    
+    
+            var marker_081b1c80eae6dcf1fd03efdc14dc4039 = L.marker(
+                [-29.820087, 31.027731],
+                {}
+            ).addTo(feature_group_sub_group_05acfe268f8f829acdc5980bc93c1a64);
+        
+    
+            var div_icon_57c16958a1a44a512b55027823957069 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #11A579;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_081b1c80eae6dcf1fd03efdc14dc4039.setIcon(div_icon_57c16958a1a44a512b55027823957069);
+        
+    
+        var popup_2446eb0d8c0bfffac3fcfab647940a95 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7ae8fdb277fdcf1ccdf34a49e93b91f1 = $(`<div id="html_7ae8fdb277fdcf1ccdf34a49e93b91f1" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #11A579;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>PERFECT LASER PLT-1390 MACHINE</strong></h4><strong>Brand</strong>	: Perfect Laser<br><strong>Type</strong>	: Laser<br><strong>Sub Type 1</strong>	: Cutter<br><strong>X Travel</strong>	: 1300Mm<br><strong>Y Travel</strong>	: 900Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: The Makerspace Foundation<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_2446eb0d8c0bfffac3fcfab647940a95.setContent(html_7ae8fdb277fdcf1ccdf34a49e93b91f1);
+            
+        
+
+        marker_081b1c80eae6dcf1fd03efdc14dc4039.bindPopup(popup_2446eb0d8c0bfffac3fcfab647940a95)
+        ;
+
+        
+    
+    
+            var marker_71cf5ebd6b96a0122cadfa0c481f2480 = L.marker(
+                [-29.820087, 31.027731],
+                {}
+            ).addTo(feature_group_sub_group_05acfe268f8f829acdc5980bc93c1a64);
+        
+    
+            var div_icon_c663c6f1febee5a9ecaa7cb9511468e3 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #11A579;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_71cf5ebd6b96a0122cadfa0c481f2480.setIcon(div_icon_c663c6f1febee5a9ecaa7cb9511468e3);
+        
+    
+        var popup_7930c8ff471f287b5e7a24eb553f4c6d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a9d9669f5baa8c61c0ee96369e4de6fb = $(`<div id="html_a9d9669f5baa8c61c0ee96369e4de6fb" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #11A579;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>BEYOND LASER </strong></h4><strong>Brand</strong>	: Beyond<br><strong>Type</strong>	: Laser<br><strong>Sub Type 1</strong>	: Cutter<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: The Makerspace Foundation<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_7930c8ff471f287b5e7a24eb553f4c6d.setContent(html_a9d9669f5baa8c61c0ee96369e4de6fb);
+            
+        
+
+        marker_71cf5ebd6b96a0122cadfa0c481f2480.bindPopup(popup_7930c8ff471f287b5e7a24eb553f4c6d)
+        ;
+
+        
+    
+    
+            var marker_2ca152e984be310cb970f2f6f4cd9dcd = L.marker(
+                [-26.194575, 28.03189],
+                {}
+            ).addTo(feature_group_sub_group_05acfe268f8f829acdc5980bc93c1a64);
+        
+    
+            var div_icon_6320734d1af8e158b79e64ade909fca5 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #11A579;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_2ca152e984be310cb970f2f6f4cd9dcd.setIcon(div_icon_6320734d1af8e158b79e64ade909fca5);
+        
+    
+        var popup_c739f1a1b3a5605727774a1263cbcfca = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4f6c95c458ac6ee138218d9d7fa3fa08 = $(`<div id="html_4f6c95c458ac6ee138218d9d7fa3fa08" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #11A579;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>LASER CUTTER (PERFECT LASER PLT-6040; 600 X 400MM; 80W CO2)</strong></h4><strong>Brand</strong>	: Perfect Laser<br><strong>Type</strong>	: Laser<br><strong>Sub Type 1</strong>	: Cutter<br><strong>Info</strong>	: 201804100216.00<br><strong>X Travel</strong>	: 600Mm<br><strong>Y Travel</strong>	: 400Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Tmg Makerspace<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_c739f1a1b3a5605727774a1263cbcfca.setContent(html_4f6c95c458ac6ee138218d9d7fa3fa08);
+            
+        
+
+        marker_2ca152e984be310cb970f2f6f4cd9dcd.bindPopup(popup_c739f1a1b3a5605727774a1263cbcfca)
+        ;
+
+        
+    
+    
+            var marker_50b01d6664044098249ff339f8cec325 = L.marker(
+                [-26.194575, 28.03189],
+                {}
+            ).addTo(feature_group_sub_group_05acfe268f8f829acdc5980bc93c1a64);
+        
+    
+            var div_icon_848c34b2437dedda3032224bfd5e796d = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #11A579;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_50b01d6664044098249ff339f8cec325.setIcon(div_icon_848c34b2437dedda3032224bfd5e796d);
+        
+    
+        var popup_087a5cd81c943b3fd10d452b8aa5b971 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c99b84085f0139085fcad71b1a5e2713 = $(`<div id="html_c99b84085f0139085fcad71b1a5e2713" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #11A579;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>LASER CUTTER (HS-Z1390; 1300 X 900MM; 80W CO2)</strong></h4><strong>Brand</strong>	: Hs<br><strong>Type</strong>	: Laser<br><strong>Sub Type 1</strong>	: Cutter<br><strong>Info</strong>	: 919139013791.00<br><strong>X Travel</strong>	: 1300Mm<br><strong>Y Travel</strong>	: 900Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Tmg Makerspace<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_087a5cd81c943b3fd10d452b8aa5b971.setContent(html_c99b84085f0139085fcad71b1a5e2713);
+            
+        
+
+        marker_50b01d6664044098249ff339f8cec325.bindPopup(popup_087a5cd81c943b3fd10d452b8aa5b971)
+        ;
+
+        
+    
+    
+            var marker_2a654c211bf2a35fe4dda32f034a6863 = L.marker(
+                [-26.194575, 28.03189],
+                {}
+            ).addTo(feature_group_sub_group_05acfe268f8f829acdc5980bc93c1a64);
+        
+    
+            var div_icon_401a52428990fe45bc9583992d5a0643 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #11A579;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_2a654c211bf2a35fe4dda32f034a6863.setIcon(div_icon_401a52428990fe45bc9583992d5a0643);
+        
+    
+        var popup_00798f14c0dd731f26ac755fe7f272fd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c5306c25e755a964f244d292880e2fca = $(`<div id="html_c5306c25e755a964f244d292880e2fca" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #11A579;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>LASER CUTTER (ORION SH-G460; 600 X 400MM; 60W CO2)</strong></h4><strong>Brand</strong>	: Orion<br><strong>Type</strong>	: Laser<br><strong>Sub Type 1</strong>	: Cutter<br><strong>Info</strong>	: Bgt129041<br><strong>X Travel</strong>	: 600Mm<br><strong>Y Travel</strong>	: 400Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Tmg Makerspace<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_00798f14c0dd731f26ac755fe7f272fd.setContent(html_c5306c25e755a964f244d292880e2fca);
+            
+        
+
+        marker_2a654c211bf2a35fe4dda32f034a6863.bindPopup(popup_00798f14c0dd731f26ac755fe7f272fd)
+        ;
+
+        
+    
+    
+            var marker_5444eeb83bf1a1796ac04778e9db9514 = L.marker(
+                [-1.303673, 36.838525],
+                {}
+            ).addTo(feature_group_sub_group_05acfe268f8f829acdc5980bc93c1a64);
+        
+    
+            var div_icon_6d006e912ce41dd6fb6ac2e49497d750 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #11A579;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_5444eeb83bf1a1796ac04778e9db9514.setIcon(div_icon_6d006e912ce41dd6fb6ac2e49497d750);
+        
+    
+        var popup_98f8bdaff80a334b442a6673ae3bfcbc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c8e4fa30d887c406afc79daeed000bd4 = $(`<div id="html_c8e4fa30d887c406afc79daeed000bd4" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #11A579;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>FULL SPECTRUM 9060</strong></h4><strong>Type</strong>	: Laser<br><strong>Sub Type 1</strong>	: Cutter<br><strong>X Travel</strong>	: 900Mm<br><strong>Y Travel</strong>	: 600Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Gearbox Pan African Network<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_98f8bdaff80a334b442a6673ae3bfcbc.setContent(html_c8e4fa30d887c406afc79daeed000bd4);
+            
+        
+
+        marker_5444eeb83bf1a1796ac04778e9db9514.bindPopup(popup_98f8bdaff80a334b442a6673ae3bfcbc)
+        ;
+
+        
+    
+    
+            var marker_97d0d34f68bd5a42961c4c0718dc4fa2 = L.marker(
+                [6.672933, -1.54567],
+                {}
+            ).addTo(feature_group_sub_group_05acfe268f8f829acdc5980bc93c1a64);
+        
+    
+            var div_icon_6d58c2db92c3c91d67e0bb6c88bde52a = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #11A579;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_97d0d34f68bd5a42961c4c0718dc4fa2.setIcon(div_icon_6d58c2db92c3c91d67e0bb6c88bde52a);
+        
+    
+        var popup_664c71fe150fde4e5bfe2bcc5c93358e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c241e11237853a2b454e913c3509bad4 = $(`<div id="html_c241e11237853a2b454e913c3509bad4" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #11A579;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>LASER CUTTER</strong></h4><strong>Type</strong>	: Laser<br><strong>Sub Type 1</strong>	: Cutter<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Triple Dimension<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_664c71fe150fde4e5bfe2bcc5c93358e.setContent(html_c241e11237853a2b454e913c3509bad4);
+            
+        
+
+        marker_97d0d34f68bd5a42961c4c0718dc4fa2.bindPopup(popup_664c71fe150fde4e5bfe2bcc5c93358e)
+        ;
+
+        
+    
+    
+            var feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58 = L.featureGroup.subGroup(
+                marker_cluster_bfafba3d76882135a98b5546ede9cf49
+            );
+            feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58.addTo(map_8e9ada6adf309174d2dc5247bf2c604b);
+        
+    
+            var marker_0efc947ca7ce726b196ca0da3f35c303 = L.marker(
+                [5.652746, -0.163267],
+                {}
+            ).addTo(feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58);
+        
+    
+            var div_icon_587b6c5889af2b210b2992564f033f71 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #3969AC;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_0efc947ca7ce726b196ca0da3f35c303.setIcon(div_icon_587b6c5889af2b210b2992564f033f71);
+        
+    
+        var popup_6a7719edfe3fa4d0d3d631aaad65170e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_02566cc2078e6846c95ce67b05c48aee = $(`<div id="html_02566cc2078e6846c95ce67b05c48aee" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #3969AC;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>CNC LATHE</strong></h4><strong>Brand</strong>	: Noka<br><strong>Type</strong>	: Cnc<br><strong>Sub Type 1</strong>	: Lathe<br><strong>Info</strong>	: Metal And Wood Lathing, 762Mm X 508Mm X 381 Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Dti Makerspace<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_6a7719edfe3fa4d0d3d631aaad65170e.setContent(html_02566cc2078e6846c95ce67b05c48aee);
+            
+        
+
+        marker_0efc947ca7ce726b196ca0da3f35c303.bindPopup(popup_6a7719edfe3fa4d0d3d631aaad65170e)
+        ;
+
+        
+    
+    
+            var marker_eb4ae07ed605450cae5c15c8ea8b2051 = L.marker(
+                [5.652746, -0.163267],
+                {}
+            ).addTo(feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58);
+        
+    
+            var div_icon_be3e8822e1545049fea988738385999c = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #3969AC;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_eb4ae07ed605450cae5c15c8ea8b2051.setIcon(div_icon_be3e8822e1545049fea988738385999c);
+        
+    
+        var popup_0b02d9e9c3a2b567f940e4b46d5f9724 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_170fc9c66b3b4a618e35df9053b290b9 = $(`<div id="html_170fc9c66b3b4a618e35df9053b290b9" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #3969AC;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>CNC MILLING</strong></h4><strong>Brand</strong>	: Noka<br><strong>Type</strong>	: Cnc<br><strong>Sub Type 1</strong>	: Milling<br><strong>Info</strong>	: Metal And Wood Milling,  482.6 X 304.8 X 228.6 Mm<br><strong>X Travel</strong>	: 177.8 Mm<br><strong>Y Travel</strong>	: 101.6 Mm<br><strong>Z Travel</strong>	: 50.8 Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Dti Makerspace<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_0b02d9e9c3a2b567f940e4b46d5f9724.setContent(html_170fc9c66b3b4a618e35df9053b290b9);
+            
+        
+
+        marker_eb4ae07ed605450cae5c15c8ea8b2051.bindPopup(popup_0b02d9e9c3a2b567f940e4b46d5f9724)
+        ;
+
+        
+    
+    
+            var marker_050b5acb23a595f3352dc55eb1dca993 = L.marker(
+                [5.652746, -0.163267],
+                {}
+            ).addTo(feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58);
+        
+    
+            var div_icon_5dfc30b00a21a412c4f287e496473763 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #3969AC;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_050b5acb23a595f3352dc55eb1dca993.setIcon(div_icon_5dfc30b00a21a412c4f287e496473763);
+        
+    
+        var popup_b0d54b4739ae49f95d01a1d9824ea5c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4a7571c5daad23db4d73c5886586522a = $(`<div id="html_4a7571c5daad23db4d73c5886586522a" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #3969AC;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>PRESS BRAKE WC67K/Y</strong></h4><strong>Brand</strong>	: Noka<br><strong>Type</strong>	: Cnc<br><strong>Sub Type 1</strong>	: Metal_Sheet_Bending<br><strong>Info</strong>	: 3200Mm X 2000Mm X 26500Mm<br><strong>X Travel</strong>	: 355.6 Mm<br><strong>Y Travel</strong>	: 152.4 Mm<br><strong>Z Travel</strong>	: 152.4 Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Dti Makerspace<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_b0d54b4739ae49f95d01a1d9824ea5c1.setContent(html_4a7571c5daad23db4d73c5886586522a);
+            
+        
+
+        marker_050b5acb23a595f3352dc55eb1dca993.bindPopup(popup_b0d54b4739ae49f95d01a1d9824ea5c1)
+        ;
+
+        
+    
+    
+            var marker_f2e6e169dbb90e329f8b41c688e24031 = L.marker(
+                [-0.139594, 34.795725],
+                {}
+            ).addTo(feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58);
+        
+    
+            var div_icon_0d4f46bd245b11f7abe3fb28a4ebd23f = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #3969AC;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_f2e6e169dbb90e329f8b41c688e24031.setIcon(div_icon_0d4f46bd245b11f7abe3fb28a4ebd23f);
+        
+    
+        var popup_ef6b6aed91736eba0cd6fd9de137c09c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_48acbf96d59be24ff6eae3a72d696027 = $(`<div id="html_48acbf96d59be24ff6eae3a72d696027" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #3969AC;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>SRM 20</strong></h4><strong>Brand</strong>	: Roland<br><strong>Type</strong>	: Cnc<br><strong>Sub Type 1</strong>	: Milling<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Fablab Winam<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_ef6b6aed91736eba0cd6fd9de137c09c.setContent(html_48acbf96d59be24ff6eae3a72d696027);
+            
+        
+
+        marker_f2e6e169dbb90e329f8b41c688e24031.bindPopup(popup_ef6b6aed91736eba0cd6fd9de137c09c)
+        ;
+
+        
+    
+    
+            var marker_e0e9c6fb70667129ca20fe76896a6c33 = L.marker(
+                [-0.139594, 34.795725],
+                {}
+            ).addTo(feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58);
+        
+    
+            var div_icon_0c8c33ff515deeabc53b0f31985b6aa0 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #3969AC;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_e0e9c6fb70667129ca20fe76896a6c33.setIcon(div_icon_0c8c33ff515deeabc53b0f31985b6aa0);
+        
+    
+        var popup_ac7f7d660cb20235aa96ea4f5711082b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f819efa6d5aa77ef7f66e8639c0516f1 = $(`<div id="html_f819efa6d5aa77ef7f66e8639c0516f1" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #3969AC;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>ROUTER</strong></h4><strong>Type</strong>	: Cnc<br><strong>Sub Type 1</strong>	: Router<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Fablab Winam<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_ac7f7d660cb20235aa96ea4f5711082b.setContent(html_f819efa6d5aa77ef7f66e8639c0516f1);
+            
+        
+
+        marker_e0e9c6fb70667129ca20fe76896a6c33.bindPopup(popup_ac7f7d660cb20235aa96ea4f5711082b)
+        ;
+
+        
+    
+    
+            var marker_3d0d3a5c3e197a912f59c91b470d81cd = L.marker(
+                [-2.193901, 40.817695],
+                {}
+            ).addTo(feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58);
+        
+    
+            var div_icon_d78a98c78661e71ececfbd30ee0ba3fd = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #3969AC;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_3d0d3a5c3e197a912f59c91b470d81cd.setIcon(div_icon_d78a98c78661e71ececfbd30ee0ba3fd);
+        
+    
+        var popup_3206fa79e0bd1f4aa3e06c3cbd91e776 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d3b9c4e62f2cf3c3a831a645a2a9259b = $(`<div id="html_d3b9c4e62f2cf3c3a831a645a2a9259b" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #3969AC;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>CNC WOOD ROUTER</strong></h4><strong>Type</strong>	: Cnc<br><strong>Sub Type 1</strong>	: Router<br><strong>Info</strong>	: 1200 (X) * 2400 (Y) * 125 (Z) Mm Bed Size, Mach3 Control<br><strong>X Travel</strong>	: 1200Mm<br><strong>Y Travel</strong>	: 2400Mm<br><strong>Z Travel</strong>	: 125Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Iome254<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_3206fa79e0bd1f4aa3e06c3cbd91e776.setContent(html_d3b9c4e62f2cf3c3a831a645a2a9259b);
+            
+        
+
+        marker_3d0d3a5c3e197a912f59c91b470d81cd.bindPopup(popup_3206fa79e0bd1f4aa3e06c3cbd91e776)
+        ;
+
+        
+    
+    
+            var marker_fd8b10691d90afcea1a4cfe0ec9be071 = L.marker(
+                [-2.193901, 40.817695],
+                {}
+            ).addTo(feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58);
+        
+    
+            var div_icon_670bd048cc93469a078b740e3ae6d5cc = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #3969AC;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_fd8b10691d90afcea1a4cfe0ec9be071.setIcon(div_icon_670bd048cc93469a078b740e3ae6d5cc);
+        
+    
+        var popup_18926ea61e6c8708f05b4a4dd43ccfd5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9b0ae14f7a322c5231ed4350b2845088 = $(`<div id="html_9b0ae14f7a322c5231ed4350b2845088" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #3969AC;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong> CNC PLASMA CUTTER</strong></h4><strong>Type</strong>	: Cnc<br><strong>Sub Type 1</strong>	: Plasma<br><strong>Info</strong>	: Powermax45Xp, Mach3 Control<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Iome254<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_18926ea61e6c8708f05b4a4dd43ccfd5.setContent(html_9b0ae14f7a322c5231ed4350b2845088);
+            
+        
+
+        marker_fd8b10691d90afcea1a4cfe0ec9be071.bindPopup(popup_18926ea61e6c8708f05b4a4dd43ccfd5)
+        ;
+
+        
+    
+    
+            var marker_54959577b7dbee2c4cc4bd0ae2b4dfbc = L.marker(
+                [-2.193901, 40.817695],
+                {}
+            ).addTo(feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58);
+        
+    
+            var div_icon_da48b7428c28ddaa90e58fcbcfacd1f5 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #3969AC;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_54959577b7dbee2c4cc4bd0ae2b4dfbc.setIcon(div_icon_da48b7428c28ddaa90e58fcbcfacd1f5);
+        
+    
+        var popup_fe4e3550b6695561b5151cfbcafe9336 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1539e9fcff5bd961b1f6c9ed62fcc79f = $(`<div id="html_1539e9fcff5bd961b1f6c9ed62fcc79f" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #3969AC;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong> SHAPER ORIGIN WORKSTATION</strong></h4><strong>Brand</strong>	: Shaper<br><strong>Type</strong>	: Cnc<br><strong>Sub Type 1</strong>	: Router<br><strong>Info</strong>	: 11.75In X 7.75In X 13.75In Machine Size, Sm-1 Spidle (Variable Speed -10,000 - 26,000 Rpm), 43Mm Max Z-Axis With Automated Touch Off Sensor, 20.3 X 18.3 X 9.8 Inches Shaper Origin Workstation<br><strong>X Travel</strong>	: 20.3In<br><strong>Y Travel</strong>	: 18.3In<br><strong>Z Travel</strong>	: 43Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Iome254<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_fe4e3550b6695561b5151cfbcafe9336.setContent(html_1539e9fcff5bd961b1f6c9ed62fcc79f);
+            
+        
+
+        marker_54959577b7dbee2c4cc4bd0ae2b4dfbc.bindPopup(popup_fe4e3550b6695561b5151cfbcafe9336)
+        ;
+
+        
+    
+    
+            var marker_50d9f005cc521b749c65ae19e5b6416e = L.marker(
+                [-2.193901, 40.817695],
+                {}
+            ).addTo(feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58);
+        
+    
+            var div_icon_1d3bed700fe5d613b57ef15978b8e78e = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #3969AC;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_50d9f005cc521b749c65ae19e5b6416e.setIcon(div_icon_1d3bed700fe5d613b57ef15978b8e78e);
+        
+    
+        var popup_7027ee6e204ee84e6231659a0f602a35 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fa8d792b9ecd7a6a00d9c5a1ef004cd4 = $(`<div id="html_fa8d792b9ecd7a6a00d9c5a1ef004cd4" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #3969AC;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>MODELA MDX-50 </strong></h4><strong>Brand</strong>	: Roland<br><strong>Type</strong>	: Cnc<br><strong>Sub Type 1</strong>	: Router<br><strong>X Travel</strong>	: 400Mm<br><strong>Y Travel</strong>	: 305Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Iome254<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_7027ee6e204ee84e6231659a0f602a35.setContent(html_fa8d792b9ecd7a6a00d9c5a1ef004cd4);
+            
+        
+
+        marker_50d9f005cc521b749c65ae19e5b6416e.bindPopup(popup_7027ee6e204ee84e6231659a0f602a35)
+        ;
+
+        
+    
+    
+            var marker_69bb6a921ecb6bf9e5ca2b388c418dd3 = L.marker(
+                [-2.193901, 40.817695],
+                {}
+            ).addTo(feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58);
+        
+    
+            var div_icon_242a14404cd251e7607c465b8d3faefd = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #3969AC;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_69bb6a921ecb6bf9e5ca2b388c418dd3.setIcon(div_icon_242a14404cd251e7607c465b8d3faefd);
+        
+    
+        var popup_d07113e9fefdbefcb79a1aadfb84950c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2f0c45ac21f6c11b76f63c2e0733a92 = $(`<div id="html_c2f0c45ac21f6c11b76f63c2e0733a92" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #3969AC;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>DESKTOP CNC</strong></h4><strong>Brand</strong>	: Genmitsu<br><strong>Type</strong>	: Cnc<br><strong>Sub Type 1</strong>	: Router<br><strong>Info</strong>	: 3018-Pro Cnc Router, 300 X 180 X 45 Mm(11.8 X 7.1 X 1.8”) Work Area<br><strong>X Travel</strong>	: 300Mm<br><strong>Y Travel</strong>	: 180Mm<br><strong>Z Travel</strong>	: 45Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Iome254<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_d07113e9fefdbefcb79a1aadfb84950c.setContent(html_c2f0c45ac21f6c11b76f63c2e0733a92);
+            
+        
+
+        marker_69bb6a921ecb6bf9e5ca2b388c418dd3.bindPopup(popup_d07113e9fefdbefcb79a1aadfb84950c)
+        ;
+
+        
+    
+    
+            var marker_b5ed8ec51df86ad37d3dec40b5356b9e = L.marker(
+                [6.69506, -1.549389],
+                {}
+            ).addTo(feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58);
+        
+    
+            var div_icon_e808d096047eb0cde6fdb0d9a19f96cb = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #3969AC;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_b5ed8ec51df86ad37d3dec40b5356b9e.setIcon(div_icon_e808d096047eb0cde6fdb0d9a19f96cb);
+        
+    
+        var popup_5399ed8487d79b4fc9172af5f7370131 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3fba6b4b37280972909e62caa0928935 = $(`<div id="html_3fba6b4b37280972909e62caa0928935" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #3969AC;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>CNC PLASMA CUTTER</strong></h4><strong>Type</strong>	: Cnc<br><strong>Sub Type 1</strong>	: Plasma<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Kumasi Hive Makerspace<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_5399ed8487d79b4fc9172af5f7370131.setContent(html_3fba6b4b37280972909e62caa0928935);
+            
+        
+
+        marker_b5ed8ec51df86ad37d3dec40b5356b9e.bindPopup(popup_5399ed8487d79b4fc9172af5f7370131)
+        ;
+
+        
+    
+    
+            var marker_958f2c90c940932cbca0466178a708f2 = L.marker(
+                [6.69506, -1.549389],
+                {}
+            ).addTo(feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58);
+        
+    
+            var div_icon_a3f0fa91d3f5c5e25112e066f60d6e3a = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #3969AC;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_958f2c90c940932cbca0466178a708f2.setIcon(div_icon_a3f0fa91d3f5c5e25112e066f60d6e3a);
+        
+    
+        var popup_b2eabce5e3e85b00250c2e7d4c199fe6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_63b3c18c4eee8e4e44915d8a7a1dcffd = $(`<div id="html_63b3c18c4eee8e4e44915d8a7a1dcffd" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #3969AC;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>CNC WOOD ROUTER</strong></h4><strong>Type</strong>	: Cnc<br><strong>Sub Type 1</strong>	: Router<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Kumasi Hive Makerspace<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_b2eabce5e3e85b00250c2e7d4c199fe6.setContent(html_63b3c18c4eee8e4e44915d8a7a1dcffd);
+            
+        
+
+        marker_958f2c90c940932cbca0466178a708f2.bindPopup(popup_b2eabce5e3e85b00250c2e7d4c199fe6)
+        ;
+
+        
+    
+    
+            var marker_89505bfea568f6c9c85c2363c5e4fedd = L.marker(
+                [6.69506, -1.549389],
+                {}
+            ).addTo(feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58);
+        
+    
+            var div_icon_b03a6edea890ceb9b8c7f7858d11159b = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #3969AC;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_89505bfea568f6c9c85c2363c5e4fedd.setIcon(div_icon_b03a6edea890ceb9b8c7f7858d11159b);
+        
+    
+        var popup_02cb4af9905c6134cf5fc57495d1f3ff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b3a443c7a3f499a3935f03c80d6f6bbe = $(`<div id="html_b3a443c7a3f499a3935f03c80d6f6bbe" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #3969AC;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>CNC LATHE MACHINE</strong></h4><strong>Type</strong>	: Cnc<br><strong>Sub Type 1</strong>	: Lathe<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Kumasi Hive Makerspace<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_02cb4af9905c6134cf5fc57495d1f3ff.setContent(html_b3a443c7a3f499a3935f03c80d6f6bbe);
+            
+        
+
+        marker_89505bfea568f6c9c85c2363c5e4fedd.bindPopup(popup_02cb4af9905c6134cf5fc57495d1f3ff)
+        ;
+
+        
+    
+    
+            var marker_76d4c4e02c78e7519274b62e4e95c0dd = L.marker(
+                [-29.820087, 31.027731],
+                {}
+            ).addTo(feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58);
+        
+    
+            var div_icon_ca3b4ef0bddce6ce933274f3d206cedc = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #3969AC;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_76d4c4e02c78e7519274b62e4e95c0dd.setIcon(div_icon_ca3b4ef0bddce6ce933274f3d206cedc);
+        
+    
+        var popup_ce2e8ab18465fa0f2c7e40efe690dbd4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1e92d99a4010eef7782cd9810f6ee156 = $(`<div id="html_1e92d99a4010eef7782cd9810f6ee156" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #3969AC;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>CNC MACHINE</strong></h4><strong>Type</strong>	: Cnc<br><strong>Sub Type 1</strong>	: Router<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: The Makerspace Foundation<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_ce2e8ab18465fa0f2c7e40efe690dbd4.setContent(html_1e92d99a4010eef7782cd9810f6ee156);
+            
+        
+
+        marker_76d4c4e02c78e7519274b62e4e95c0dd.bindPopup(popup_ce2e8ab18465fa0f2c7e40efe690dbd4)
+        ;
+
+        
+    
+    
+            var marker_0b0a2c302a9ecd8af5e530840715fe04 = L.marker(
+                [-1.303673, 36.838525],
+                {}
+            ).addTo(feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58);
+        
+    
+            var div_icon_a25ef4fb1ad1e02e96237d5f58f43944 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #3969AC;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_0b0a2c302a9ecd8af5e530840715fe04.setIcon(div_icon_a25ef4fb1ad1e02e96237d5f58f43944);
+        
+    
+        var popup_b5460031b89c898095784a9babcd2a8d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b17a82092dc46fce8ec1cfe6c907f47 = $(`<div id="html_4b17a82092dc46fce8ec1cfe6c907f47" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #3969AC;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>CNC PLASMA CUTTER</strong></h4><strong>Type</strong>	: Cnc<br><strong>Sub Type 1</strong>	: Cutter<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Gearbox Pan African Network<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_b5460031b89c898095784a9babcd2a8d.setContent(html_4b17a82092dc46fce8ec1cfe6c907f47);
+            
+        
+
+        marker_0b0a2c302a9ecd8af5e530840715fe04.bindPopup(popup_b5460031b89c898095784a9babcd2a8d)
+        ;
+
+        
+    
+    
+            var marker_b2029e336fde954aca7cadbc57fdaf23 = L.marker(
+                [-1.303673, 36.838525],
+                {}
+            ).addTo(feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58);
+        
+    
+            var div_icon_8ed6b5d9c79833c6b6a58417d1b5fcfe = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #3969AC;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_b2029e336fde954aca7cadbc57fdaf23.setIcon(div_icon_8ed6b5d9c79833c6b6a58417d1b5fcfe);
+        
+    
+        var popup_57ea5727ab36f9c0936498de409757b3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_14fd0c0eb0b19c3dede7d10b1bed4a9e = $(`<div id="html_14fd0c0eb0b19c3dede7d10b1bed4a9e" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #3969AC;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>CNC WOOD ROUTER</strong></h4><strong>Type</strong>	: Cnc<br><strong>Sub Type 1</strong>	: Router<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Gearbox Pan African Network<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_57ea5727ab36f9c0936498de409757b3.setContent(html_14fd0c0eb0b19c3dede7d10b1bed4a9e);
+            
+        
+
+        marker_b2029e336fde954aca7cadbc57fdaf23.bindPopup(popup_57ea5727ab36f9c0936498de409757b3)
+        ;
+
+        
+    
+    
+            var marker_7049f997ef9191432f092b90ab4ac500 = L.marker(
+                [-1.303673, 36.838525],
+                {}
+            ).addTo(feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58);
+        
+    
+            var div_icon_447f04eed42ad64c777d1e4a101672bc = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #3969AC;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_7049f997ef9191432f092b90ab4ac500.setIcon(div_icon_447f04eed42ad64c777d1e4a101672bc);
+        
+    
+        var popup_959780d8b9908e0f9593d33adbc6b1ce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f81edefe73482ca41dc30e289f2c53b1 = $(`<div id="html_f81edefe73482ca41dc30e289f2c53b1" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #3969AC;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>TORMACH PCNC 1100</strong></h4><strong>Brand</strong>	: Tormach<br><strong>Type</strong>	: Cnc<br><strong>Sub Type 1</strong>	: Milling<br><strong>X Travel</strong>	: 18In<br><strong>Y Travel</strong>	: 11In<br><strong>Z Travel</strong>	: 16.25In<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Gearbox Pan African Network<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_959780d8b9908e0f9593d33adbc6b1ce.setContent(html_f81edefe73482ca41dc30e289f2c53b1);
+            
+        
+
+        marker_7049f997ef9191432f092b90ab4ac500.bindPopup(popup_959780d8b9908e0f9593d33adbc6b1ce)
+        ;
+
+        
+    
+    
+            var marker_fa43d04f6d859b57d078aea5adf348c9 = L.marker(
+                [6.672933, -1.54567],
+                {}
+            ).addTo(feature_group_sub_group_9989a2caf77cc3ae894fc3a271d47f58);
+        
+    
+            var div_icon_37d6d69ca0b2558362f043f457a93aa6 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #3969AC;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_fa43d04f6d859b57d078aea5adf348c9.setIcon(div_icon_37d6d69ca0b2558362f043f457a93aa6);
+        
+    
+        var popup_2cab441956bb4c9df4cb9f67ee711e51 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b758c2a9dbcf609e7259852bf63fe3ff = $(`<div id="html_b758c2a9dbcf609e7259852bf63fe3ff" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #3969AC;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>CNC MILL</strong></h4><strong>Type</strong>	: Cnc<br><strong>Sub Type 1</strong>	: Milling<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Triple Dimension<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_2cab441956bb4c9df4cb9f67ee711e51.setContent(html_b758c2a9dbcf609e7259852bf63fe3ff);
+            
+        
+
+        marker_fa43d04f6d859b57d078aea5adf348c9.bindPopup(popup_2cab441956bb4c9df4cb9f67ee711e51)
+        ;
+
+        
+    
+    
+            var feature_group_sub_group_d04a21d3f511908b588c3807580daab7 = L.featureGroup.subGroup(
+                marker_cluster_bfafba3d76882135a98b5546ede9cf49
+            );
+            feature_group_sub_group_d04a21d3f511908b588c3807580daab7.addTo(map_8e9ada6adf309174d2dc5247bf2c604b);
+        
+    
+            var marker_516ab9c34e1ba8a6fa7dbda8dcf6e961 = L.marker(
+                [-0.139594, 34.795725],
+                {}
+            ).addTo(feature_group_sub_group_d04a21d3f511908b588c3807580daab7);
+        
+    
+            var div_icon_0754a29635bfadaf4fbf64066171e476 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #F2B701;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_516ab9c34e1ba8a6fa7dbda8dcf6e961.setIcon(div_icon_0754a29635bfadaf4fbf64066171e476);
+        
+    
+        var popup_92fc83809100738cfe6d1290f08e04f4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b9e58f0dc450893ca26630bc81815f26 = $(`<div id="html_b9e58f0dc450893ca26630bc81815f26" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #F2B701;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>VINYL CUTTER</strong></h4><strong>Brand</strong>	: Roland<br><strong>Type</strong>	: Vinyl<br><strong>Sub Type 1</strong>	: Cutter<br><strong>Info</strong>	: Vinyl<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Fablab Winam<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_92fc83809100738cfe6d1290f08e04f4.setContent(html_b9e58f0dc450893ca26630bc81815f26);
+            
+        
+
+        marker_516ab9c34e1ba8a6fa7dbda8dcf6e961.bindPopup(popup_92fc83809100738cfe6d1290f08e04f4)
+        ;
+
+        
+    
+    
+            var marker_284a485518cafbb53be70f7ce73e3b13 = L.marker(
+                [-2.193901, 40.817695],
+                {}
+            ).addTo(feature_group_sub_group_d04a21d3f511908b588c3807580daab7);
+        
+    
+            var div_icon_1678793b573f07eb57363cbf2a61d549 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #F2B701;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_284a485518cafbb53be70f7ce73e3b13.setIcon(div_icon_1678793b573f07eb57363cbf2a61d549);
+        
+    
+        var popup_76e2d67c201f6b7fcefa7963f04eb2c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d2ce0f0816e26f0a78b42f5cee97243d = $(`<div id="html_d2ce0f0816e26f0a78b42f5cee97243d" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #F2B701;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>VINYL  CUTTER</strong></h4><strong>Brand</strong>	: Yinghe<br><strong>Type</strong>	: Vinyl<br><strong>Sub Type 1</strong>	: Cutter<br><strong>Info</strong>	: Media Way: Floor Stand Main Board: High Speed Stepping Motor, Micro-Step Driver Maximum Cutting Width: 630Mm Interface: Usb/Serial Port, U-Disk Port Plotter Instruction: Dm-Pl/Hp-Gl Automatic Identification Noise At Work: ≤50 Db<br><strong>X Travel</strong>	: 630Mm<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Iome254<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_76e2d67c201f6b7fcefa7963f04eb2c5.setContent(html_d2ce0f0816e26f0a78b42f5cee97243d);
+            
+        
+
+        marker_284a485518cafbb53be70f7ce73e3b13.bindPopup(popup_76e2d67c201f6b7fcefa7963f04eb2c5)
+        ;
+
+        
+    
+    
+            var feature_group_sub_group_d64e99b575fe9958f08dc02046a1e95e = L.featureGroup.subGroup(
+                marker_cluster_bfafba3d76882135a98b5546ede9cf49
+            );
+            feature_group_sub_group_d64e99b575fe9958f08dc02046a1e95e.addTo(map_8e9ada6adf309174d2dc5247bf2c604b);
+        
+    
+            var marker_04b80f1ea2be6778cf399c9975a414ee = L.marker(
+                [-29.820087, 31.027731],
+                {}
+            ).addTo(feature_group_sub_group_d64e99b575fe9958f08dc02046a1e95e);
+        
+    
+            var div_icon_e4d8e8e127c5c51ad0e5f71d5ccfd283 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #E73F74;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_04b80f1ea2be6778cf399c9975a414ee.setIcon(div_icon_e4d8e8e127c5c51ad0e5f71d5ccfd283);
+        
+    
+        var popup_a4a9bee844b2fbda0057131f314c7103 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_59e32768de3c78cf7f795ef5b333d6c4 = $(`<div id="html_59e32768de3c78cf7f795ef5b333d6c4" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #E73F74;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>3D SCANNER </strong></h4><strong>Type</strong>	: 3D_Scanner<br><strong>Sub Type 1</strong>	: Handheld<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: The Makerspace Foundation<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_a4a9bee844b2fbda0057131f314c7103.setContent(html_59e32768de3c78cf7f795ef5b333d6c4);
+            
+        
+
+        marker_04b80f1ea2be6778cf399c9975a414ee.bindPopup(popup_a4a9bee844b2fbda0057131f314c7103)
+        ;
+
+        
+    
+    
+            var marker_b47854aed8f0df41f24b495507318da8 = L.marker(
+                [-29.820087, 31.027731],
+                {}
+            ).addTo(feature_group_sub_group_d64e99b575fe9958f08dc02046a1e95e);
+        
+    
+            var div_icon_c690ba7cc09701f52471c738bfb1be9b = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #E73F74;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_b47854aed8f0df41f24b495507318da8.setIcon(div_icon_c690ba7cc09701f52471c738bfb1be9b);
+        
+    
+        var popup_6e222500f9de61d34881267e9d11cc3f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b5b4430b7704adcdd084bc8c5a7da20f = $(`<div id="html_b5b4430b7704adcdd084bc8c5a7da20f" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #E73F74;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>REVEL POINT TURN TABLE</strong></h4><strong>Type</strong>	: 3D_Scanner<br><strong>Sub Type 1</strong>	: Turn_Table<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: The Makerspace Foundation<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_6e222500f9de61d34881267e9d11cc3f.setContent(html_b5b4430b7704adcdd084bc8c5a7da20f);
+            
+        
+
+        marker_b47854aed8f0df41f24b495507318da8.bindPopup(popup_6e222500f9de61d34881267e9d11cc3f)
+        ;
+
+        
+    
+    
+            var marker_d588359b2e1dbdd22dfaca5142763bda = L.marker(
+                [-1.303673, 36.838525],
+                {}
+            ).addTo(feature_group_sub_group_d64e99b575fe9958f08dc02046a1e95e);
+        
+    
+            var div_icon_57ab6f565a81b885562c14f357a777f8 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003cpolygon points=\"0,0 10,20 20,0\" style=\"fill: #E73F74;  fill-opacity: 1;\"\u003e\u003c/polygon\u003e\n    \u003c/svg\u003e\n    "});
+            marker_d588359b2e1dbdd22dfaca5142763bda.setIcon(div_icon_57ab6f565a81b885562c14f357a777f8);
+        
+    
+        var popup_596f672b8e5c060695e3011e406262d5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a9bc335f844ce1271ec96f9fee86079a = $(`<div id="html_a9bc335f844ce1271ec96f9fee86079a" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 150px;             }             .leaflet-popup-content-wrapper             {                 background-color: #E73F74;                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo_c {                 height: 30px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 20px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>     <div><p><h4><strong>3D LASER SCANNER </strong></h4><strong>Type</strong>	: 3D_Scanner<br><strong>Sub Type 1</strong>	: Laser<br><strong>Working</strong>	: True<br><strong>Approved</strong>	: True<br><strong>Qty</strong>	: 1<br><strong>Facility</strong>	: Gearbox Pan African Network<br></p><div class="ima_logo_c"></div></div></div>`)[0];
+                popup_596f672b8e5c060695e3011e406262d5.setContent(html_a9bc335f844ce1271ec96f9fee86079a);
+            
+        
+
+        marker_d588359b2e1dbdd22dfaca5142763bda.bindPopup(popup_596f672b8e5c060695e3011e406262d5)
+        ;
+
+        
+    
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": true, "position": "topleft", "title": "Full Screen", "titleCancel": "Exit Full Screen"}
+            ).addTo(map_8e9ada6adf309174d2dc5247bf2c604b);
+        
+    
+            var locate_control_b6354237ec75eefb91a9bf0c787cd1bd = L.control.locate(
+                {"zindex": 50}
+            ).addTo(map_8e9ada6adf309174d2dc5247bf2c604b);
+            
+        
+    
+            var marker_cluster_daaeb9918d6c0ba7f3c8a9c0ef1fec47 = L.markerClusterGroup(
+                {"spiderLegPolylineOptions": {"color": "#FFF", "opacity": 0.5, "weight": 0.5}}
+            );
+            marker_cluster_daaeb9918d6c0ba7f3c8a9c0ef1fec47.options.iconCreateFunction =
+                function(cluster) {
+    var iconSize = new L.Point(20 + cluster.getChildCount() / 2, 20 + cluster.getChildCount() / 2); // Adjust the size of the marker as needed
+    var text = cluster.getChildCount(); // Example text to display, you can modify this as per your requirement
+
+    var textX = iconSize.x / 2; // X-coordinate of the text
+    var textY = iconSize.y / 2; // Y-coordinate of the text
+
+    var rectWidth = iconSize.x; // Width of the rectangle
+    var rectHeight = iconSize.y; // Height of the rectangle
+    var rectCornerRadius = 2; // Rounded corner radius of the rectangle
+    var rectFill = 'rgba(239, 71, 111, 1)'; // Fill color of the rectangle
+
+    var svgContent = `<svg height="${iconSize.y + textY}" width="${iconSize.x + textX}" viewBox="0 0 ${iconSize.x + textX} ${iconSize.y + textY}" style="z-index:10000;">
+        <rect x="0" y="0" width="${rectWidth}" height="${rectHeight}" rx="${rectCornerRadius}" ry="${rectCornerRadius}" style="fill: ${rectFill};"></rect>
+        <text x="${textX}" y="${textY}" text-anchor="middle" alignment-baseline="middle" style="fill: white; font-size: 10px;">${text}</text>
+    </svg>`;
+
+    return L.divIcon({
+        html: svgContent,
+        className: 'marker-cluster',
+        iconSize: [iconSize.x + textX, iconSize.y + textY]
+    });
+};
+            map_8e9ada6adf309174d2dc5247bf2c604b.addLayer(marker_cluster_daaeb9918d6c0ba7f3c8a9c0ef1fec47);
+        
+    
+            var marker_eae435eb8a6a04bec7cf12853081791f = L.marker(
+                [5.652746, -0.163267],
+                {}
+            ).addTo(marker_cluster_daaeb9918d6c0ba7f3c8a9c0ef1fec47);
+        
+    
+            var div_icon_5079454b4e8721f8a0188a7682d30e70 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EF476F; fill-opacity: 1;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_eae435eb8a6a04bec7cf12853081791f.setIcon(div_icon_5079454b4e8721f8a0188a7682d30e70);
+        
+    
+        var popup_ded77addf793fe5a9f180a0927defeb8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_671a2727c31a15221c099a56c6ccb9f7 = $(`<div id="html_671a2727c31a15221c099a56c6ccb9f7" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 200px;                              }             .leaflet-popup-content-wrapper             {                 background-color: rgba(45, 46, 130, 0.85);                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo {                 height: 50px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 30px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>          <div><p><h4><strong>DTI MAKERSPACE</strong></h4><strong>Country</strong>	: <span style="float:right;">Ghana</span><br><strong>City</strong>	: <span style="float:right;">Accra</span><br><strong>Url</strong>	: <a target="_blank" href="https://dtiafrica.com/" style="float:right;">https://dtiafrica.com/</a><br><strong>Email</strong>	: <span style="float:right;">Melinawo.Vowotor@Dtiafrica.Edu.Gh</span><br><strong>Phone</strong>	: <span style="float:right;">(026) 685-8556</span><br><strong>Primary Contact</strong>	: <span style="float:right;">Melinawo Vowotor</span><br><strong>Share Inventory</strong>	: <span style="float:right;">False</span><br><strong>Data Source</strong>	: <span style="float:right;">Iopa</span><br><strong>Association</strong>	: <span style="float:right;">None</span><br><strong>Ima</strong>	: <span style="float:right;">True</span><br><strong>Latitude</strong>	: <span style="float:right;">5.652746</span><br><strong>Longitude</strong>	: <span style="float:right;">-0.163267</span><br><strong>Address</strong>	: <span style="float:right;">Precise</span><br><strong>Inventory File</strong>	: <span style="float:right;">True</span><br></p><div class="ima_logo"></div></div></div>`)[0];
+                popup_ded77addf793fe5a9f180a0927defeb8.setContent(html_671a2727c31a15221c099a56c6ccb9f7);
+            
+        
+
+        marker_eae435eb8a6a04bec7cf12853081791f.bindPopup(popup_ded77addf793fe5a9f180a0927defeb8)
+        ;
+
+        
+    
+    
+            var marker_e4a70caaebc7b286f224c9504885c6b8 = L.marker(
+                [-0.139594, 34.795725],
+                {}
+            ).addTo(marker_cluster_daaeb9918d6c0ba7f3c8a9c0ef1fec47);
+        
+    
+            var div_icon_8f8500c66ef2d2f2601426bcc973c555 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EF476F; fill-opacity: 1;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_e4a70caaebc7b286f224c9504885c6b8.setIcon(div_icon_8f8500c66ef2d2f2601426bcc973c555);
+        
+    
+        var popup_405376bd5312cfb495c83e483954d214 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_159dba8bc95837fbb2fa15deced287d0 = $(`<div id="html_159dba8bc95837fbb2fa15deced287d0" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 200px;                              }             .leaflet-popup-content-wrapper             {                 background-color: rgba(45, 46, 130, 0.85);                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo {                 height: 50px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 30px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>          <div><p><h4><strong>FABLAB WINAM</strong></h4><strong>Country</strong>	: <span style="float:right;">Kenya</span><br><strong>City</strong>	: <span style="float:right;">Kisumu</span><br><strong>Url</strong>	: <a target="_blank" href="https://fablabwinam.org/" style="float:right;">https://fablabwinam.org/</a><br><strong>Email</strong>	: <span style="float:right;">Info@Fablabwinam.Org</span><br><strong>Phone</strong>	: <span style="float:right;">+ 254 704 960 992</span><br><strong>Primary Contact</strong>	: <span style="float:right;">Martin Oloo</span><br><strong>Share Inventory</strong>	: <span style="float:right;">True</span><br><strong>Data Source</strong>	: <span style="float:right;">Iopa</span><br><strong>Association</strong>	: <span style="float:right;">None</span><br><strong>Ima</strong>	: <span style="float:right;">True</span><br><strong>Latitude</strong>	: <span style="float:right;">-0.139594</span><br><strong>Longitude</strong>	: <span style="float:right;">34.795725</span><br><strong>Address</strong>	: <span style="float:right;">Precise</span><br><strong>Inventory File</strong>	: <span style="float:right;">True</span><br></p><div class="ima_logo"></div></div></div>`)[0];
+                popup_405376bd5312cfb495c83e483954d214.setContent(html_159dba8bc95837fbb2fa15deced287d0);
+            
+        
+
+        marker_e4a70caaebc7b286f224c9504885c6b8.bindPopup(popup_405376bd5312cfb495c83e483954d214)
+        ;
+
+        
+    
+    
+            var marker_16f9396927138131dea4b40a02b76f3a = L.marker(
+                [-33.926652, 18.444082],
+                {}
+            ).addTo(marker_cluster_daaeb9918d6c0ba7f3c8a9c0ef1fec47);
+        
+    
+            var div_icon_39f7ab9d4df3e5a2277b9901fed6cf82 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EF476F; fill-opacity: 1;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_16f9396927138131dea4b40a02b76f3a.setIcon(div_icon_39f7ab9d4df3e5a2277b9901fed6cf82);
+        
+    
+        var popup_9b4910bac970a77554c84ed0a747e87f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f6a69c1e47acd391fd3e00a90e723786 = $(`<div id="html_f6a69c1e47acd391fd3e00a90e723786" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 200px;                              }             .leaflet-popup-content-wrapper             {                 background-color: rgba(45, 46, 130, 0.85);                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo {                 height: 50px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 30px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>          <div><p><h4><strong>FLAT ROCK STUDIO /M-CLUB</strong></h4><strong>Country</strong>	: <span style="float:right;">South Africa</span><br><strong>City</strong>	: <span style="float:right;">Kisumu</span><br><strong>Email</strong>	: <span style="float:right;">Handmadechange@Gmail.Com</span><br><strong>Phone</strong>	: <span style="float:right;">27761611260</span><br><strong>Primary Contact</strong>	: <span style="float:right;">Felix</span><br><strong>Share Inventory</strong>	: <span style="float:right;">False</span><br><strong>Data Source</strong>	: <span style="float:right;">Iopa</span><br><strong>Association</strong>	: <span style="float:right;">None</span><br><strong>Ima</strong>	: <span style="float:right;">True</span><br><strong>Latitude</strong>	: <span style="float:right;">-33.926652</span><br><strong>Longitude</strong>	: <span style="float:right;">18.444082</span><br><strong>Address</strong>	: <span style="float:right;">Precise</span><br><strong>Inventory File</strong>	: <span style="float:right;">False</span><br></p><div class="ima_logo"></div></div></div>`)[0];
+                popup_9b4910bac970a77554c84ed0a747e87f.setContent(html_f6a69c1e47acd391fd3e00a90e723786);
+            
+        
+
+        marker_16f9396927138131dea4b40a02b76f3a.bindPopup(popup_9b4910bac970a77554c84ed0a747e87f)
+        ;
+
+        
+    
+    
+            var marker_c1db148ee3bac9ed51032b97fa7474d5 = L.marker(
+                [-1.303673, 36.838525],
+                {}
+            ).addTo(marker_cluster_daaeb9918d6c0ba7f3c8a9c0ef1fec47);
+        
+    
+            var div_icon_49392ee4cd166e9fa20d432011a44d8a = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EF476F; fill-opacity: 1;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_c1db148ee3bac9ed51032b97fa7474d5.setIcon(div_icon_49392ee4cd166e9fa20d432011a44d8a);
+        
+    
+        var popup_c277fb54223ad688e3b1aea58bb6e07b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bdbdfba7739ce91a8bd29073b07d8eea = $(`<div id="html_bdbdfba7739ce91a8bd29073b07d8eea" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 200px;                              }             .leaflet-popup-content-wrapper             {                 background-color: rgba(45, 46, 130, 0.85);                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo {                 height: 50px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 30px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>          <div><p><h4><strong>GEARBOX PAN AFRICAN NETWORK</strong></h4><strong>Country</strong>	: <span style="float:right;">Kenya</span><br><strong>City</strong>	: <span style="float:right;">Nairobi</span><br><strong>Url</strong>	: <a target="_blank" href="https://www.gearbox.co.ke/" style="float:right;">https://www.gearbox.co.ke/</a><br><strong>Email</strong>	: <span style="float:right;">Info@Gearbox.Co.Ke</span><br><strong>Phone</strong>	: <span style="float:right;">(072) 592-2579, (+254)790 406 265</span><br><strong>Primary Contact</strong>	: <span style="float:right;">Mark</span><br><strong>Share Inventory</strong>	: <span style="float:right;">True</span><br><strong>Data Source</strong>	: <span style="float:right;">Iopa</span><br><strong>Association</strong>	: <span style="float:right;">None</span><br><strong>Ima</strong>	: <span style="float:right;">True</span><br><strong>Latitude</strong>	: <span style="float:right;">-1.303673</span><br><strong>Longitude</strong>	: <span style="float:right;">36.838525</span><br><strong>Address</strong>	: <span style="float:right;">Precise</span><br><strong>Inventory File</strong>	: <span style="float:right;">True</span><br></p><div class="ima_logo"></div></div></div>`)[0];
+                popup_c277fb54223ad688e3b1aea58bb6e07b.setContent(html_bdbdfba7739ce91a8bd29073b07d8eea);
+            
+        
+
+        marker_c1db148ee3bac9ed51032b97fa7474d5.bindPopup(popup_c277fb54223ad688e3b1aea58bb6e07b)
+        ;
+
+        
+    
+    
+            var marker_ca6a92e0dcc19fbec9d99b4dff9e8474 = L.marker(
+                [-2.193901, 40.817695],
+                {}
+            ).addTo(marker_cluster_daaeb9918d6c0ba7f3c8a9c0ef1fec47);
+        
+    
+            var div_icon_35d2f63edf8fc8f83197063a5a03741c = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EF476F; fill-opacity: 1;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_ca6a92e0dcc19fbec9d99b4dff9e8474.setIcon(div_icon_35d2f63edf8fc8f83197063a5a03741c);
+        
+    
+        var popup_3c8da1f9efd98f70b17936966398c7ec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_29944328c50e95f810a61308a84e0ec0 = $(`<div id="html_29944328c50e95f810a61308a84e0ec0" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 200px;                              }             .leaflet-popup-content-wrapper             {                 background-color: rgba(45, 46, 130, 0.85);                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo {                 height: 50px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 30px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>          <div><p><h4><strong>IOME254</strong></h4><strong>Country</strong>	: <span style="float:right;">Kenya</span><br><strong>City</strong>	: <span style="float:right;">Mombasa</span><br><strong>Url</strong>	: <a target="_blank" href="https://twitter.com/iome254" style="float:right;">https://twitter.com/iome254</a><br><strong>Email</strong>	: <span style="float:right;">Mugasia.Derrick@Redcross.Or.Ke</span><br><strong>Phone</strong>	: <span style="float:right;">2.55E+11</span><br><strong>Primary Contact</strong>	: <span style="float:right;">Derrick Mugasia</span><br><strong>Share Inventory</strong>	: <span style="float:right;">False</span><br><strong>Data Source</strong>	: <span style="float:right;">Iopa</span><br><strong>Association</strong>	: <span style="float:right;">None</span><br><strong>Ima</strong>	: <span style="float:right;">True</span><br><strong>Latitude</strong>	: <span style="float:right;">-2.193901</span><br><strong>Longitude</strong>	: <span style="float:right;">40.817695</span><br><strong>Address</strong>	: <span style="float:right;">Precise</span><br><strong>Inventory File</strong>	: <span style="float:right;">True</span><br></p><div class="ima_logo"></div></div></div>`)[0];
+                popup_3c8da1f9efd98f70b17936966398c7ec.setContent(html_29944328c50e95f810a61308a84e0ec0);
+            
+        
+
+        marker_ca6a92e0dcc19fbec9d99b4dff9e8474.bindPopup(popup_3c8da1f9efd98f70b17936966398c7ec)
+        ;
+
+        
+    
+    
+            var marker_398301c111826298eb08d26f9f23dffd = L.marker(
+                [6.69506, -1.549389],
+                {}
+            ).addTo(marker_cluster_daaeb9918d6c0ba7f3c8a9c0ef1fec47);
+        
+    
+            var div_icon_0c5f82cf1cea2f82a991c79cdcfbf795 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EF476F; fill-opacity: 1;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_398301c111826298eb08d26f9f23dffd.setIcon(div_icon_0c5f82cf1cea2f82a991c79cdcfbf795);
+        
+    
+        var popup_8734a03f8ed1a103992c28a903a47085 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b0a19ee34581221ea291326daae238bc = $(`<div id="html_b0a19ee34581221ea291326daae238bc" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 200px;                              }             .leaflet-popup-content-wrapper             {                 background-color: rgba(45, 46, 130, 0.85);                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo {                 height: 50px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 30px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>          <div><p><h4><strong>KUMASI HIVE MAKERSPACE</strong></h4><strong>Country</strong>	: <span style="float:right;">Ghana</span><br><strong>City</strong>	: <span style="float:right;">Kumasi</span><br><strong>Url</strong>	: <a target="_blank" href="https://kumasihive.com/makers-space/" style="float:right;">https://kumasihive.com/makers-space/</a><br><strong>Email</strong>	: <span style="float:right;">Info@Kumasihive.Com, Makerspace@Kumasihive.Com</span><br><strong>Phone</strong>	: <span style="float:right;">(+233) 24 956 9580 / (+233) 32 249 6788, (054) 427-7260</span><br><strong>Primary Contact</strong>	: <span style="float:right;">Isaac Nyankum</span><br><strong>Share Inventory</strong>	: <span style="float:right;">True</span><br><strong>Data Source</strong>	: <span style="float:right;">Iopa</span><br><strong>Association</strong>	: <span style="float:right;">None</span><br><strong>Ima</strong>	: <span style="float:right;">True</span><br><strong>Latitude</strong>	: <span style="float:right;">6.69506</span><br><strong>Longitude</strong>	: <span style="float:right;">-1.549389</span><br><strong>Address</strong>	: <span style="float:right;">Precise</span><br><strong>Inventory File</strong>	: <span style="float:right;">True</span><br></p><div class="ima_logo"></div></div></div>`)[0];
+                popup_8734a03f8ed1a103992c28a903a47085.setContent(html_b0a19ee34581221ea291326daae238bc);
+            
+        
+
+        marker_398301c111826298eb08d26f9f23dffd.bindPopup(popup_8734a03f8ed1a103992c28a903a47085)
+        ;
+
+        
+    
+    
+            var marker_d21fbf00742f105a862335a5754782ad = L.marker(
+                [-29.820087, 31.027731],
+                {}
+            ).addTo(marker_cluster_daaeb9918d6c0ba7f3c8a9c0ef1fec47);
+        
+    
+            var div_icon_026deeb5e2f347144f1b68afa635d72a = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EF476F; fill-opacity: 1;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_d21fbf00742f105a862335a5754782ad.setIcon(div_icon_026deeb5e2f347144f1b68afa635d72a);
+        
+    
+        var popup_1a3f04d0663c9b8809aedb984e9b6ed8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b636a97fa96b101caa249fba28c5674 = $(`<div id="html_1b636a97fa96b101caa249fba28c5674" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 200px;                              }             .leaflet-popup-content-wrapper             {                 background-color: rgba(45, 46, 130, 0.85);                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo {                 height: 50px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 30px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>          <div><p><h4><strong>THE MAKERSPACE FOUNDATION</strong></h4><strong>Country</strong>	: <span style="float:right;">South Africa</span><br><strong>City</strong>	: <span style="float:right;">Durban</span><br><strong>Url</strong>	: <a target="_blank" href="https://themakerspace.co.za/" style="float:right;">https://themakerspace.co.za/</a><br><strong>Email</strong>	: <span style="float:right;">Steve@Themakerspace.Co.Za</span><br><strong>Phone</strong>	: <span style="float:right;">'+27 31 001 3691, (031) 001-3691</span><br><strong>Primary Contact</strong>	: <span style="float:right;">Gray Steve</span><br><strong>Share Inventory</strong>	: <span style="float:right;">True</span><br><strong>Data Source</strong>	: <span style="float:right;">Iopa</span><br><strong>Association</strong>	: <span style="float:right;">None</span><br><strong>Ima</strong>	: <span style="float:right;">True</span><br><strong>Latitude</strong>	: <span style="float:right;">-29.820087</span><br><strong>Longitude</strong>	: <span style="float:right;">31.027731</span><br><strong>Address</strong>	: <span style="float:right;">Precise</span><br><strong>Inventory File</strong>	: <span style="float:right;">True</span><br></p><div class="ima_logo"></div></div></div>`)[0];
+                popup_1a3f04d0663c9b8809aedb984e9b6ed8.setContent(html_1b636a97fa96b101caa249fba28c5674);
+            
+        
+
+        marker_d21fbf00742f105a862335a5754782ad.bindPopup(popup_1a3f04d0663c9b8809aedb984e9b6ed8)
+        ;
+
+        
+    
+    
+            var marker_8c114dc42b44c624640cbf9bed0fc88b = L.marker(
+                [-26.194575, 28.03189],
+                {}
+            ).addTo(marker_cluster_daaeb9918d6c0ba7f3c8a9c0ef1fec47);
+        
+    
+            var div_icon_804a7ac3ed73bfadfb558475b85e3b50 = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EF476F; fill-opacity: 1;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_8c114dc42b44c624640cbf9bed0fc88b.setIcon(div_icon_804a7ac3ed73bfadfb558475b85e3b50);
+        
+    
+        var popup_327fe1e8ed425eee93dad2d5df44e57c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2a952014e3f2ebc214df7bc74e45e269 = $(`<div id="html_2a952014e3f2ebc214df7bc74e45e269" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 200px;                              }             .leaflet-popup-content-wrapper             {                 background-color: rgba(45, 46, 130, 0.85);                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo {                 height: 50px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 30px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>          <div><p><h4><strong>TMG MAKERSPACE</strong></h4><strong>Country</strong>	: <span style="float:right;">South Africa</span><br><strong>City</strong>	: <span style="float:right;">Johannesburg</span><br><strong>Url</strong>	: <a target="_blank" href="https://tmgmakerspace.africa/" style="float:right;">https://tmgmakerspace.africa/</a><br><strong>Email</strong>	: <span style="float:right;">Nelson@Tmgmakerspace.Africa, Tmgmakerspace@Tshimologong.Joburg</span><br><strong>Phone</strong>	: <span style="float:right;">(072) 320-4978</span><br><strong>Primary Contact</strong>	: <span style="float:right;">Nelson Sekgota</span><br><strong>Share Inventory</strong>	: <span style="float:right;">True</span><br><strong>Data Source</strong>	: <span style="float:right;">Iopa</span><br><strong>Association</strong>	: <span style="float:right;">None</span><br><strong>Ima</strong>	: <span style="float:right;">True</span><br><strong>Latitude</strong>	: <span style="float:right;">-26.194575</span><br><strong>Longitude</strong>	: <span style="float:right;">28.03189</span><br><strong>Address</strong>	: <span style="float:right;">Precise</span><br><strong>Inventory File</strong>	: <span style="float:right;">True</span><br></p><div class="ima_logo"></div></div></div>`)[0];
+                popup_327fe1e8ed425eee93dad2d5df44e57c.setContent(html_2a952014e3f2ebc214df7bc74e45e269);
+            
+        
+
+        marker_8c114dc42b44c624640cbf9bed0fc88b.bindPopup(popup_327fe1e8ed425eee93dad2d5df44e57c)
+        ;
+
+        
+    
+    
+            var marker_bd5d602805f0b132426943b115a03efd = L.marker(
+                [6.672933, -1.54567],
+                {}
+            ).addTo(marker_cluster_daaeb9918d6c0ba7f3c8a9c0ef1fec47);
+        
+    
+            var div_icon_5f3035b8213fd3307441723eb728f9bf = L.divIcon({"className": "empty", "html": "\n    \u003csvg height=\"20\" width=\"20\" viewBox=\"0 0 20 20\"\u003e\n        \u003crect x=\"0\" y=\"0\" width=\"20\" height=\"20\" style=\"fill: #EF476F; fill-opacity: 1;\"\u003e\u003c/rect\u003e\n    \u003c/svg\u003e\n    "});
+            marker_bd5d602805f0b132426943b115a03efd.setIcon(div_icon_5f3035b8213fd3307441723eb728f9bf);
+        
+    
+        var popup_6246a9b18039ac52d8ae1aa24c2bc60a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_20dd9e34f75fcfb7873aa1d271eba9bc = $(`<div id="html_20dd9e34f75fcfb7873aa1d271eba9bc" style="width: 100.0%; height: 100.0%;"><style>             .leaflet-popup-content             {                 font-family:    Arial, Helvetica, sans-serif;                 color: white;                 padding: 1px;                  width: 200px;                              }             .leaflet-popup-content-wrapper             {                 background-color: rgba(45, 46, 130, 0.85);                             }             .leaflet-popup-content a:link {                 color: hotpink;             }             .leaflet-popup-content a:visited {                 color: white;             }             .leaflet-container a.leaflet-popup-close-button {                 color: hotpink;             }             .ima_logo {                 height: 50px;                 padding: 5px;                 background-image: url("https://www.risa-fund.org/wp-content/themes/risa/img/logo-risa-with-tag-line-white.svg");                 background-repeat: no-repeat;                 background-size: auto 30px; /* 'auto' for width, '10px' for height */                 background-position: center right;             }         </style>          <div><p><h4><strong>TRIPLE DIMENSION</strong></h4><strong>Country</strong>	: <span style="float:right;">Ghana</span><br><strong>City</strong>	: <span style="float:right;">Kumasi</span><br><strong>Email</strong>	: <span style="float:right;">Masante.Afrifa@Gmail.Com</span><br><strong>Phone</strong>	: <span style="float:right;">(024) 568-0256</span><br><strong>Primary Contact</strong>	: <span style="float:right;">Micheal Afrifa Asante</span><br><strong>Share Inventory</strong>	: <span style="float:right;">True</span><br><strong>Data Source</strong>	: <span style="float:right;">Iopa</span><br><strong>Association</strong>	: <span style="float:right;">None</span><br><strong>Ima</strong>	: <span style="float:right;">True</span><br><strong>Latitude</strong>	: <span style="float:right;">6.672933</span><br><strong>Longitude</strong>	: <span style="float:right;">-1.54567</span><br><strong>Address</strong>	: <span style="float:right;">Precise</span><br><strong>Inventory File</strong>	: <span style="float:right;">True</span><br></p><div class="ima_logo"></div></div></div>`)[0];
+                popup_6246a9b18039ac52d8ae1aa24c2bc60a.setContent(html_20dd9e34f75fcfb7873aa1d271eba9bc);
+            
+        
+
+        marker_bd5d602805f0b132426943b115a03efd.bindPopup(popup_6246a9b18039ac52d8ae1aa24c2bc60a)
+        ;
+
+        
+    
+    
+            map_8e9ada6adf309174d2dc5247bf2c604b.fitBounds(
+                [[-33, 40.0], [7, -1]],
+                {}
+            );
+        
+    
+            var layer_control_16e8ef7d7563a1f329ce038c49c5c4f7 = {
+                base_layers : {
+                },
+                overlays :  {
+                    "\u003ci class=\"fas fa-caret-down\" style=\"color: #00A676;\"\u003e\u003c/i\u003e Machinery" : marker_cluster_bfafba3d76882135a98b5546ede9cf49,
+                    "\u003ci class=\"fas fa-square\" style=\"color: #EF476F;\"\u003e\u003c/i\u003e Facilities" : marker_cluster_daaeb9918d6c0ba7f3c8a9c0ef1fec47,
+                },
+            };
+            L.control.layers(
+                layer_control_16e8ef7d7563a1f329ce038c49c5c4f7.base_layers,
+                layer_control_16e8ef7d7563a1f329ce038c49c5c4f7.overlays,
+                {"autoZIndex": false, "collapsed": false, "position": "topright"}
+            ).addTo(map_8e9ada6adf309174d2dc5247bf2c604b);
+        
+</script>
+</html>
