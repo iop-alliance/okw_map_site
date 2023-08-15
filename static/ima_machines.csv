@@ -27,37 +27,48 @@ Interface: USB/Serial port, U-disk port
 Plotter instruction: DM-PL/HP-GL Automatic Identification
 Noise at work: ≤50 DB",630mm,None,None,TRUE,TRUE,3,1,IOME254,-2.193901,40.817695
 23,Desktop CNC,genmitsu,cnc,router,"3018-PRO CNC Router, 300 x 180 x 45 mm(11.8 x 7.1 x 1.8”) work area",300mm,180mm,45mm,TRUE,TRUE,3,1,IOME254,-2.193901,40.817695
-24,3d printer,None,3d_printer,fdm,None,None,None,None,TRUE,TRUE,4,4,Kumasi Hive Makerspace,6.69506,-1.549389
-25,LASER CUTTING MACHINE,None,laser,cutter,None,None,None,None,TRUE,TRUE,4,2,Kumasi Hive Makerspace,6.69506,-1.549389
-26,CNC PLASMA CUTTER,None,cnc,plasma,None,None,None,None,TRUE,TRUE,4,1,Kumasi Hive Makerspace,6.69506,-1.549389
-27,CNC WOOD ROUTER,None,cnc,router,None,None,None,None,TRUE,TRUE,4,1,Kumasi Hive Makerspace,6.69506,-1.549389
-28,CNC LATHE MACHINE,None,cnc,lathe,None,None,None,None,TRUE,TRUE,4,1,Kumasi Hive Makerspace,6.69506,-1.549389
-29,Perfect Laser PLT-1390 Machine,perfect laser,laser,cutter,None,1300mm,900mm,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
-30,Beyond Laser ,beyond,laser,cutter,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
-31,Custom Built 3D Printer ,None,3d_printer,ceramic_extrusion,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
-32,R3 Robo beast,robobeast,3d_printer,fdm,None,300mm,320mm,385mm,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
-33,3D Printer [ Ender],ender,3d_printer,fdm,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
-34,2 CR 20 ,creality,3d_printer,fdm,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
-35,CR20 ,creality,3d_printer,fdm,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
-36,CNC Machine,None,cnc,router,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
-37,Any cubic,anycubic,3d_printer,sla,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
-38,Rapide Lite [Silver p],rapide,3d_printer,fdm,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
-39,3D Scanner ,None,3d_scanner,handheld,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
-40,Revel point turn table,None,3d_scanner,turn_table,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
-41,3D Printer (Creality CR 20),creality,3d_printer,fdm,CR2018001051,None,None,None,TRUE,TRUE,6,1,TMG Makerspace,-26.194575,28.03189
-42,Laser cutter (Perfect Laser PLT-6040; 600 x 400mm; 80W CO2),perfect laser,laser,cutter,201804100216.00,600mm,400mm,None,TRUE,TRUE,6,1,TMG Makerspace,-26.194575,28.03189
-43,Laser cutter (HS-Z1390; 1300 x 900mm; 80W CO2),hs,laser,cutter,919139013791.00,1300mm,900mm,None,TRUE,TRUE,6,1,TMG Makerspace,-26.194575,28.03189
-44,Laser cutter (Orion SH-G460; 600 x 400mm; 60W CO2),orion,laser,cutter,BGT129041,600mm,400mm,None,TRUE,TRUE,6,1,TMG Makerspace,-26.194575,28.03189
-45,3D Printer (LulzBot Mini V2.0),lulzbot,3d_printer,fdm,KT-PR0047NA-16436,None,None,None,TRUE,TRUE,6,1,TMG Makerspace,-26.194575,28.03189
-46,Ultimaker 3 extended,ultimaker,3d_printer,fdm,None,None,None,None,TRUE,TRUE,7,2,Gearbox Pan African Network,-1.303673,36.838525
-47,Ultimaker 2+,ultimaker,3d_printer,fdm,None,None,None,None,TRUE,TRUE,7,1,Gearbox Pan African Network,-1.303673,36.838525
-48,Full spectrum 9060,None,laser,cutter,None,900mm,600mm,None,TRUE,TRUE,7,1,Gearbox Pan African Network,-1.303673,36.838525
-49,Makerbot 3D printer,makerbot,3d_printer,fdm,None,None,None,None,TRUE,TRUE,7,2,Gearbox Pan African Network,-1.303673,36.838525
-50,3D laser scanner ,None,3d_scanner,laser,None,None,None,None,TRUE,TRUE,7,1,Gearbox Pan African Network,-1.303673,36.838525
-51,CNC plasma cutter,None,cnc,cutter,None,None,None,None,TRUE,TRUE,7,1,Gearbox Pan African Network,-1.303673,36.838525
-52,CnC wood router,None,cnc,router,None,None,None,None,TRUE,TRUE,7,1,Gearbox Pan African Network,-1.303673,36.838525
-53,Tormach pCNC 1100,tormach,cnc,milling,None,18in,11in,16.25in,TRUE,TRUE,7,1,Gearbox Pan African Network,-1.303673,36.838525
-54,Laser Cutter,None,laser,cutter,None,None,None,None,TRUE,TRUE,8,1,Triple Dimension,6.672933,-1.54567
-55,CNC Mill,None,cnc,milling,None,None,None,None,TRUE,TRUE,8,1,Triple Dimension,6.672933,-1.54567
-56,3D printer,None,3d_printer,None,None,None,None,None,TRUE,TRUE,8,1,Triple Dimension,6.672933,-1.54567
+24,3D Scanner,3d sense,3d_scanner,handheld,Handheld 3D scanning functions,None,None,None,TRUE,TRUE,3,1,IOME255,-2.193901,40.817695
+25,3d printer,None,3d_printer,fdm,None,None,None,None,TRUE,TRUE,4,4,Kumasi Hive Makerspace,6.69506,-1.549389
+26,LASER CUTTING MACHINE,None,laser,cutter,None,None,None,None,TRUE,TRUE,4,2,Kumasi Hive Makerspace,6.69506,-1.549389
+27,CNC PLASMA CUTTER,None,cnc,plasma,None,None,None,None,TRUE,TRUE,4,1,Kumasi Hive Makerspace,6.69506,-1.549389
+28,CNC WOOD ROUTER,None,cnc,router,None,None,None,None,TRUE,TRUE,4,1,Kumasi Hive Makerspace,6.69506,-1.549389
+29,CNC LATHE MACHINE,None,cnc,lathe,None,None,None,None,TRUE,TRUE,4,1,Kumasi Hive Makerspace,6.69506,-1.549389
+30,Perfect Laser PLT-1390 Machine,perfect laser,laser,cutter,None,1300mm,900mm,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
+31,Beyond Laser ,beyond,laser,cutter,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
+32,Custom Built 3D Printer ,None,3d_printer,ceramic_extrusion,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
+33,R3 Robo beast,robobeast,3d_printer,fdm,None,300mm,320mm,385mm,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
+34,3D Printer [ Ender],ender,3d_printer,fdm,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
+35,2 CR 20 ,creality,3d_printer,fdm,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
+36,CR20 ,creality,3d_printer,fdm,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
+37,CNC Machine,None,cnc,router,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
+38,Any cubic,anycubic,3d_printer,sla,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
+39,Rapide Lite [Silver p],rapide,3d_printer,fdm,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
+40,3D Scanner ,None,3d_scanner,handheld,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
+41,Revel point turn table,None,3d_scanner,turn_table,None,None,None,None,TRUE,TRUE,5,1,The Makerspace Foundation,-29.820087,31.027731
+42,3D Printer (Creality CR 20),creality,3d_printer,fdm,CR2018001051,None,None,None,TRUE,TRUE,6,1,TMG Makerspace,-26.194575,28.03189
+43,Laser cutter (Perfect Laser PLT-6040; 600 x 400mm; 80W CO2),perfect laser,laser,cutter,201804100216.00,600mm,400mm,None,TRUE,TRUE,6,1,TMG Makerspace,-26.194575,28.03189
+44,Laser cutter (HS-Z1390; 1300 x 900mm; 80W CO2),hs,laser,cutter,919139013791.00,1300mm,900mm,None,TRUE,TRUE,6,1,TMG Makerspace,-26.194575,28.03189
+45,Laser cutter (Orion SH-G460; 600 x 400mm; 60W CO2),orion,laser,cutter,BGT129041,600mm,400mm,None,TRUE,TRUE,6,1,TMG Makerspace,-26.194575,28.03189
+46,3D Printer (LulzBot Mini V2.0),lulzbot,3d_printer,fdm,KT-PR0047NA-16436,None,None,None,TRUE,TRUE,6,1,TMG Makerspace,-26.194575,28.03189
+47,Ultimaker 3 extended,ultimaker,3d_printer,fdm,None,None,None,None,TRUE,TRUE,7,2,Gearbox Pan African Network,-1.303673,36.838525
+48,Ultimaker 2+,ultimaker,3d_printer,fdm,None,None,None,None,TRUE,TRUE,7,1,Gearbox Pan African Network,-1.303673,36.838525
+49,Full spectrum 9060,None,laser,cutter,None,900mm,600mm,None,TRUE,TRUE,7,1,Gearbox Pan African Network,-1.303673,36.838525
+50,Makerbot 3D printer,makerbot,3d_printer,fdm,None,None,None,None,TRUE,TRUE,7,2,Gearbox Pan African Network,-1.303673,36.838525
+51,3D laser scanner ,None,3d_scanner,laser,None,None,None,None,TRUE,TRUE,7,1,Gearbox Pan African Network,-1.303673,36.838525
+52,CNC plasma cutter,None,cnc,cutter,None,None,None,None,TRUE,TRUE,7,1,Gearbox Pan African Network,-1.303673,36.838525
+53,CnC wood router,None,cnc,router,None,None,None,None,TRUE,TRUE,7,1,Gearbox Pan African Network,-1.303673,36.838525
+54,Tormach pCNC 1100,tormach,cnc,milling,None,18in,11in,16.25in,TRUE,TRUE,7,1,Gearbox Pan African Network,-1.303673,36.838525
+55,Laser Cutter,None,laser,cutter,None,None,None,None,TRUE,TRUE,8,1,Triple Dimension,6.672933,-1.54567
+56,CNC Mill,None,cnc,milling,None,None,None,None,TRUE,TRUE,8,1,Triple Dimension,6.672933,-1.54567
+57,3D printer,None,3d_printer,fdm,None,None,None,None,TRUE,TRUE,8,1,Triple Dimension,6.672933,-1.54567
+58,150w Lasercutter,None,laser,cutter,None,None,None,None,TRUE,TRUE,9,1,Flat Rock Studio,-33.9253,18.4239
+59,Bambu 3D rpinter,bambu,3d_printer,fdm,None,None,None,None,TRUE,TRUE,9,1,Flat Rock Studio,-33.9253,18.4239
+60,Tiertime printer,tier time,3d_printer,None,None,None,None,None,TRUE,TRUE,9,3,Flat Rock Studio,-33.9253,18.4239
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
