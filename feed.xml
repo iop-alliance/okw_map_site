@@ -3,12 +3,123 @@
     <title>Open-Know-Where Initiative Mapping and Data</title>
     <link href="https://map.internetofproduction.org/feed.xml" rel="self" />
     <link href="https://map.internetofproduction.org" />
-    <updated>2024-04-16T02:41:00-06:00</updated>
+    <updated>2024-06-17T14:32:41+02:00</updated>
     <author>
         <name>Antonio de Jesus Anaya Hernandez</name>
     </author>
     <id>https://map.internetofproduction.org</id>
 
+    <entry>
+        <title>WORKING GROUP</title>
+        <author>
+            <name>Antonio de Jesus Anaya Hernandez</name>
+        </author>
+        <link href="https://map.internetofproduction.org/working-group/index.html"/>
+        <id>https://map.internetofproduction.org/working-group/index.html</id>
+
+        <updated>2024-04-11T13:57:22+02:00</updated>
+            <summary>
+                <![CDATA[
+                    Working Group Sessions for the Open-Know-Where (OKW) Initiative Overview The Open-Know-Where (OKW) initiative is transitioning from creating Geo-location data reports to offering open databases, ETL&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h3>Working Group Sessions for the Open-Know-Where (OKW) Initiative</h3>
+<h4>Overview</h4>
+<p>The Open-Know-Where (OKW) initiative is transitioning from creating Geo-location data reports to offering open databases, ETL aggregation, and manufacturing data validation specifications. The working group sessions play a crucial role in this transition, fostering collaboration, knowledge sharing, and strategic planning among participants.</p>
+<h4>Objectives</h4>
+<p>The primary objectives of the working group sessions are to:</p>
+<ol>
+<li><strong>Facilitate Collaboration</strong>: Bring together diverse stakeholders from the global Distributed Manufacturing Ecosystem.</li>
+<li><strong>Share Knowledge</strong>: Disseminate insights, methodologies, and best practices related to data collection, validation, and utilization.</li>
+<li><strong>Strategize Development</strong>: Plan and coordinate the development of OKW tools and resources, including databases, APIs, and data visualization tools.</li>
+<li><strong>Enhance Engagement</strong>: Engage the community in contributing to and utilizing OKW resources for economic development, disaster response, and manufacturing innovation.</li>
+</ol>
+<h4>Structure</h4>
+<p>The working group sessions are structured to ensure comprehensive coverage of key topics and effective engagement of participants. Each session typically includes:</p>
+<ol>
+<li><strong>Introduction and Objectives</strong>: Overview of the session's goals and agenda.</li>
+<li><strong>Presentations and Updates</strong>: Updates on the current state of the OKW initiative, including recent developments, data insights, and tool enhancements.</li>
+<li><strong>Discussion and Feedback</strong>: Interactive discussions to gather feedback, address challenges, and explore new ideas.</li>
+<li><strong>Action Planning</strong>: Identification of actionable items, assigning responsibilities, and setting timelines for implementation.</li>
+</ol>
+<h4>Key Topics</h4>
+<p>Working group sessions focus on a range of topics critical to the success of the OKW initiative, including:</p>
+<ol>
+<li><strong>Data Collection and Validation</strong>:
+<ul>
+<li>Best practices for data collection from various sources.</li>
+<li>Validation techniques to ensure data accuracy and reliability.</li>
+</ul>
+</li>
+<li><strong>Tool Development and Integration</strong>:
+<ul>
+<li>Development of APIs and data visualization tools.</li>
+<li>Integration of OKW tools with existing platforms and workflows.</li>
+</ul>
+</li>
+<li><strong>Use Cases and Applications</strong>:
+<ul>
+<li>Identification and development of use cases for distributed manufacturing, economic development, and humanitarian response.</li>
+<li>Success stories and lessons learned from implemented projects.</li>
+</ul>
+</li>
+<li><strong>Community Engagement and Collaboration</strong>:
+<ul>
+<li>Strategies to engage the global community in contributing to and benefiting from OKW resources.</li>
+<li>Collaboration opportunities with partner organizations and initiatives.</li>
+</ul>
+</li>
+</ol>
+<h4>Resources and Support</h4>
+<p>Participants in the working group sessions have access to a range of resources to support their contributions, including:</p>
+<ol>
+<li><strong>OKW Data Collection Form</strong>: A tool to collect new data into the OKW database <a rel="noreferrer" target="_new" href="https://map.internetofproduction.org/data-submission/index.html">Link</a>.</li>
+<li><strong>OKW Machine Specifications Catalogue</strong>: A repository of identified machines and their specifications <a rel="noreferrer" target="_new" href="https://github.com/iop-alliance/okw_machines_catalog">Link</a>.</li>
+<li><strong>OKW Data Science Notebooks</strong>: Documentation and tools for data transparency and reproducibility <a rel="noreferrer" target="_new" href="https://github.com/iop-alliance/okw_data_management">Link</a>.</li>
+<li><strong>OKW Map Data Representation Prototype</strong>: Visualization of collected data and its guidelines <a rel="noreferrer" target="_new" href="https://map.internetofproduction.org/">Link</a>.</li>
+</ol>
+<h4>Members</h4>
+<p>The working group sessions involve a diverse set of members who contribute their expertise and perspectives to the OKW initiative. Key members include:</p>
+<ol>
+<li>
+<p><strong>Researchers and Data Scientists</strong>:</p>
+<ul>
+<li>Experts in data collection, analysis, and validation.</li>
+<li>Contributors to the development of data science notebooks and methodologies.</li>
+</ul>
+</li>
+<li>
+<p><strong>Distributed Manufacturing Practitioners</strong>:</p>
+<ul>
+<li>Representatives from maker-spaces, fab-labs, and distributed manufacturing networks.</li>
+<li>Providers of practical insights and use case examples.</li>
+</ul>
+</li>
+<li>
+<p><strong>Community </strong><span style="color: #02192b;"><strong>Organisers</strong></span><strong> and Economic Developers</strong>:</p>
+<ul>
+<li>Individuals focused on leveraging distributed manufacturing for local economic development.</li>
+<li>Advocates for community engagement and capacity building.</li>
+</ul>
+</li>
+<li>
+<p><strong>Policy Makers and Humanitarian Response Coordinators</strong>:</p>
+<ul>
+<li>Stakeholders interested in using OKW resources for disaster response and humanitarian aid.</li>
+<li>Contributors to policy development and implementation strategies.</li>
+</ul>
+</li>
+</ol>
+<h4>Plan</h4>
+<figure class="post__image"><img loading="lazy"  src="https://map.internetofproduction.org/media/posts/25/OKW-Frame-121.jpg" alt="2024 Plan. January to July. Updated June." width="1333" height="750" sizes="(max-width: 768px) 100vw, 768px" srcset="https://map.internetofproduction.org/media/posts/25/responsive/OKW-Frame-121-xs.jpg 300w ,https://map.internetofproduction.org/media/posts/25/responsive/OKW-Frame-121-sm.jpg 480w ,https://map.internetofproduction.org/media/posts/25/responsive/OKW-Frame-121-md.jpg 768w"><figcaption>2024 plan. Last updated June 17th.</figcaption></figure>
+<h4>Participation</h4>
+<p>The working group sessions are open to all stakeholders interested in contributing to the OKW initiative. Participants can join by contacting the OKW initiative through their communication channels or by visiting their <a rel="noreferrer" target="_new" href="https://github.com/iop-alliance/okw_data_management">GitHub repositories</a> for more details on ongoing projects and how to get involved.</p>
+<p>By actively participating in the working group sessions, stakeholders can help shape the future of distributed manufacturing, drive economic growth, and improve disaster response capabilities globally.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>DATA SCHEMA SPECIFICATION</title>
         <author>
@@ -17,7 +128,7 @@
         <link href="https://map.internetofproduction.org/data-schema-design-choices/index.html"/>
         <id>https://map.internetofproduction.org/data-schema-design-choices/index.html</id>
 
-        <updated>2024-04-06T12:24:09-06:00</updated>
+        <updated>2024-04-06T20:24:09+02:00</updated>
             <summary>
                 <![CDATA[
                     Open-Know-Where Initiative Distributed Resources Data Schema Introduction The Open-Know-Where Initiative Distributed Resources Data Schema is designed to manage information about distributed resources, such as manufacturing&hellip;
@@ -561,7 +672,7 @@
         <link href="https://map.internetofproduction.org/use-cases/index.html"/>
         <id>https://map.internetofproduction.org/use-cases/index.html</id>
 
-        <updated>2024-03-28T07:30:09-06:00</updated>
+        <updated>2024-03-28T14:30:09+01:00</updated>
             <summary>
                 <![CDATA[
                     1. Finding Manufacturing Sites for Open-Source Projects: Use Case: Open-Source-Hardware designers seek suitable locations to materialise their projects. i.e. A designer of prosthesis or cerebral&hellip;
@@ -747,7 +858,7 @@
         <link href="https://map.internetofproduction.org/okw-charter/index.html"/>
         <id>https://map.internetofproduction.org/okw-charter/index.html</id>
 
-        <updated>2024-02-19T06:06:07-06:00</updated>
+        <updated>2024-02-19T13:06:07+01:00</updated>
             <summary>
                 <![CDATA[
                     Vision Open-Know-Where (OKW) aspires to be the global platform that empowers individuals and organizations in the maker and manufacturing ecosystem by providing accessible, comprehensive, and&hellip;
@@ -794,7 +905,7 @@
         <link href="https://map.internetofproduction.org/data-submission/index.html"/>
         <id>https://map.internetofproduction.org/data-submission/index.html</id>
 
-        <updated>2023-12-19T19:47:37-06:00</updated>
+        <updated>2023-12-20T02:47:37+01:00</updated>
             <summary></summary>
         <content type="html">
             <![CDATA[
@@ -810,7 +921,7 @@
         <link href="https://map.internetofproduction.org/data-privacy-policy/index.html"/>
         <id>https://map.internetofproduction.org/data-privacy-policy/index.html</id>
 
-        <updated>2023-12-19T18:14:06-06:00</updated>
+        <updated>2023-12-20T01:14:06+01:00</updated>
             <summary>
                 <![CDATA[
                     PRIVACY NOTICE Last updated 14/12/2023 This privacy notice for https://map.internetofproduction.org ('we', 'us', or 'our'), describes how and why we might collect, store, use, and/or share&hellip;
@@ -1025,7 +1136,7 @@
         <link href="https://map.internetofproduction.org/open-know-where-2/index.html"/>
         <id>https://map.internetofproduction.org/open-know-where-2/index.html</id>
 
-        <updated>2023-05-15T11:43:06-06:00</updated>
+        <updated>2023-05-15T19:43:06+02:00</updated>
             <summary>
                 <![CDATA[
                     REV 2.1, 23/01/2024 Author: Antonio de Jesus Anaya Hernandez, DevOps Eng. CC BY-SA 4.0 2023-2024, The Internet of Production Alliance. INTRODUCTION What: This is the&hellip;
