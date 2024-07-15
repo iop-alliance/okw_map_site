@@ -909,7 +909,24 @@
             <summary></summary>
         <content type="html">
             <![CDATA[
-                <div class="post__iframe"><iframe loading="lazy" width="100%" height="100%" style="border: 0px #ffffff hidden;" src="https://enketo.unhcr.org/x/gn0IrHmt" scrolling="yes" id="kobo_form" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"></iframe></div>
+                <div class="post__iframe">
+                <div 
+                    class="pec-wrapper" 
+                    data-consent-group-id="analytics">
+                    <iframe data-consent-overlay-added="true" loading="lazy" width="100%" height="100%" style="border: 0px #ffffff hidden;" data-consent-src="https://enketo.unhcr.org/x/gn0IrHmt" scrolling="yes" id="kobo_form" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"></iframe>
+                    <div class="pec-overlay is-active" aria-hidden="false">
+                        <div class="pec-overlay-inner">
+                            <p></p>
+                            <button 
+                                class="pec-button" 
+                                onclick="window.publiiEmbedConsentGiven('analytics'); return false;">
+                                
+                            </button>
+                        </div>
+                    </div>
+                    <script>window.publiiEmbedConsentCheck('analytics');</script>
+                </div>
+                </div>
             ]]>
         </content>
     </entry>
@@ -1152,11 +1169,62 @@
 <p>Our data policy is found at <a href="https://map.internetofproduction.org/data-privacy-policy/index.html" target="_blank" rel="nofollow noopener noreferrer">https://map.internetofproduction.org/data-privacy-policy/index.html</a></p>
 <p>For any map related concerns and requests contact by email to: <a href="mailto:antonio.anaya@internetofproduction.org">antonio.anaya@internetofproduction.org</a></p>
 <h2>MAPS</h2>
-<h3>GLOBAL<br><div class="post__iframe"><iframe loading="lazy" width="100%" height="50%" style="border-radius: 10px; border: 0px #ffffff none;" src="https://map.internetofproduction.org/world_map.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></div></h3>
+<h3>GLOBAL<br><div class="post__iframe">
+                <div 
+                    class="pec-wrapper" 
+                    data-consent-group-id="analytics">
+                    <iframe data-consent-overlay-added="true" loading="lazy" width="100%" height="50%" style="border-radius: 10px; border: 0px #ffffff none;" data-consent-src="https://map.internetofproduction.org/world_map.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe>
+                    <div class="pec-overlay is-active" aria-hidden="false">
+                        <div class="pec-overlay-inner">
+                            <p></p>
+                            <button 
+                                class="pec-button" 
+                                onclick="window.publiiEmbedConsentGiven('analytics'); return false;">
+                                
+                            </button>
+                        </div>
+                    </div>
+                    <script>window.publiiEmbedConsentCheck('analytics');</script>
+                </div>
+                </div></h3>
 <h3>MAKE</h3>
-<div class="post__iframe"><iframe loading="lazy" width="100%" height="50%" style="border-radius: 10px; border: 0px #ffffff none;" src="https://map.internetofproduction.org/makeafricaeu.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"></iframe></div>
+<div class="post__iframe">
+                <div 
+                    class="pec-wrapper" 
+                    data-consent-group-id="analytics">
+                    <iframe data-consent-overlay-added="true" loading="lazy" width="100%" height="50%" style="border-radius: 10px; border: 0px #ffffff none;" data-consent-src="https://map.internetofproduction.org/makeafricaeu.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"></iframe>
+                    <div class="pec-overlay is-active" aria-hidden="false">
+                        <div class="pec-overlay-inner">
+                            <p></p>
+                            <button 
+                                class="pec-button" 
+                                onclick="window.publiiEmbedConsentGiven('analytics'); return false;">
+                                
+                            </button>
+                        </div>
+                    </div>
+                    <script>window.publiiEmbedConsentCheck('analytics');</script>
+                </div>
+                </div>
 <h3>IMA</h3>
-<div class="post__iframe"><iframe loading="lazy" width="100%" height="50%" style="border-radius: 10px; border: 0px #ffffff none;" src="https://map.internetofproduction.org/ima.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"></iframe></div>
+<div class="post__iframe">
+                <div 
+                    class="pec-wrapper" 
+                    data-consent-group-id="analytics">
+                    <iframe data-consent-overlay-added="true" loading="lazy" width="100%" height="50%" style="border-radius: 10px; border: 0px #ffffff none;" data-consent-src="https://map.internetofproduction.org/ima.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"></iframe>
+                    <div class="pec-overlay is-active" aria-hidden="false">
+                        <div class="pec-overlay-inner">
+                            <p></p>
+                            <button 
+                                class="pec-button" 
+                                onclick="window.publiiEmbedConsentGiven('analytics'); return false;">
+                                
+                            </button>
+                        </div>
+                    </div>
+                    <script>window.publiiEmbedConsentCheck('analytics');</script>
+                </div>
+                </div>
 <p> </p>
 <h2>DATASETS AND RECORDS</h2>
 <h3>COLLECTION</h3>
