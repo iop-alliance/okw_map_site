@@ -3,7 +3,7 @@
     <title>Open-Know-Where Initiative Mapping and Data</title>
     <link href="https://map.internetofproduction.org/feed.xml" rel="self" />
     <link href="https://map.internetofproduction.org" />
-    <updated>2024-06-17T14:32:41+02:00</updated>
+    <updated>2024-07-25T08:21:46-06:00</updated>
     <author>
         <name>Antonio de Jesus Anaya Hernandez</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://map.internetofproduction.org/working-group/index.html"/>
         <id>https://map.internetofproduction.org/working-group/index.html</id>
 
-        <updated>2024-04-11T13:57:22+02:00</updated>
+        <updated>2024-04-11T05:57:22-06:00</updated>
             <summary>
                 <![CDATA[
                     Working Group Sessions for the Open-Know-Where (OKW) Initiative Overview The Open-Know-Where (OKW) initiative is transitioning from creating Geo-location data reports to offering open databases, ETL&hellip;
@@ -128,7 +128,7 @@
         <link href="https://map.internetofproduction.org/data-schema-design-choices/index.html"/>
         <id>https://map.internetofproduction.org/data-schema-design-choices/index.html</id>
 
-        <updated>2024-04-06T20:24:09+02:00</updated>
+        <updated>2024-04-06T12:24:09-06:00</updated>
             <summary>
                 <![CDATA[
                     Open-Know-Where Initiative Distributed Resources Data Schema Introduction The Open-Know-Where Initiative Distributed Resources Data Schema is designed to manage information about distributed resources, such as manufacturing&hellip;
@@ -672,7 +672,7 @@
         <link href="https://map.internetofproduction.org/use-cases/index.html"/>
         <id>https://map.internetofproduction.org/use-cases/index.html</id>
 
-        <updated>2024-03-28T14:30:09+01:00</updated>
+        <updated>2024-03-28T07:30:09-06:00</updated>
             <summary>
                 <![CDATA[
                     1. Finding Manufacturing Sites for Open-Source Projects: Use Case: Open-Source-Hardware designers seek suitable locations to materialise their projects. i.e. A designer of prosthesis or cerebral&hellip;
@@ -858,7 +858,7 @@
         <link href="https://map.internetofproduction.org/okw-charter/index.html"/>
         <id>https://map.internetofproduction.org/okw-charter/index.html</id>
 
-        <updated>2024-02-19T13:06:07+01:00</updated>
+        <updated>2024-02-19T06:06:07-06:00</updated>
             <summary>
                 <![CDATA[
                     Vision Open-Know-Where (OKW) aspires to be the global platform that empowers individuals and organizations in the maker and manufacturing ecosystem by providing accessible, comprehensive, and&hellip;
@@ -905,7 +905,7 @@
         <link href="https://map.internetofproduction.org/data-submission/index.html"/>
         <id>https://map.internetofproduction.org/data-submission/index.html</id>
 
-        <updated>2023-12-20T02:47:37+01:00</updated>
+        <updated>2023-12-19T19:47:37-06:00</updated>
             <summary></summary>
         <content type="html">
             <![CDATA[
@@ -938,7 +938,7 @@
         <link href="https://map.internetofproduction.org/data-privacy-policy/index.html"/>
         <id>https://map.internetofproduction.org/data-privacy-policy/index.html</id>
 
-        <updated>2023-12-20T01:14:06+01:00</updated>
+        <updated>2023-12-19T18:14:06-06:00</updated>
             <summary>
                 <![CDATA[
                     PRIVACY NOTICE Last updated 14/12/2023 This privacy notice for https://map.internetofproduction.org ('we', 'us', or 'our'), describes how and why we might collect, store, use, and/or share&hellip;
@@ -1153,7 +1153,7 @@
         <link href="https://map.internetofproduction.org/open-know-where-2/index.html"/>
         <id>https://map.internetofproduction.org/open-know-where-2/index.html</id>
 
-        <updated>2023-05-15T19:43:06+02:00</updated>
+        <updated>2023-05-15T11:43:06-06:00</updated>
             <summary>
                 <![CDATA[
                     REV 2.1, 23/01/2024 Author: Antonio de Jesus Anaya Hernandez, DevOps Eng. CC BY-SA 4.0 2023-2024, The Internet of Production Alliance. INTRODUCTION What: This is the&hellip;
@@ -1227,6 +1227,49 @@
                 </div>
 <p> </p>
 <h2>DATASETS AND RECORDS</h2>
+<h3>SUMMARY</h3>
+<p>This is a summary of the data based on the analysis and classification reports found on the GitHub Repositories:</p>
+<h4>FACILITIES</h4>
+<p>Facilities identification and filtering requires that:<br>Facility is active, the data is truth, and has: facility name, contact information, or address, or GPS location captured.</p>
+<p>Processed:</p>
+<ol>
+<li><span style="text-decoration: underline;"><span style="color: #000000; text-decoration: underline;">"The Fab Foundation, FabLab Network and its partners",</span></span></li>
+<li><span style="text-decoration: underline;"><span style="color: #000000; text-decoration: underline;">"Make Works, FabLab Barcelona and its partners",</span></span></li>
+<li><span style="text-decoration: underline;"><span style="color: #000000; text-decoration: underline;">"Offene Werkstaetten, and its partners",</span></span></li>
+<li><span style="text-decoration: underline;"><span style="color: #000000; text-decoration: underline;">"Field Ready Inc. and its partners",</span></span></li>
+<li><span style="text-decoration: underline;"><span style="color: #000000; text-decoration: underline;">"Makery",</span></span></li>
+<li><span style="text-decoration: underline;"><span style="color: #000000; text-decoration: underline;">"MakerTour",</span></span></li>
+<li>"Open-Know-Where Data Awards r1",</li>
+<li>"Open-Know-Where Data Awards r2",</li>
+<li>"IMA Innovative Manufacturing in Africa",</li>
+<li>"mAkE African European Maker Ecosystem".</li>
+</ol>
+<p>Yet to process:</p>
+<ol>
+<li>"Make, Makezine",</li>
+<li>"Bay Area Makerspaces UC Berkeley",</li>
+<li>"Bay Area Makerspaces Upbeatlab",</li>
+<li>"sphere.diybio.org",</li>
+<li>"Hackerspaces.org",</li>
+<li>"Vulca",</li>
+<li>"FabCity",</li>
+<li>"Univeristy of Michigan 3DLab"</li>
+</ol>
+<p>Distribution by continent:</p>
+<ul>
+<li><strong>Africa</strong>: 8391</li>
+<li><strong>Asia</strong>: 1580</li>
+<li><strong>Europe</strong>: 1568</li>
+<li><strong>North America</strong>: 357</li>
+<li><strong>South America</strong>: 276</li>
+<li><strong>Oceania</strong>: 23</li>
+</ul>
+<h4>MACHINERY</h4>
+<p>The most common machines found are 3D printers following to CNC milling machines, the "other" class comprises to a variety of machines from presses to air vacuum moulding machines. This preliminary classification depends on the classes and tags defined by the FabLab Network. Later on we identified the need of a Taxonomy for the classification of machines.</p>
+<ul>
+<li><span class="ui-provider xs xt ji xu xv xw xx xy xz ya yb yc yd ye yf yg yh yi yj yk yl ym yn yo yp yq yr ys yt yu yv yw yx yy yz" dir="ltr">World wide: 7488 [<a href="https://iop-alliance.github.io/data_reports/reports/machines_in_fablabs_world_readback.html" target="_blank" rel="noopener noreferrer">Analysis report</a>]</span></li>
+</ul>
+<figure class="post__image"><img loading="lazy"  src="https://map.internetofproduction.org/media/posts/4/Untitled.png" alt="Machine distribution graph" width="1336" height="967" sizes="(max-width: 768px) 100vw, 768px" srcset="https://map.internetofproduction.org/media/posts/4/responsive/Untitled-xs.png 300w ,https://map.internetofproduction.org/media/posts/4/responsive/Untitled-sm.png 480w ,https://map.internetofproduction.org/media/posts/4/responsive/Untitled-md.png 768w"></figure>
 <h3>COLLECTION</h3>
 <p>A GIT repository containing Jupyter notebooks designed for the collection and analysis of machinery and facilities data its available at: <br><a href="https://github.com/iop-alliance/okw_data_management">https://github.com/iop-alliance/okw_data_management</a>.</p>
 <p>The notebooks cover a range of topics, including data acquisition processes, machinery cataloguing, and data management.</p>
