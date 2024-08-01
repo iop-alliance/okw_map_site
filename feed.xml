@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
-    <title>Open-Know-Where Initiative Mapping and Data</title>
+    <title>Open-Know-Where Initiative</title>
     <link href="https://map.internetofproduction.org/feed.xml" rel="self" />
     <link href="https://map.internetofproduction.org" />
-    <updated>2024-07-25T08:21:46-06:00</updated>
+    <updated>2024-07-31T18:02:26-06:00</updated>
     <author>
         <name>Antonio de Jesus Anaya Hernandez</name>
     </author>
@@ -906,10 +906,16 @@
         <id>https://map.internetofproduction.org/data-submission/index.html</id>
 
         <updated>2023-12-19T19:47:37-06:00</updated>
-            <summary></summary>
+            <summary>
+                <![CDATA[
+                    If you are using Firefox and/or you can't access the form here due to "Loading Error". Click and enter the form directly at: https://enketo.unhcr.org/x/gn0IrHmt This&hellip;
+                ]]>
+            </summary>
         <content type="html">
             <![CDATA[
-                <div class="post__iframe">
+                <p> </p>
+<p class="msg msg--highlight ">If you are using Firefox and/or you can't access the form here due to "Loading Error". Click and enter the form directly at: <br><a href="https://enketo.unhcr.org/x/gn0IrHmt">https://enketo.unhcr.org/x/gn0IrHmt</a> <br><br>This error is due to "service workers protection" policy that is enabled by default by Firefox. Bug information: <a href="https://discourse.mozilla.org/t/failed-to-register-update-a-serviceworker/102538">https://discourse.mozilla.org/t/failed-to-register-update-a-serviceworker/102538</a></p>
+<div class="post__iframe">
                 <div 
                     class="pec-wrapper" 
                     data-consent-group-id="analytics">
@@ -1166,10 +1172,14 @@
 <p><strong>What:</strong> This is the front page of the <strong>Open-Know-Where Map of Manufacturing</strong> project to survey and collect data on machines, facilities, people, and materials enabling distributed manufacturing.<br><br><strong>Who:</strong> This is intended to be use by Makers and organisations around Maker-spaces, Fab-Labs, and innovation hubs within the Internet of Production Alliance and its projects.<br><br><strong>Purpose:</strong> The Internet of Production Alliance collects the data to form a database of machines, facilities, people, and materials by location, to be analysed and mapped for the Open-Know-Where initiative.</p>
 <p><strong>Data Processing:</strong> The data collected is processed by the DevOps office of the Internet of Production Alliance. </p>
 <p><strong>Data expiration:</strong> Data would be re-validated or discarded after 36 months from the initial date of data publishing, expected on 2024/02 TBA. </p>
-<p>Our data policy is found at <a href="https://map.internetofproduction.org/data-privacy-policy/index.html" target="_blank" rel="nofollow noopener noreferrer">https://map.internetofproduction.org/data-privacy-policy/index.html</a></p>
-<p>For any map related concerns and requests contact by email to: <a href="mailto:antonio.anaya@internetofproduction.org">antonio.anaya@internetofproduction.org</a></p>
+<p class="msg msg--info">Our data policy is found at <a href="https://map.internetofproduction.org/data-privacy-policy/index.html" target="_blank" rel="nofollow noopener noreferrer">https://map.internetofproduction.org/data-privacy-policy/index.html</a></p>
+<p class="msg msg--info">For any map related concerns and requests contact by email to: <a href="mailto:antonio.anaya@internetofproduction.org">antonio.anaya@internetofproduction.org</a></p>
 <h2>MAPS</h2>
-<h3>GLOBAL<br><div class="post__iframe">
+<p>These map prototypes have been created following the needs of different projects and objectives:</p>
+<p>The Sloan Foundation map of distributed manufacturing and Open-Know-Where Standard Development, European Horizon for the mAkE African European Maker Ecosystem, and the Innovative Manufacturing in Africa I.M.A.<br><br>The value proposition of these maps is integrated by the collection of relevant data, the examination and proposition of a <a href="https://map.internetofproduction.org/data-schema-design-choices/index.html" target="_blank" rel="noopener noreferrer">technical data storage standard</a>, the exploration of data collection methods and the machine-human interaction with the data.</p>
+<p>The maps have been proposed for a set of different identified <a href="https://map.internetofproduction.org/use-cases/index.html" target="_blank" rel="noopener noreferrer">use cases</a>. And the data collection aims to be a tool for the future understanding and developing of innovation and location of resources.</p>
+<p class="msg msg--highlight ">The current work is in constant review and development. Maps and data amounts will change, accordingly to new finds, regulations and privacy requests.</p>
+<p>GLOBAL (Sloan Foundation)<br><br><div class="post__iframe">
                 <div 
                     class="pec-wrapper" 
                     data-consent-group-id="analytics">
@@ -1186,8 +1196,8 @@
                     </div>
                     <script>window.publiiEmbedConsentCheck('analytics');</script>
                 </div>
-                </div></h3>
-<h3>MAKE</h3>
+                </div>
+<p>mAkE (Horizon Europe)</p>
 <div class="post__iframe">
                 <div 
                     class="pec-wrapper" 
@@ -1206,7 +1216,7 @@
                     <script>window.publiiEmbedConsentCheck('analytics');</script>
                 </div>
                 </div>
-<h3>IMA</h3>
+<p>IMA (Innovative Manufacturing in Africa)</p>
 <div class="post__iframe">
                 <div 
                     class="pec-wrapper" 
