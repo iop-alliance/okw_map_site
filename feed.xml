@@ -3,12 +3,60 @@
     <title>Open-Know-Where Initiative</title>
     <link href="https://map.internetofproduction.org/feed.xml" rel="self" />
     <link href="https://map.internetofproduction.org" />
-    <updated>2024-08-01T01:59:14-06:00</updated>
+    <updated>2024-08-21T20:48:14-06:00</updated>
     <author>
         <name>Antonio de Jesus Anaya Hernandez</name>
     </author>
     <id>https://map.internetofproduction.org</id>
 
+    <entry>
+        <title>mAkE: Map of Machinery</title>
+        <author>
+            <name>Antonio de Jesus Anaya Hernandez</name>
+        </author>
+        <link href="https://map.internetofproduction.org/makeafricaeu/index.html"/>
+        <id>https://map.internetofproduction.org/makeafricaeu/index.html</id>
+
+        <updated>2024-07-15T06:58:09-06:00</updated>
+            <summary>
+                <![CDATA[
+                    The Map of Machinery, a project by the Internet of Production under the mAkE initiative, is a tool for distributed manufacturing that helps makers, SMEs,&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>The Map of Machinery, a project by the Internet of Production under the mAkE initiative, is a tool for distributed manufacturing that helps makers, SMEs, and innovators locate resources like machinery, facilities, and skilled individuals. This open-data initiative supports various use cases, from disaster response to economic development, by enabling localised production and innovation. The project emphasises adherence to FAIR principles and EU GDPR (European Union General Data Protection Regulation) standards for data collection and sharing.</p>
+<p><strong>Key Points</strong></p>
+<ul>
+<li><strong>Purpose:</strong> Enable distributed manufacturing by providing open data on machinery, facilities, and skills.</li>
+<li><strong>Use Cases:</strong> Includes disaster response, economic development, education, and open-source hardware design.</li>
+<li><strong>Data Collection:</strong> Involves partners like FabLabs.io, Global Innovation Gathering (GIG), and others, focusing on Europe and Africa.</li>
+<li><strong>Contributions:</strong> Users can add facility and machinery data via a submission form, with validation by administrators before display.</li>
+<li><strong>Future Plans:</strong> Developing an API for data publishing and an MVP for disaster response, along with ongoing community engagement.</li>
+</ul>
+<p>For more information read this blog entry: <a href="https://makeafricaeu.org/map-of-machinery/" target="_blank" rel="noopener noreferrer">https://makeafricaeu.org/map-of-machinery/</a> </p>
+<p>A dataset for regional information on WHERE to Build Hardware for:<br>Drinking Water security,<br>Electricity generation,<br>Assistive medical devices like Prosthetics.<br> <br>Hypothesis: Motivating organically, the collection of manufacturing data by showcasing a tool that uses the IOPA OKW data and standard specification.</p>
+<div class="post__iframe">
+                <div 
+                    class="pec-wrapper" 
+                    data-consent-group-id="analytics">
+                    <iframe data-consent-overlay-added="true" loading="lazy" width="100%" height="50%" style="border-radius: 10px; border: 0px #ffffff none;" data-consent-src="https://map.internetofproduction.org/makeafricaeu.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"></iframe>
+                    <div class="pec-overlay is-active" aria-hidden="false">
+                        <div class="pec-overlay-inner">
+                            <p></p>
+                            <button 
+                                class="pec-button" 
+                                onclick="window.publiiEmbedConsentGiven('analytics'); return false;">
+                                
+                            </button>
+                        </div>
+                    </div>
+                    <script>window.publiiEmbedConsentCheck('analytics');</script>
+                </div>
+                </div>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>WORKING GROUP</title>
         <author>
