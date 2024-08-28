@@ -3,12 +3,126 @@
     <title>Open-Know-Where Initiative</title>
     <link href="https://map.internetofproduction.org/feed.xml" rel="self" />
     <link href="https://map.internetofproduction.org" />
-    <updated>2024-08-21T20:48:14-06:00</updated>
+    <updated>2024-08-28T08:28:50-06:00</updated>
     <author>
         <name>Antonio de Jesus Anaya Hernandez</name>
     </author>
     <id>https://map.internetofproduction.org</id>
 
+    <entry>
+        <title>Disaster response Open database</title>
+        <author>
+            <name>Antonio de Jesus Anaya Hernandez</name>
+        </author>
+        <link href="https://map.internetofproduction.org/disaster-response-open-database/index.html"/>
+        <id>https://map.internetofproduction.org/disaster-response-open-database/index.html</id>
+
+        <updated>2024-08-26T22:04:33-06:00</updated>
+            <summary>
+                <![CDATA[
+                    1. Introduction 2. Key Areas of Data Needs for Disaster Response 3: Database Structure 4: Benefits of Open Data in Disaster Response 5. MVP Make&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><strong>1. Introduction </strong></p>
+<div class="my-0.5"> </div>
+<ul>
+<li>Brief overview of the importance of data in disaster response</li>
+<li>Explanation of the concept of open data and its relevance to disaster response</li>
+</ul>
+<div class="my-0.5"> </div>
+<p><strong>2. Key Areas of Data Needs for Disaster Response </strong></p>
+<ul>
+<li>Energy and Water Procurement
+<ul>
+<li>Types of energy and water needed during disasters (e.g., generators, fuel, bottled water)</li>
+<li>Sources of supply (e.g., manufacturers, distributors, emergency stockpiles) * Corrected to add a specific example of "emergency stockpiles" *</li>
+</ul>
+</li>
+<li>Prosthesis and Assistive Devices
+<ul>
+<li>Types of assistive devices needed for disaster victims (e.g., prosthetic limbs, wheelchairs)</li>
+<li>Availability of specialised equipment and expertise</li>
+</ul>
+</li>
+<li>Repair and Spare Parts for Manufacturing of Machinery
+<ul>
+<li>Types of machinery used in disaster response (e.g., heavy equipment, medical equipment)</li>
+<li>Sources of spare parts and repair services</li>
+</ul>
+</li>
+<li>Big Small Scale of Protective Bio-Hazard Equipment
+<ul>
+<li>Types of protective equipment needed for bio-hazards (e.g., PPE, decontamination supplies)</li>
+<li>Availability and manufacturing of specialised equipment and expertise</li>
+</ul>
+</li>
+</ul>
+<div class="my-0.5"> </div>
+<p><strong>3: Database Structure </strong></p>
+<div class="my-0.5"> </div>
+<ul>
+<li>Manufacturing Locations
+<ul>
+<li>Geographical coordinates and locations of manufacturing facilities</li>
+<li>Types of products manufactured at each location</li>
+</ul>
+</li>
+<li>Manufacturing Equipment
+<ul>
+<li>Types of equipment used in production (e.g., 3D printers, machining tools)</li>
+<li>Availability of spare parts and maintenance services</li>
+</ul>
+</li>
+</ul>
+<div class="my-0.5"> </div>
+<p><strong>4: Benefits of Open Data in Disaster Response </strong></p>
+<div class="my-0.5"> </div>
+<ul>
+<li>Improved Situational Awareness
+<ul>
+<li>Access to accurate and timely data enables more effective decision-making during disasters.</li>
+</ul>
+</li>
+<li>Enhanced Collaboration
+<ul>
+<li>Sharing of open data fosters cooperation among stakeholders, including governments, NGOs, and private sector entities.</li>
+</ul>
+</li>
+</ul>
+<div class="my-0.5"> </div>
+<p><strong>5. MVP</strong></p>
+<div class="my-0.5"><figure class="post__image"><img loading="lazy"  src="https://map.internetofproduction.org/media/posts/29/Screenshot-2024-08-28-at-07-44-54-collector_source_01.py.png" alt="" width="1108" height="476" sizes="(max-width: 768px) 100vw, 768px" srcset="https://map.internetofproduction.org/media/posts/29/responsive/Screenshot-2024-08-28-at-07-44-54-collector_source_01.py-xs.png 300w ,https://map.internetofproduction.org/media/posts/29/responsive/Screenshot-2024-08-28-at-07-44-54-collector_source_01.py-sm.png 480w ,https://map.internetofproduction.org/media/posts/29/responsive/Screenshot-2024-08-28-at-07-44-54-collector_source_01.py-md.png 768w"></figure></div>
+<ul>
+<li>Make a test run for the region of<strong> Egypt </strong>and<strong> France.</strong></li>
+<li>Create an scenario where a pandemic has strike and items are needed in hospitals.</li>
+<li>Base on the interaction study from Hackaday Prize and other research UI determine the actions and functions to gather:<br><br>
+<ul>
+<li>A Portable document holding manufacturing product intelligence. (Product A)<br>
+<ul>
+<li>Data of locations.
+<ul>
+<li>Maker/Fab Repairing spaces.</li>
+<li>Machining services.</li>
+<li>Catalogue of machines and quantities.</li>
+<li>Skilled people. (Skills)</li>
+<li>Catalogue of Projects/Products made/deployed in the area.</li>
+<li>Repairing spaces.</li>
+</ul>
+</li>
+<li>Map visualisation tool: Kepler.Gl</li>
+<li>with a data analysis and data resume.</li>
+</ul>
+</li>
+<li>A brief guideline on how to use the data. (Product B)</li>
+<li>A database setup and forms for the collection of new data. (Product C)</li>
+</ul>
+</li>
+</ul>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>mAkE: Map of Machinery</title>
         <author>
