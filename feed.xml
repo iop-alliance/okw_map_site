@@ -3,7 +3,7 @@
     <title>Open-Know-Where Initiative</title>
     <link href="https://map.internetofproduction.org/feed.xml" rel="self" />
     <link href="https://map.internetofproduction.org" />
-    <updated>2024-08-28T08:28:50-06:00</updated>
+    <updated>2024-08-29T06:32:10-06:00</updated>
     <author>
         <name>Antonio de Jesus Anaya Hernandez</name>
     </author>
@@ -20,7 +20,7 @@
         <updated>2024-08-26T22:04:33-06:00</updated>
             <summary>
                 <![CDATA[
-                    1. Introduction 2. Key Areas of Data Needs for Disaster Response 3: Database Structure 4: Benefits of Open Data in Disaster Response 5. MVP Make&hellip;
+                    1. Introduction 2. Key Areas of Data Needs for Disaster Response 3: Database Structure 4: Benefits of Open Data in Disaster Response 5. MVP Current&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -93,9 +93,10 @@
 </ul>
 <div class="my-0.5"> </div>
 <p><strong>5. MVP</strong></p>
+<p> </p>
 <div class="my-0.5"><figure class="post__image"><img loading="lazy"  src="https://map.internetofproduction.org/media/posts/29/Screenshot-2024-08-28-at-07-44-54-collector_source_01.py.png" alt="" width="1108" height="476" sizes="(max-width: 768px) 100vw, 768px" srcset="https://map.internetofproduction.org/media/posts/29/responsive/Screenshot-2024-08-28-at-07-44-54-collector_source_01.py-xs.png 300w ,https://map.internetofproduction.org/media/posts/29/responsive/Screenshot-2024-08-28-at-07-44-54-collector_source_01.py-sm.png 480w ,https://map.internetofproduction.org/media/posts/29/responsive/Screenshot-2024-08-28-at-07-44-54-collector_source_01.py-md.png 768w"></figure></div>
 <ul>
-<li>Make a test run for the region of<strong> Egypt </strong>and<strong> France.</strong></li>
+<li>Make a test run for the regions of<strong> Egypt </strong>and<strong> France.</strong></li>
 <li>Create an scenario where a pandemic has strike and items are needed in hospitals.</li>
 <li>Base on the interaction study from Hackaday Prize and other research UI determine the actions and functions to gather:<br><br>
 <ul>
@@ -120,6 +121,8 @@
 </ul>
 </li>
 </ul>
+<p>Current challenges:</p>
+<p>Get African Makers to engage and participate.</p>
             ]]>
         </content>
     </entry>
