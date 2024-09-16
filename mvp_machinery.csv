@@ -1,289 +1,289 @@
-0,name,brand,class_1,lab,city,county,country_code
-16,ultimaker 2,ultimaker,three_d_printer,la refabrique,Cannes,Provence-Alpes-Cote d'Azur,FR
-103,ultimaker 2,ultimaker,three_d_printer,zBis,ST GEORGES DE MONTAIGU,Vendée,FR
-104,cameo®,silhouette,vinyl_cutting,zBis,ST GEORGES DE MONTAIGU,Vendée,FR
-105,replicator 2x,makerbot industries,three_d_printer,zBis,ST GEORGES DE MONTAIGU,Vendée,FR
-106,up! mini,ebpp3dp,three_d_printer,zBis,ST GEORGES DE MONTAIGU,Vendée,FR
-107,ultimaker 2,ultimaker,three_d_printer,Laboratoire d'Aix-périmentation et de Bidouille,Aix-en-Provence,,FR
-108,gx-24,roland,vinyl_cutting,Laboratoire d'Aix-périmentation et de Bidouille,Aix-en-Provence,,FR
-109,mdx-40a,roland,precision_milling,Laboratoire d'Aix-périmentation et de Bidouille,Aix-en-Provence,,FR
-110,replicator 2,makerbot industries,three_d_printer,Laboratoire d'Aix-périmentation et de Bidouille,Aix-en-Provence,,FR
-118,ultimaker 2,ultimaker,three_d_printer,Les Fabriques du Ponant,brest,,FR
-119,speedy 100,trotec,laser,Les Fabriques du Ponant,brest,,FR
-120,ultimaker 2,ultimaker,three_d_printer, Fab Lab du 127° ,Bordeaux,,FR
-121,mdx-20,roland,precision_milling, Fab Lab du 127° ,Bordeaux,,FR
-175,ultimaker 2,ultimaker,three_d_printer,BerryLab36,Châteauroux,,FR
-176,speedy 100,trotec,laser,BerryLab36,Châteauroux,,FR
-189,ultimaker 2,ultimaker,three_d_printer,Telefab,Plouzane,Bretagne,FR
-190,cameo®,silhouette,vinyl_cutting,Telefab,Plouzane,Bretagne,FR
-191,rayjet,trotec,laser,Telefab,Plouzane,Bretagne,FR
-192,mdx-15,roland,precision_milling,Telefab,Plouzane,Bretagne,FR
-278,ultimaker 2,ultimaker,three_d_printer,La Fabritech,Le Cheylard,,FR
-279,shopbot gantry,"shopbot tools, inc",cnc_milling,La Fabritech,Le Cheylard,,FR
-282,ultimaker 2,ultimaker,three_d_printer,Eco FabLab MDesign,Metz,,FR
-283,prusa mendel 1,reprap,three_d_printer,Eco FabLab MDesign,Metz,,FR
-284,othermill,other machine co,precision_milling,Eco FabLab MDesign,Metz,,FR
-285,up! mini,ebpp3dp,three_d_printer,Eco FabLab MDesign,Metz,,FR
-286,rostock,reprap,three_d_printer,Eco FabLab MDesign,Metz,,FR
-287,cnc router machine--forsun,heiz,cnc_milling,Eco FabLab MDesign,Metz,,FR
-288,shopbot buddy,"shopbot tools, inc",cnc_milling,Eco FabLab MDesign,Metz,,FR
-289,spirit ge 30w,laserpro,laser,Eco FabLab MDesign,Metz,,FR
-290,ultimaker 2,ultimaker,three_d_printer,Nicéphore Labs,Chalon-sur-Saône,Burgundy,FR
-291,mdx-40a,roland,precision_milling,Nicéphore Labs,Chalon-sur-Saône,Burgundy,FR
-292,prusa mendel 1,reprap,three_d_printer,Nicéphore Labs,Chalon-sur-Saône,Burgundy,FR
-453,kinect v1,microsoft,scanner,Atelier Made in iKi - FabLab Bresse du Jura,Commenailles,,FR
-454,prusa i3,reprap,three_d_printer,Atelier Made in iKi - FabLab Bresse du Jura,Commenailles,,FR
-455,cameo®,silhouette,vinyl_cutting,Atelier Made in iKi - FabLab Bresse du Jura,Commenailles,,FR
-456,replicator 2,makerbot industries,three_d_printer,Atelier Made in iKi - FabLab Bresse du Jura,Commenailles,,FR
-457,k40 laser engraver & cutter,unknown,laser,Atelier Made in iKi - FabLab Bresse du Jura,Commenailles,,FR
-458,cnc 3018 pro,sainsmart,cnc_milling,Atelier Made in iKi - FabLab Bresse du Jura,Commenailles,,FR
-459,ciclop,bq,other,Atelier Made in iKi - FabLab Bresse du Jura,Commenailles,,FR
-460,scalar l,3d modular systems,three_d_printer,Atelier Made in iKi - FabLab Bresse du Jura,Commenailles,,FR
-544,kinect v1,microsoft,scanner,FabLab 276 Val-de-Reuil,Val-de-Reuil,Normandie,FR
-545,cameo®,silhouette,vinyl_cutting,FabLab 276 Val-de-Reuil,Val-de-Reuil,Normandie,FR
-546,k40 laser engraver & cutter,unknown,laser,FabLab 276 Val-de-Reuil,Val-de-Reuil,Normandie,FR
-547,bq hephestos i3,bq,three_d_printer,FabLab 276 Val-de-Reuil,Val-de-Reuil,Normandie,FR
-548,micro delta,emotion tech,three_d_printer,FabLab 276 Val-de-Reuil,Val-de-Reuil,Normandie,FR
-549,ciclop,bq,other,FabLab 276 Val-de-Reuil,Val-de-Reuil,Normandie,FR
-695,kinect v1,microsoft,scanner,GraouLab,Metz,,FR
-696,prusa mendel 1,reprap,three_d_printer,GraouLab,Metz,,FR
-697,othermill,other machine co,precision_milling,GraouLab,Metz,,FR
-710,kinect v1,microsoft,scanner,SquaregoLab,Perpignan,,FR
-711,srm-20 monofab,roland,precision_milling,SquaregoLab,Perpignan,,FR
-712,camm-1 gs-24,roland,vinyl_cutting,SquaregoLab,Perpignan,,FR
-713,tec cam 1000,perez camps,cnc_milling,SquaregoLab,Perpignan,,FR
-766,kinect v1,microsoft,scanner,Fablab du Chalonnais,Chalon-sur-Saône,,FR
-767,sense 3d scanner,"3d systems, inc",scanner,Fablab du Chalonnais,Chalon-sur-Saône,,FR
-768,cameo 3,silhouette,vinyl_cutting,Fablab du Chalonnais,Chalon-sur-Saône,,FR
-769,kinect v2 3d scanner,microsoft,scanner,Fablab du Chalonnais,Chalon-sur-Saône,,FR
-770,witbox 2,bq,three_d_printer,Fablab du Chalonnais,Chalon-sur-Saône,,FR
-825,prusa i3,reprap,three_d_printer,Fab Lab Egypt,Cairo,Cairo,EG
-826,mdx-20,roland,precision_milling,Fab Lab Egypt,Cairo,Cairo,EG
-827,replicator 2,makerbot industries,three_d_printer,Fab Lab Egypt,Cairo,Cairo,EG
-828,up! mini,ebpp3dp,three_d_printer,Fab Lab Egypt,Cairo,Cairo,EG
-829,morn mt3050d,morn,laser,Fab Lab Egypt,Cairo,Cairo,EG
-851,prusa i3,reprap,three_d_printer,Fab Lab Sud31-Val d'Ariège,Cintegabelle,,FR
-852,ultimaker 2+,ultimaker,three_d_printer,Fab Lab Sud31-Val d'Ariège,Cintegabelle,,FR
-853,cnc routing,homemade cnc router,cnc_milling,Fab Lab Sud31-Val d'Ariège,Cintegabelle,,FR
-854,kh-750,kehui,laser,Fab Lab Sud31-Val d'Ariège,Cintegabelle,,FR
-855,ciclop,bq,other,Fab Lab Sud31-Val d'Ariège,Cintegabelle,,FR
-856,innovis 15,brother,other,Fab Lab Sud31-Val d'Ariège,Cintegabelle,,FR
-857,hx-1360,rabbit,vinyl_cutting,Fab Lab Sud31-Val d'Ariège,Cintegabelle,,FR
-873,prusa i3,reprap,three_d_printer,Info@Leze,Lagardelle-sur-Lèze,,FR
-874,ultimaker 2+,ultimaker,three_d_printer,Info@Leze,Lagardelle-sur-Lèze,,FR
-875,cameo 3,silhouette,vinyl_cutting,Info@Leze,Lagardelle-sur-Lèze,,FR
-876,redsail x900 100w lasercut,redsail,laser,Info@Leze,Lagardelle-sur-Lèze,,FR
-877,innov'is m280d,brother,other,Info@Leze,Lagardelle-sur-Lèze,,FR
-904,prusa i3,reprap,three_d_printer,ACoLab,Clermont-Ferrand,,FR
-905,cnc routing,homemade cnc router,cnc_milling,ACoLab,Clermont-Ferrand,,FR
-906,othermill,other machine co,precision_milling,ACoLab,Clermont-Ferrand,,FR
-907,prusa i3,reprap,three_d_printer,Fab Lab - La Casemate,Grenoble,Rhone-Alpes,FR
-908,shopbot gantry,"shopbot tools, inc",cnc_milling,Fab Lab - La Casemate,Grenoble,Rhone-Alpes,FR
-909,speedy 100,trotec,laser,Fab Lab - La Casemate,Grenoble,Rhone-Alpes,FR
-919,prusa i3,reprap,three_d_printer,DeVinci Fablab,Courbevoie,,FR
-920,cr10s5,creality,three_d_printer,DeVinci Fablab,Courbevoie,,FR
-921,raise 3d n2 plas,raise 3d,three_d_printer,DeVinci Fablab,Courbevoie,,FR
-922,mini,original prusa,three_d_printer,DeVinci Fablab,Courbevoie,,FR
-923,raise 3d n1,raise 3d,three_d_printer,DeVinci Fablab,Courbevoie,,FR
-932,prusa i3,reprap,three_d_printer,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-933,shopbot gantry,"shopbot tools, inc",cnc_milling,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-934,mdx-40a,roland,precision_milling,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-935,ultimaker 3,ultimaker,three_d_printer,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-936,form2,formlabs,three_d_printer,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-937,camm-1 gs-24,roland,vinyl_cutting,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-938,cnc routing,homemade cnc router,cnc_milling,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-939,ultimaker 3 extended,ultimaker,three_d_printer,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-940,legend mini 24,epilog laser,laser,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-941,ultimaker s5,ultimaker,three_d_printer,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-942,shopbot desktop,"shopbot tools, inc",cnc_milling,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-943,kinect v2 3d scanner,microsoft,scanner,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-944,x-carve,inventables,cnc_milling,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-945,epilog fusion m2 40,epilog laser,laser,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-946,digital sublimation t-shirt heat press,powerpress,other,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-947,wd1 digital soldering station,weller,other,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-948,pocket nc 5 axis,pocket nc,precision_milling,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-949,mayku formbox,mayku formbox,other,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-950,open qpcr,chai biotechnologies,other,FABLAB UPSACLAY ,Gif-sur-Yvette,,FR
-993,prusa i3,reprap,three_d_printer,8 FabLab Drôme,Crest,Drôme,FR
-994,up plus 2,ebpp3dp,three_d_printer,8 FabLab Drôme,Crest,Drôme,FR
-995,witbox 2,bq,three_d_printer,8 FabLab Drôme,Crest,Drôme,FR
-1042,prusa i3,reprap,three_d_printer,Fablab Descartes,Champs-sur-Marne,,FR
-1043,ultimaker s5,ultimaker,three_d_printer,Fablab Descartes,Champs-sur-Marne,,FR
-1044,ultimaker 2+ extended,ultimaker,three_d_printer,Fablab Descartes,Champs-sur-Marne,,FR
-1045,shopbot buddy,"shopbot tools, inc",cnc_milling,Fablab Descartes,Champs-sur-Marne,,FR
-1046,gx 500/300,roland,vinyl_cutting,Fablab Descartes,Champs-sur-Marne,,FR
-1047,mark two,markforged,three_d_printer,Fablab Descartes,Champs-sur-Marne,,FR
-1048,innovis n150,brother,other,Fablab Descartes,Champs-sur-Marne,,FR
-1083,gx-24,roland,vinyl_cutting,Artilect FabLab Toulouse,Toulouse,Midi-Pyrénées,FR
-1084,cnc mill­ing mach­ine,cnc,cnc_milling,Artilect FabLab Toulouse,Toulouse,Midi-Pyrénées,FR
-1085,makerbot z18,makerbot industries,three_d_printer,Artilect FabLab Toulouse,Toulouse,Midi-Pyrénées,FR
-1086,ender-3,creality,three_d_printer,Artilect FabLab Toulouse,Toulouse,Midi-Pyrénées,FR
-1087,up plus 2,ebpp3dp,three_d_printer,Artilect FabLab Toulouse,Toulouse,Midi-Pyrénées,FR
-1088,"trotec laser engraving, cutting & marking machine",trotec,laser,Artilect FabLab Toulouse,Toulouse,Midi-Pyrénées,FR
-1089,up! mini,ebpp3dp,three_d_printer,Artilect FabLab Toulouse,Toulouse,Midi-Pyrénées,FR
-1090,legend helix 24,epilog laser,laser,Artilect FabLab Toulouse,Toulouse,Midi-Pyrénées,FR
-1125,gx-24,roland,vinyl_cutting,Pangloss Labs #1 - Ferney-Voltaire,Ferney-Voltaire,Ain,FR
-1126,replicator 2,makerbot industries,three_d_printer,Pangloss Labs #1 - Ferney-Voltaire,Ferney-Voltaire,Ain,FR
-1127,k40 laser engraver & cutter,unknown,laser,Pangloss Labs #1 - Ferney-Voltaire,Ferney-Voltaire,Ain,FR
-1128,scan in a box,scan in a box,scanner,Pangloss Labs #1 - Ferney-Voltaire,Ferney-Voltaire,Ain,FR
-1129,ox cnc,openbuilds,cnc_milling,Pangloss Labs #1 - Ferney-Voltaire,Ferney-Voltaire,Ain,FR
-1130,simple metal with extended heatbed,printrbot,three_d_printer,Pangloss Labs #1 - Ferney-Voltaire,Ferney-Voltaire,Ain,FR
-1131,creatr hs,leapfrog,three_d_printer,Pangloss Labs #1 - Ferney-Voltaire,Ferney-Voltaire,Ain,FR
-1132,pico 2 405 nm,asiga,three_d_printer,Pangloss Labs #1 - Ferney-Voltaire,Ferney-Voltaire,Ain,FR
-1133,x2 cnc,badog,cnc_milling,Pangloss Labs #1 - Ferney-Voltaire,Ferney-Voltaire,Ain,FR
-1134,scanify,fuel 3d,scanner,Pangloss Labs #1 - Ferney-Voltaire,Ferney-Voltaire,Ain,FR
-1135,cronos3d  dual 2.0 mpx,open technologies,scanner,Pangloss Labs #1 - Ferney-Voltaire,Ferney-Voltaire,Ain,FR
-1136,aurum 3d,open technologies,scanner,Pangloss Labs #1 - Ferney-Voltaire,Ferney-Voltaire,Ain,FR
-1215,gx-24,roland,vinyl_cutting,AgriLab,Beauvais,Oise,FR
-1216,srm-20 monofab,roland,precision_milling,AgriLab,Beauvais,Oise,FR
-1217,ultimaker 2+,ultimaker,three_d_printer,AgriLab,Beauvais,Oise,FR
-1218,form2,formlabs,three_d_printer,AgriLab,Beauvais,Oise,FR
-1219,ultimaker 3 extended,ultimaker,three_d_printer,AgriLab,Beauvais,Oise,FR
-1220,cameo 3,silhouette,vinyl_cutting,AgriLab,Beauvais,Oise,FR
-1221,pocket nc 5 axis,pocket nc,precision_milling,AgriLab,Beauvais,Oise,FR
-1222,x-reflow306 lf-ac advanced model ,bokar,other,AgriLab,Beauvais,Oise,FR
-1223,pick and place xmp302d,bokar,other,AgriLab,Beauvais,Oise,FR
-1224,otii,qoitech,other,AgriLab,Beauvais,Oise,FR
-1225,gx-24,roland,vinyl_cutting,FabLab du Dôme à Caen,Caen,Normandie,FR
-1226,mdx-40a,roland,precision_milling,FabLab du Dôme à Caen,Caen,Normandie,FR
-1227,ultimaker 2+,ultimaker,three_d_printer,FabLab du Dôme à Caen,Caen,Normandie,FR
-1228,ultimaker s5,ultimaker,three_d_printer,FabLab du Dôme à Caen,Caen,Normandie,FR
-1229,heat press machine 38x38cm,xingyang,other,FabLab du Dôme à Caen,Caen,Normandie,FR
-1230,innov-is nv800e,brother,other,FabLab du Dôme à Caen,Caen,Normandie,FR
-1231,prsalpha 96x48,"shopbot tools, inc",cnc_milling,FabLab du Dôme à Caen,Caen,Normandie,FR
-1281,shopbot gantry,"shopbot tools, inc",cnc_milling,La Machinerie,Amiens,Somme,FR
-1282,ultimaker 2+,ultimaker,three_d_printer,La Machinerie,Amiens,Somme,FR
-1283,othermill,other machine co,precision_milling,La Machinerie,Amiens,Somme,FR
-1284,x-carve,inventables,cnc_milling,La Machinerie,Amiens,Somme,FR
-1285,ultimaker original,ultimaker,three_d_printer,La Machinerie,Amiens,Somme,FR
-1367,sense 3d scanner,"3d systems, inc",scanner,MillauLab,Millau,Aveyron,FR
-1368,ultimaker 2+,ultimaker,three_d_printer,MillauLab,Millau,Aveyron,FR
-1369,camm-1 gs-24,roland,vinyl_cutting,MillauLab,Millau,Aveyron,FR
-1370,witbox 2,bq,three_d_printer,MillauLab,Millau,Aveyron,FR
-1371,open maker machine pro xl,mon-fablab.fr,cnc_milling,MillauLab,Millau,Aveyron,FR
-1372,ciclop,bq,other,MillauLab,Millau,Aveyron,FR
-1373,lm1390,arketype,laser,MillauLab,Millau,Aveyron,FR
-1374,alu line 1110,sorotec,cnc_milling,MillauLab,Millau,Aveyron,FR
-1375,lathe, lf300 x 900,other,MillauLab,Millau,Aveyron,FR
-1376,dm45,tech-machines,other,MillauLab,Millau,Aveyron,FR
-1466,mdx-40a,roland,precision_milling,Fab Lab in New Cairo (FLiNC),Cairo,Egypt,EG
-1467,cubepro duo,"3d systems, inc",three_d_printer,Fab Lab in New Cairo (FLiNC),Cairo,Egypt,EG
-1468,gx 500/300,roland,vinyl_cutting,Fab Lab in New Cairo (FLiNC),Cairo,Egypt,EG
-1469,morn mt3050d,morn,laser,Fab Lab in New Cairo (FLiNC),Cairo,Egypt,EG
-1470,mdx-40a,roland,precision_milling,Makeo,Dax,Aquitaine,FR
-1471,legend mini 24,epilog laser,laser,Makeo,Dax,Aquitaine,FR
-1472,versacamm sp-i,roland,vinyl_cutting,Makeo,Dax,Aquitaine,FR
-1600,srm-20 monofab,roland,precision_milling,FabLab on wheels,Cairo,Cairo,EG
-1601,ultimaker 2+ extended,ultimaker,three_d_printer,FabLab on wheels,Cairo,Cairo,EG
-1602,morn mt3050d,morn,laser,FabLab on wheels,Cairo,Cairo,EG
-1647,ultimaker 2+,ultimaker,three_d_printer,Fablab Les Usines,Ligugé,,FR
-1648,cnc routing,homemade cnc router,cnc_milling,Fablab Les Usines,Ligugé,,FR
-1649,akj1610 h,acctek,laser,Fablab Les Usines,Ligugé,,FR
-1650,akm1530,acctek,cnc_milling,Fablab Les Usines,Ligugé,,FR
-1658,ultimaker 2+,ultimaker,three_d_printer,Fablab des Fabriques,Besançon,,FR
-1659,ultimaker 3,ultimaker,three_d_printer,Fablab des Fabriques,Besançon,,FR
-1660,speedy 100,trotec,laser,Fablab des Fabriques,Besançon,,FR
-1661,ultimaker 2+,ultimaker,three_d_printer,Médiathèque Les Carmes (Coop fablab) ,Pertuis,,FR
-1662,ultimaker 3,ultimaker,three_d_printer,Médiathèque Les Carmes (Coop fablab) ,Pertuis,,FR
-1663,deltawasp 2040,wasp,three_d_printer,Médiathèque Les Carmes (Coop fablab) ,Pertuis,,FR
-1664,form 1+,formlabs,three_d_printer,Médiathèque Les Carmes (Coop fablab) ,Pertuis,,FR
-1682,ultimaker 2+,ultimaker,three_d_printer,Fabric'INSA,Toulouse,,FR
-1683,ultimaker 3,ultimaker,three_d_printer,Fabric'INSA,Toulouse,,FR
-1684,ultimaker s5,ultimaker,three_d_printer,Fabric'INSA,Toulouse,,FR
-1697,ultimaker 3,ultimaker,three_d_printer,Fablab open innovation center CEA,Grenoble,,FR
-1698,form2,formlabs,three_d_printer,Fablab open innovation center CEA,Grenoble,,FR
-1699,creality cr-10s5,creality,three_d_printer,Fablab open innovation center CEA,Grenoble,,FR
-1700,objet30 pro,stratasys,three_d_printer,Fablab open innovation center CEA,Grenoble,,FR
-1701,zing 6030,epilog laser,laser,Fablab open innovation center CEA,Grenoble,,FR
-1702,rayjet,trotec,laser,Fablab open innovation center CEA,Grenoble,,FR
-1703,bn-20,roland,vinyl_cutting,Fablab open innovation center CEA,Grenoble,,FR
-1704,mdx-15,roland,precision_milling,Fablab open innovation center CEA,Grenoble,,FR
-1705,ultimaker 3,ultimaker,three_d_printer,LH3D Fab Lab,Le havre,Normandie,FR
-1706,replicator 2x,makerbot industries,three_d_printer,LH3D Fab Lab,Le havre,Normandie,FR
-1707,makerbot replicator,makerbot industries,three_d_printer,LH3D Fab Lab,Le havre,Normandie,FR
-1708,"trotec laser engraving, cutting & marking machine",trotec,laser,LH3D Fab Lab,Le havre,Normandie,FR
-1709,form 2,formlabs,three_d_printer,LH3D Fab Lab,Le havre,Normandie,FR
-1735,cameo®,silhouette,vinyl_cutting,Antibes NavLab,Antibes,Provence-Alpes-Côte d'Azur,FR
-1736,replicator 2,makerbot industries,three_d_printer,Antibes NavLab,Antibes,Provence-Alpes-Côte d'Azur,FR
-1737,ls6480,laserscript,laser,Antibes NavLab,Antibes,Provence-Alpes-Côte d'Azur,FR
-1765,cameo®,silhouette,vinyl_cutting,Laminiak,Paris,,FR
-1766,cnc routing,homemade cnc router,cnc_milling,Laminiak,Paris,,FR
-1767,ultimaker 2+ extended,ultimaker,three_d_printer,Laminiak,Paris,,FR
-1768,zmorph 2.0 vx,zmorph,three_d_printer,Laminiak,Paris,,FR
-1769,300x,formech,other,Laminiak,Paris,,FR
-1770,mc4x,cncfab,cnc_milling,Laminiak,Paris,,FR
-1862,cnc mill­ing mach­ine,cnc,cnc_milling,Avilab // Fablab Avignon,Avignon,France,FR
-1863,prusa i3 mk2 with  multi-material upgrade,reprap,three_d_printer,Avilab // Fablab Avignon,Avignon,France,FR
-1896,form2,formlabs,three_d_printer,Fablab Tiers lieu de Carpentras,Carpentras,,FR
-1897,camm-1 gs-24,roland,vinyl_cutting,Fablab Tiers lieu de Carpentras,Carpentras,,FR
-1898,up plus 2,ebpp3dp,three_d_printer,Fablab Tiers lieu de Carpentras,Carpentras,,FR
-1899,up! mini,ebpp3dp,three_d_printer,Fablab Tiers lieu de Carpentras,Carpentras,,FR
-1900,vls 6.60,universal laser systems,laser,Fablab Tiers lieu de Carpentras,Carpentras,,FR
-1901,laser scan arm,faro,laser,Fablab Tiers lieu de Carpentras,Carpentras,,FR
-1902,zmorph 2.0 sx,zmorph,three_d_printer,Fablab Tiers lieu de Carpentras,Carpentras,,FR
-1903,brother pe800 ,brother,other,Fablab Tiers lieu de Carpentras,Carpentras,,FR
-1957,makerbot z18,makerbot industries,three_d_printer,LABSud Montpellier,Montpellier,,FR
-1958,duplicator 7,wanhao,three_d_printer,LABSud Montpellier,Montpellier,,FR
-1959,n2 plus,raise 3d,three_d_printer,LABSud Montpellier,Montpellier,,FR
-1960,pr-650,brother,other,LABSud Montpellier,Montpellier,,FR
-1966,makerbot z18,makerbot industries,three_d_printer,ICI Nantes,Nantes,,FR
-1967,"trotec laser engraving, cutting & marking machine",trotec,laser,ICI Nantes,Nantes,,FR
-1971,prusa mendel 1,reprap,three_d_printer,Lab Top Innovation,Mazères-sur-Salat,,FR
-1980,cnc routing,homemade cnc router,cnc_milling,FabLab BEN,BEGLES,Nouvelle Aquitaine,FR
-1981,cr10s5,creality,three_d_printer,FabLab BEN,BEGLES,Nouvelle Aquitaine,FR
-1982,cnc routing,homemade cnc router,cnc_milling,Nybi.cc,Nancy,,FR
-2012,ender-3,creality,three_d_printer,TechF@ctory,Gourdon,,FR
-2013,speedy 100,trotec,laser,TechF@ctory,Gourdon,,FR
-2014,ultimaker 2+ extended,ultimaker,three_d_printer,TechF@ctory,Gourdon,,FR
-2015,einscan-se scanner 3d,shining3d,scanner,TechF@ctory,Gourdon,,FR
-2016,dremel 3000,dremel digilab,other,TechF@ctory,Gourdon,,FR
-2017,vive,htc,other,TechF@ctory,Gourdon,,FR
-2018,ricoh theta s 360°,ricoh,other,TechF@ctory,Gourdon,,FR
-2019,stika sv12,roland,vinyl_cutting,TechF@ctory,Gourdon,,FR
-2020,finder,flashforge,three_d_printer,TechF@ctory,Gourdon,,FR
-2021,inovis nv55,brother,other,TechF@ctory,Gourdon,,FR
-2022,pr 655,brother,other,TechF@ctory,Gourdon,,FR
-2023,holipress,holimaker,other,TechF@ctory,Gourdon,,FR
-2041,ultimaker 3 extended,ultimaker,three_d_printer,TyFab,Brest,,FR
-2042,kh-750,kehui,laser,TyFab,Brest,,FR
-2077,cameo 3,silhouette,vinyl_cutting,Les établis&co,La Rochelle,,FR
-2078,kinect v2 3d scanner,microsoft,scanner,Les établis&co,La Rochelle,,FR
-2079,m200,zortrax,three_d_printer,Les établis&co,La Rochelle,,FR
-2080,open maker machine pro xl,mon-fablab.fr,cnc_milling,Les établis&co,La Rochelle,,FR
-2081,lasercut gesmain 1006 / 90w,lasercut gesmain,laser,Les établis&co,La Rochelle,,FR
-2090,replicator 2,makerbot industries,three_d_printer,LAB01,Ambérieu-en-Bugey,,FR
-2091,replicator,makerbot industries,three_d_printer,LAB01,Ambérieu-en-Bugey,,FR
-2092,digitizer,makerbot industries,scanner,LAB01,Ambérieu-en-Bugey,,FR
-2100,ultimaker s5,ultimaker,three_d_printer,Fablab Vichy Communauté,Vichy,Allier,FR
-2101,"trotec laser engraving, cutting & marking machine",trotec,laser,Fablab Vichy Communauté,Vichy,Allier,FR
-2102,dji mavic,dji,other,Fablab Vichy Communauté,Vichy,Allier,FR
-2103,einscan-se scanner 3d,shining3d,scanner,Fablab Vichy Communauté,Vichy,Allier,FR
-2104,vive,htc,other,Fablab Vichy Communauté,Vichy,Allier,FR
-2105,moverio smart glasses bt 300,epson,other,Fablab Vichy Communauté,Vichy,Allier,FR
-2126,replicator 2x,makerbot industries,three_d_printer,SenartLab,Lieusaint,,FR
-2127,m200,zortrax,three_d_printer,SenartLab,Lieusaint,,FR
-2128,innov-is nv800e,brother,other,SenartLab,Lieusaint,,FR
-2129,i3 mk3s+,original prusa,three_d_printer,SenartLab,Lieusaint,,FR
-2130,open maker machine pro xl,mon-fablab.fr,cnc_milling,SenartLab,Lieusaint,,FR
-2131,mini,original prusa,three_d_printer,SenartLab,Lieusaint,,FR
-2132,techodrill 3,cif,precision_milling,SenartLab,Lieusaint,,FR
-2133,u20,alfawise,three_d_printer,SenartLab,Lieusaint,,FR
-2140,othermill,other machine co,precision_milling,La Charbonnerie,Marseille,,FR
-2145,shopbot desktop,"shopbot tools, inc",cnc_milling,FabLab By Pop Place Valenciennes,Anzin,,FR
-2146,m200,zortrax,three_d_printer,FabLab By Pop Place Valenciennes,Anzin,,FR
-2147,innov-is nv800e,brother,other,FabLab By Pop Place Valenciennes,Anzin,,FR
-2148,ce6000-40,graphtec corp,vinyl_cutting,FabLab By Pop Place Valenciennes,Anzin,,FR
-2151,up plus 2,ebpp3dp,three_d_printer,RuTech FabLab MJC Rodez,Rodez,,FR
-2166,k40 laser engraver & cutter,unknown,laser,FabLac,Anthy-sur-Léman,,FR
-2167,cr10s5,creality,three_d_printer,FabLac,Anthy-sur-Léman,,FR
-2168,k40 laser engraver & cutter,unknown,laser,Fab Lab Fayoum,Fayoum,Fayoum,EG
-2183,legend helix 24,epilog laser,laser,FAB LAB Château Thierry,Château-Thierry,Picardie,FR
-2184,sls-2 3d scanner,david,scanner,FAB LAB Château Thierry,Château-Thierry,Picardie,FR
-2185,form 2,formlabs,three_d_printer,FAB LAB Château Thierry,Château-Thierry,Picardie,FR
-2186,ce 6000-60,graphtec corp,vinyl_cutting,FAB LAB Château Thierry,Château-Thierry,Picardie,FR
-2187,k3x,sieg,cnc_milling,FAB LAB Château Thierry,Château-Thierry,Picardie,FR
-2188,kc4x380-s,sieg,cnc_milling,FAB LAB Château Thierry,Château-Thierry,Picardie,FR
-2195,form 2,formlabs,three_d_printer,FougeresLab,Fougères,,FR
-2210,micro delta,emotion tech,three_d_printer,Humanlab Saint-Pierre,Palavas-les-Flots,,FR
-2211,the 3-in-1 3d printer,snapmaker,laser,Humanlab Saint-Pierre,Palavas-les-Flots,,FR
-2230,carmine 1.09,primesense,other,Fabriques Alternatives,Coudures,,FR
+name,brand,class_1,lab,country_code
+ultimaker 2,ultimaker,three_d_printer,la refabrique,FR
+ultimaker 2,ultimaker,three_d_printer,zBis,FR
+cameo®,silhouette,vinyl_cutting,zBis,FR
+replicator 2x,makerbot industries,three_d_printer,zBis,FR
+up! mini,ebpp3dp,three_d_printer,zBis,FR
+ultimaker 2,ultimaker,three_d_printer,Laboratoire d'Aix-périmentation et de Bidouille,FR
+gx-24,roland,vinyl_cutting,Laboratoire d'Aix-périmentation et de Bidouille,FR
+mdx-40a,roland,precision_milling,Laboratoire d'Aix-périmentation et de Bidouille,FR
+replicator 2,makerbot industries,three_d_printer,Laboratoire d'Aix-périmentation et de Bidouille,FR
+ultimaker 2,ultimaker,three_d_printer,Les Fabriques du Ponant,FR
+speedy 100,trotec,laser,Les Fabriques du Ponant,FR
+ultimaker 2,ultimaker,three_d_printer, Fab Lab du 127° ,FR
+mdx-20,roland,precision_milling, Fab Lab du 127° ,FR
+ultimaker 2,ultimaker,three_d_printer,BerryLab36,FR
+speedy 100,trotec,laser,BerryLab36,FR
+ultimaker 2,ultimaker,three_d_printer,Telefab,FR
+cameo®,silhouette,vinyl_cutting,Telefab,FR
+rayjet,trotec,laser,Telefab,FR
+mdx-15,roland,precision_milling,Telefab,FR
+ultimaker 2,ultimaker,three_d_printer,La Fabritech,FR
+shopbot gantry,"shopbot tools, inc",cnc_milling,La Fabritech,FR
+ultimaker 2,ultimaker,three_d_printer,Eco FabLab MDesign,FR
+prusa mendel 1,reprap,three_d_printer,Eco FabLab MDesign,FR
+othermill,other machine co,precision_milling,Eco FabLab MDesign,FR
+up! mini,ebpp3dp,three_d_printer,Eco FabLab MDesign,FR
+rostock,reprap,three_d_printer,Eco FabLab MDesign,FR
+cnc router machine--forsun,heiz,cnc_milling,Eco FabLab MDesign,FR
+shopbot buddy,"shopbot tools, inc",cnc_milling,Eco FabLab MDesign,FR
+spirit ge 30w,laserpro,laser,Eco FabLab MDesign,FR
+ultimaker 2,ultimaker,three_d_printer,Nicéphore Labs,FR
+mdx-40a,roland,precision_milling,Nicéphore Labs,FR
+prusa mendel 1,reprap,three_d_printer,Nicéphore Labs,FR
+kinect v1,microsoft,scanner,Atelier Made in iKi - FabLab Bresse du Jura,FR
+prusa i3,reprap,three_d_printer,Atelier Made in iKi - FabLab Bresse du Jura,FR
+cameo®,silhouette,vinyl_cutting,Atelier Made in iKi - FabLab Bresse du Jura,FR
+replicator 2,makerbot industries,three_d_printer,Atelier Made in iKi - FabLab Bresse du Jura,FR
+k40 laser engraver & cutter,unknown,laser,Atelier Made in iKi - FabLab Bresse du Jura,FR
+cnc 3018 pro,sainsmart,cnc_milling,Atelier Made in iKi - FabLab Bresse du Jura,FR
+ciclop,bq,other,Atelier Made in iKi - FabLab Bresse du Jura,FR
+scalar l,3d modular systems,three_d_printer,Atelier Made in iKi - FabLab Bresse du Jura,FR
+kinect v1,microsoft,scanner,FabLab 276 Val-de-Reuil,FR
+cameo®,silhouette,vinyl_cutting,FabLab 276 Val-de-Reuil,FR
+k40 laser engraver & cutter,unknown,laser,FabLab 276 Val-de-Reuil,FR
+bq hephestos i3,bq,three_d_printer,FabLab 276 Val-de-Reuil,FR
+micro delta,emotion tech,three_d_printer,FabLab 276 Val-de-Reuil,FR
+ciclop,bq,other,FabLab 276 Val-de-Reuil,FR
+kinect v1,microsoft,scanner,GraouLab,FR
+prusa mendel 1,reprap,three_d_printer,GraouLab,FR
+othermill,other machine co,precision_milling,GraouLab,FR
+kinect v1,microsoft,scanner,SquaregoLab,FR
+srm-20 monofab,roland,precision_milling,SquaregoLab,FR
+camm-1 gs-24,roland,vinyl_cutting,SquaregoLab,FR
+tec cam 1000,perez camps,cnc_milling,SquaregoLab,FR
+kinect v1,microsoft,scanner,Fablab du Chalonnais,FR
+sense 3d scanner,"3d systems, inc",scanner,Fablab du Chalonnais,FR
+cameo 3,silhouette,vinyl_cutting,Fablab du Chalonnais,FR
+kinect v2 3d scanner,microsoft,scanner,Fablab du Chalonnais,FR
+witbox 2,bq,three_d_printer,Fablab du Chalonnais,FR
+prusa i3,reprap,three_d_printer,Fab Lab Egypt,EG
+mdx-20,roland,precision_milling,Fab Lab Egypt,EG
+replicator 2,makerbot industries,three_d_printer,Fab Lab Egypt,EG
+up! mini,ebpp3dp,three_d_printer,Fab Lab Egypt,EG
+morn mt3050d,morn,laser,Fab Lab Egypt,EG
+prusa i3,reprap,three_d_printer,Fab Lab Sud31-Val d'Ariège,FR
+ultimaker 2+,ultimaker,three_d_printer,Fab Lab Sud31-Val d'Ariège,FR
+cnc routing,homemade cnc router,cnc_milling,Fab Lab Sud31-Val d'Ariège,FR
+kh-750,kehui,laser,Fab Lab Sud31-Val d'Ariège,FR
+ciclop,bq,other,Fab Lab Sud31-Val d'Ariège,FR
+innovis 15,brother,other,Fab Lab Sud31-Val d'Ariège,FR
+hx-1360,rabbit,vinyl_cutting,Fab Lab Sud31-Val d'Ariège,FR
+prusa i3,reprap,three_d_printer,Info@Leze,FR
+ultimaker 2+,ultimaker,three_d_printer,Info@Leze,FR
+cameo 3,silhouette,vinyl_cutting,Info@Leze,FR
+redsail x900 100w lasercut,redsail,laser,Info@Leze,FR
+innov'is m280d,brother,other,Info@Leze,FR
+prusa i3,reprap,three_d_printer,ACoLab,FR
+cnc routing,homemade cnc router,cnc_milling,ACoLab,FR
+othermill,other machine co,precision_milling,ACoLab,FR
+prusa i3,reprap,three_d_printer,Fab Lab - La Casemate,FR
+shopbot gantry,"shopbot tools, inc",cnc_milling,Fab Lab - La Casemate,FR
+speedy 100,trotec,laser,Fab Lab - La Casemate,FR
+prusa i3,reprap,three_d_printer,DeVinci Fablab,FR
+cr10s5,creality,three_d_printer,DeVinci Fablab,FR
+raise 3d n2 plas,raise 3d,three_d_printer,DeVinci Fablab,FR
+mini,original prusa,three_d_printer,DeVinci Fablab,FR
+raise 3d n1,raise 3d,three_d_printer,DeVinci Fablab,FR
+prusa i3,reprap,three_d_printer,FABLAB UPSACLAY ,FR
+shopbot gantry,"shopbot tools, inc",cnc_milling,FABLAB UPSACLAY ,FR
+mdx-40a,roland,precision_milling,FABLAB UPSACLAY ,FR
+ultimaker 3,ultimaker,three_d_printer,FABLAB UPSACLAY ,FR
+form2,formlabs,three_d_printer,FABLAB UPSACLAY ,FR
+camm-1 gs-24,roland,vinyl_cutting,FABLAB UPSACLAY ,FR
+cnc routing,homemade cnc router,cnc_milling,FABLAB UPSACLAY ,FR
+ultimaker 3 extended,ultimaker,three_d_printer,FABLAB UPSACLAY ,FR
+legend mini 24,epilog laser,laser,FABLAB UPSACLAY ,FR
+ultimaker s5,ultimaker,three_d_printer,FABLAB UPSACLAY ,FR
+shopbot desktop,"shopbot tools, inc",cnc_milling,FABLAB UPSACLAY ,FR
+kinect v2 3d scanner,microsoft,scanner,FABLAB UPSACLAY ,FR
+x-carve,inventables,cnc_milling,FABLAB UPSACLAY ,FR
+epilog fusion m2 40,epilog laser,laser,FABLAB UPSACLAY ,FR
+digital sublimation t-shirt heat press,powerpress,other,FABLAB UPSACLAY ,FR
+wd1 digital soldering station,weller,other,FABLAB UPSACLAY ,FR
+pocket nc 5 axis,pocket nc,precision_milling,FABLAB UPSACLAY ,FR
+mayku formbox,mayku formbox,other,FABLAB UPSACLAY ,FR
+open qpcr,chai biotechnologies,other,FABLAB UPSACLAY ,FR
+prusa i3,reprap,three_d_printer,8 FabLab Drôme,FR
+up plus 2,ebpp3dp,three_d_printer,8 FabLab Drôme,FR
+witbox 2,bq,three_d_printer,8 FabLab Drôme,FR
+prusa i3,reprap,three_d_printer,Fablab Descartes,FR
+ultimaker s5,ultimaker,three_d_printer,Fablab Descartes,FR
+ultimaker 2+ extended,ultimaker,three_d_printer,Fablab Descartes,FR
+shopbot buddy,"shopbot tools, inc",cnc_milling,Fablab Descartes,FR
+gx 500/300,roland,vinyl_cutting,Fablab Descartes,FR
+mark two,markforged,three_d_printer,Fablab Descartes,FR
+innovis n150,brother,other,Fablab Descartes,FR
+gx-24,roland,vinyl_cutting,Artilect FabLab Toulouse,FR
+cnc mill­ing mach­ine,cnc,cnc_milling,Artilect FabLab Toulouse,FR
+makerbot z18,makerbot industries,three_d_printer,Artilect FabLab Toulouse,FR
+ender-3,creality,three_d_printer,Artilect FabLab Toulouse,FR
+up plus 2,ebpp3dp,three_d_printer,Artilect FabLab Toulouse,FR
+"trotec laser engraving, cutting & marking machine",trotec,laser,Artilect FabLab Toulouse,FR
+up! mini,ebpp3dp,three_d_printer,Artilect FabLab Toulouse,FR
+legend helix 24,epilog laser,laser,Artilect FabLab Toulouse,FR
+gx-24,roland,vinyl_cutting,Pangloss Labs #1 - Ferney-Voltaire,FR
+replicator 2,makerbot industries,three_d_printer,Pangloss Labs #1 - Ferney-Voltaire,FR
+k40 laser engraver & cutter,unknown,laser,Pangloss Labs #1 - Ferney-Voltaire,FR
+scan in a box,scan in a box,scanner,Pangloss Labs #1 - Ferney-Voltaire,FR
+ox cnc,openbuilds,cnc_milling,Pangloss Labs #1 - Ferney-Voltaire,FR
+simple metal with extended heatbed,printrbot,three_d_printer,Pangloss Labs #1 - Ferney-Voltaire,FR
+creatr hs,leapfrog,three_d_printer,Pangloss Labs #1 - Ferney-Voltaire,FR
+pico 2 405 nm,asiga,three_d_printer,Pangloss Labs #1 - Ferney-Voltaire,FR
+x2 cnc,badog,cnc_milling,Pangloss Labs #1 - Ferney-Voltaire,FR
+scanify,fuel 3d,scanner,Pangloss Labs #1 - Ferney-Voltaire,FR
+cronos3d  dual 2.0 mpx,open technologies,scanner,Pangloss Labs #1 - Ferney-Voltaire,FR
+aurum 3d,open technologies,scanner,Pangloss Labs #1 - Ferney-Voltaire,FR
+gx-24,roland,vinyl_cutting,AgriLab,FR
+srm-20 monofab,roland,precision_milling,AgriLab,FR
+ultimaker 2+,ultimaker,three_d_printer,AgriLab,FR
+form2,formlabs,three_d_printer,AgriLab,FR
+ultimaker 3 extended,ultimaker,three_d_printer,AgriLab,FR
+cameo 3,silhouette,vinyl_cutting,AgriLab,FR
+pocket nc 5 axis,pocket nc,precision_milling,AgriLab,FR
+x-reflow306 lf-ac advanced model ,bokar,other,AgriLab,FR
+pick and place xmp302d,bokar,other,AgriLab,FR
+otii,qoitech,other,AgriLab,FR
+gx-24,roland,vinyl_cutting,FabLab du Dôme à Caen,FR
+mdx-40a,roland,precision_milling,FabLab du Dôme à Caen,FR
+ultimaker 2+,ultimaker,three_d_printer,FabLab du Dôme à Caen,FR
+ultimaker s5,ultimaker,three_d_printer,FabLab du Dôme à Caen,FR
+heat press machine 38x38cm,xingyang,other,FabLab du Dôme à Caen,FR
+innov-is nv800e,brother,other,FabLab du Dôme à Caen,FR
+prsalpha 96x48,"shopbot tools, inc",cnc_milling,FabLab du Dôme à Caen,FR
+shopbot gantry,"shopbot tools, inc",cnc_milling,La Machinerie,FR
+ultimaker 2+,ultimaker,three_d_printer,La Machinerie,FR
+othermill,other machine co,precision_milling,La Machinerie,FR
+x-carve,inventables,cnc_milling,La Machinerie,FR
+ultimaker original,ultimaker,three_d_printer,La Machinerie,FR
+sense 3d scanner,"3d systems, inc",scanner,MillauLab,FR
+ultimaker 2+,ultimaker,three_d_printer,MillauLab,FR
+camm-1 gs-24,roland,vinyl_cutting,MillauLab,FR
+witbox 2,bq,three_d_printer,MillauLab,FR
+open maker machine pro xl,mon-fablab.fr,cnc_milling,MillauLab,FR
+ciclop,bq,other,MillauLab,FR
+lm1390,arketype,laser,MillauLab,FR
+alu line 1110,sorotec,cnc_milling,MillauLab,FR
+lathe, lf300 x 900,other,MillauLab,FR
+dm45,tech-machines,other,MillauLab,FR
+mdx-40a,roland,precision_milling,Fab Lab in New Cairo (FLiNC),EG
+cubepro duo,"3d systems, inc",three_d_printer,Fab Lab in New Cairo (FLiNC),EG
+gx 500/300,roland,vinyl_cutting,Fab Lab in New Cairo (FLiNC),EG
+morn mt3050d,morn,laser,Fab Lab in New Cairo (FLiNC),EG
+mdx-40a,roland,precision_milling,Makeo,FR
+legend mini 24,epilog laser,laser,Makeo,FR
+versacamm sp-i,roland,vinyl_cutting,Makeo,FR
+srm-20 monofab,roland,precision_milling,FabLab on wheels,EG
+ultimaker 2+ extended,ultimaker,three_d_printer,FabLab on wheels,EG
+morn mt3050d,morn,laser,FabLab on wheels,EG
+ultimaker 2+,ultimaker,three_d_printer,Fablab Les Usines,FR
+cnc routing,homemade cnc router,cnc_milling,Fablab Les Usines,FR
+akj1610 h,acctek,laser,Fablab Les Usines,FR
+akm1530,acctek,cnc_milling,Fablab Les Usines,FR
+ultimaker 2+,ultimaker,three_d_printer,Fablab des Fabriques,FR
+ultimaker 3,ultimaker,three_d_printer,Fablab des Fabriques,FR
+speedy 100,trotec,laser,Fablab des Fabriques,FR
+ultimaker 2+,ultimaker,three_d_printer,Médiathèque Les Carmes (Coop fablab) ,FR
+ultimaker 3,ultimaker,three_d_printer,Médiathèque Les Carmes (Coop fablab) ,FR
+deltawasp 2040,wasp,three_d_printer,Médiathèque Les Carmes (Coop fablab) ,FR
+form 1+,formlabs,three_d_printer,Médiathèque Les Carmes (Coop fablab) ,FR
+ultimaker 2+,ultimaker,three_d_printer,Fabric'INSA,FR
+ultimaker 3,ultimaker,three_d_printer,Fabric'INSA,FR
+ultimaker s5,ultimaker,three_d_printer,Fabric'INSA,FR
+ultimaker 3,ultimaker,three_d_printer,Fablab open innovation center CEA,FR
+form2,formlabs,three_d_printer,Fablab open innovation center CEA,FR
+creality cr-10s5,creality,three_d_printer,Fablab open innovation center CEA,FR
+objet30 pro,stratasys,three_d_printer,Fablab open innovation center CEA,FR
+zing 6030,epilog laser,laser,Fablab open innovation center CEA,FR
+rayjet,trotec,laser,Fablab open innovation center CEA,FR
+bn-20,roland,vinyl_cutting,Fablab open innovation center CEA,FR
+mdx-15,roland,precision_milling,Fablab open innovation center CEA,FR
+ultimaker 3,ultimaker,three_d_printer,LH3D Fab Lab,FR
+replicator 2x,makerbot industries,three_d_printer,LH3D Fab Lab,FR
+makerbot replicator,makerbot industries,three_d_printer,LH3D Fab Lab,FR
+"trotec laser engraving, cutting & marking machine",trotec,laser,LH3D Fab Lab,FR
+form 2,formlabs,three_d_printer,LH3D Fab Lab,FR
+cameo®,silhouette,vinyl_cutting,Antibes NavLab,FR
+replicator 2,makerbot industries,three_d_printer,Antibes NavLab,FR
+ls6480,laserscript,laser,Antibes NavLab,FR
+cameo®,silhouette,vinyl_cutting,Laminiak,FR
+cnc routing,homemade cnc router,cnc_milling,Laminiak,FR
+ultimaker 2+ extended,ultimaker,three_d_printer,Laminiak,FR
+zmorph 2.0 vx,zmorph,three_d_printer,Laminiak,FR
+300x,formech,other,Laminiak,FR
+mc4x,cncfab,cnc_milling,Laminiak,FR
+cnc mill­ing mach­ine,cnc,cnc_milling,Avilab // Fablab Avignon,FR
+prusa i3 mk2 with  multi-material upgrade,reprap,three_d_printer,Avilab // Fablab Avignon,FR
+form2,formlabs,three_d_printer,Fablab Tiers lieu de Carpentras,FR
+camm-1 gs-24,roland,vinyl_cutting,Fablab Tiers lieu de Carpentras,FR
+up plus 2,ebpp3dp,three_d_printer,Fablab Tiers lieu de Carpentras,FR
+up! mini,ebpp3dp,three_d_printer,Fablab Tiers lieu de Carpentras,FR
+vls 6.60,universal laser systems,laser,Fablab Tiers lieu de Carpentras,FR
+laser scan arm,faro,laser,Fablab Tiers lieu de Carpentras,FR
+zmorph 2.0 sx,zmorph,three_d_printer,Fablab Tiers lieu de Carpentras,FR
+brother pe800 ,brother,other,Fablab Tiers lieu de Carpentras,FR
+makerbot z18,makerbot industries,three_d_printer,LABSud Montpellier,FR
+duplicator 7,wanhao,three_d_printer,LABSud Montpellier,FR
+n2 plus,raise 3d,three_d_printer,LABSud Montpellier,FR
+pr-650,brother,other,LABSud Montpellier,FR
+makerbot z18,makerbot industries,three_d_printer,ICI Nantes,FR
+"trotec laser engraving, cutting & marking machine",trotec,laser,ICI Nantes,FR
+prusa mendel 1,reprap,three_d_printer,Lab Top Innovation,FR
+cnc routing,homemade cnc router,cnc_milling,FabLab BEN,FR
+cr10s5,creality,three_d_printer,FabLab BEN,FR
+cnc routing,homemade cnc router,cnc_milling,Nybi.cc,FR
+ender-3,creality,three_d_printer,TechF@ctory,FR
+speedy 100,trotec,laser,TechF@ctory,FR
+ultimaker 2+ extended,ultimaker,three_d_printer,TechF@ctory,FR
+einscan-se scanner 3d,shining3d,scanner,TechF@ctory,FR
+dremel 3000,dremel digilab,other,TechF@ctory,FR
+vive,htc,other,TechF@ctory,FR
+ricoh theta s 360°,ricoh,other,TechF@ctory,FR
+stika sv12,roland,vinyl_cutting,TechF@ctory,FR
+finder,flashforge,three_d_printer,TechF@ctory,FR
+inovis nv55,brother,other,TechF@ctory,FR
+pr 655,brother,other,TechF@ctory,FR
+holipress,holimaker,other,TechF@ctory,FR
+ultimaker 3 extended,ultimaker,three_d_printer,TyFab,FR
+kh-750,kehui,laser,TyFab,FR
+cameo 3,silhouette,vinyl_cutting,Les établis&co,FR
+kinect v2 3d scanner,microsoft,scanner,Les établis&co,FR
+m200,zortrax,three_d_printer,Les établis&co,FR
+open maker machine pro xl,mon-fablab.fr,cnc_milling,Les établis&co,FR
+lasercut gesmain 1006 / 90w,lasercut gesmain,laser,Les établis&co,FR
+replicator 2,makerbot industries,three_d_printer,LAB01,FR
+replicator,makerbot industries,three_d_printer,LAB01,FR
+digitizer,makerbot industries,scanner,LAB01,FR
+ultimaker s5,ultimaker,three_d_printer,Fablab Vichy Communauté,FR
+"trotec laser engraving, cutting & marking machine",trotec,laser,Fablab Vichy Communauté,FR
+dji mavic,dji,other,Fablab Vichy Communauté,FR
+einscan-se scanner 3d,shining3d,scanner,Fablab Vichy Communauté,FR
+vive,htc,other,Fablab Vichy Communauté,FR
+moverio smart glasses bt 300,epson,other,Fablab Vichy Communauté,FR
+replicator 2x,makerbot industries,three_d_printer,SenartLab,FR
+m200,zortrax,three_d_printer,SenartLab,FR
+innov-is nv800e,brother,other,SenartLab,FR
+i3 mk3s+,original prusa,three_d_printer,SenartLab,FR
+open maker machine pro xl,mon-fablab.fr,cnc_milling,SenartLab,FR
+mini,original prusa,three_d_printer,SenartLab,FR
+techodrill 3,cif,precision_milling,SenartLab,FR
+u20,alfawise,three_d_printer,SenartLab,FR
+othermill,other machine co,precision_milling,La Charbonnerie,FR
+shopbot desktop,"shopbot tools, inc",cnc_milling,FabLab By Pop Place Valenciennes,FR
+m200,zortrax,three_d_printer,FabLab By Pop Place Valenciennes,FR
+innov-is nv800e,brother,other,FabLab By Pop Place Valenciennes,FR
+ce6000-40,graphtec corp,vinyl_cutting,FabLab By Pop Place Valenciennes,FR
+up plus 2,ebpp3dp,three_d_printer,RuTech FabLab MJC Rodez,FR
+k40 laser engraver & cutter,unknown,laser,FabLac,FR
+cr10s5,creality,three_d_printer,FabLac,FR
+k40 laser engraver & cutter,unknown,laser,Fab Lab Fayoum,EG
+legend helix 24,epilog laser,laser,FAB LAB Château Thierry,FR
+sls-2 3d scanner,david,scanner,FAB LAB Château Thierry,FR
+form 2,formlabs,three_d_printer,FAB LAB Château Thierry,FR
+ce 6000-60,graphtec corp,vinyl_cutting,FAB LAB Château Thierry,FR
+k3x,sieg,cnc_milling,FAB LAB Château Thierry,FR
+kc4x380-s,sieg,cnc_milling,FAB LAB Château Thierry,FR
+form 2,formlabs,three_d_printer,FougeresLab,FR
+micro delta,emotion tech,three_d_printer,Humanlab Saint-Pierre,FR
+the 3-in-1 3d printer,snapmaker,laser,Humanlab Saint-Pierre,FR
+carmine 1.09,primesense,other,Fabriques Alternatives,FR

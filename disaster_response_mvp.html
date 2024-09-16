@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding specification -->
+    <meta charset="UTF-8">
+    
+    <!-- Viewport settings for mobile responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- SEO and Accessibility improvements -->
+    <meta name="description" content="Discover how Open-Know is revolutionizing disaster response manufacturing for sustainable development with our projects in Africa. This section details the innovative approaches taken to enhance resilience, efficiency, and speed of production during crises.">
+    <meta name="keywords" content="disaster relief, Open-Know where disaster response, Manufacturing for Humanitarian Action">
+    
+    <!-- Page Title -->
+    <title>OKW Disaster Response Manufacturing Tool</title>
+    
+    <!-- Linking external CSS stylesheets -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+
+<body class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-light fixed-top">
+        <a class="navbar-brand" href="#">Open-Know-Where</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li><a class="nav-link" href="#map">Map</a></li>
+                <li><a class="nav-link" href="#facilities">Facilities</a></li>
+                <li><a class="nav-link" href="#machinery">Machinery</a></li>
+                <li><a class="nav-link" href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="content">
+        <section id="map">
+            <h2>Map</h2>
+            <iframe src="https://map.internetofproduction.org/mvp_06.html" width="100%" height="500" style="border: 0;" allowfullscreen></iframe>
+        </section>
+
+        <section id="facilities">
+            <h2>Facilities</h2>
+            <table id="csvTable" class="display" style="width:100%"></table>
+        </section>
+
+        <section id="machinery">
+            <h2>Machinery</h2>
+            <table id="csvTable_machinery" class="display" style="width:100%"></table>
+        </section>
+  
+    </main>
+
+    <footer class="container-fluid text-center py-3 bg-light">
+        <p>2024 Internet of Production UK</p>
+    </footer>
+
+ <script>
+    function loadCSVTable(filePath, tableId) {
+      Papa.parse(filePath, {
+        download: true,
+        header: true,
+        complete: function(results) {
+          const data = results.data;
+          const headers = Object.keys(data[0]);
+
+          let table = '<thead><tr>';
+          headers.forEach(header => {
+            table += `<th>${header}</th>`;
+          });
+          table += '</tr></thead><tbody>';
+
+          data.forEach(row => {
+            table += '<tr>';
+            headers.forEach(header => {
+              table += `<td>${row[header]}</td>`;
+            });
+            table += '</tr>';
+          });
+          table += '</tbody>';
+
+          const tableElement = document.getElementById(tableId);
+          tableElement.innerHTML = table;
+
+          // Destroy any existing DataTable instance before initializing a new one
+          if ($.fn.DataTable.isDataTable(tableElement)) {
+            $(tableElement).DataTable().destroy();
+          }
+          $(tableElement).DataTable();
+        },
+        error: function(error) {
+          console.error('Error loading CSV file:', error);
+        }
+      });
+    }
+
+    $(document).ready(function() {
+      loadCSVTable('https://map.internetofproduction.org/mvp_makerspaces.csv', 'csvTable');
+      loadCSVTable('https://map.internetofproduction.org/mvp_machinery.csv', 'csvTable_machinery');
+    });
+  </script>
+</body>
+</html>
