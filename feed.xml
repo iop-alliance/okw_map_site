@@ -3,12 +3,112 @@
     <title>Open-Know-Where Initiative</title>
     <link href="https://map.internetofproduction.org/feed.xml" rel="self" />
     <link href="https://map.internetofproduction.org" />
-    <updated>2024-08-29T06:32:10-06:00</updated>
+    <updated>2024-10-14T08:17:45-06:00</updated>
     <author>
         <name>Antonio de Jesus Anaya Hernandez</name>
     </author>
     <id>https://map.internetofproduction.org</id>
 
+    <entry>
+        <title>Workshops and talks</title>
+        <author>
+            <name>Antonio de Jesus Anaya Hernandez</name>
+        </author>
+        <link href="https://map.internetofproduction.org/workshops-and-talks/index.html"/>
+        <id>https://map.internetofproduction.org/workshops-and-talks/index.html</id>
+
+        <updated>2024-10-14T08:17:45-06:00</updated>
+            <summary>
+                <![CDATA[
+                    Introduction. The Open-Know-Where has come a long way of development and changes over the past 3 years, it has started from developing a standard for&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h1>Introduction.</h1>
+<p>The Open-Know-Where has come a long way of development and changes over the past 3 years, it has started from developing a standard for metadata, to mapping locations with collaborations and grants during the Data Awards round 1 and 2, and scrapping internet data and APIs to measure data standardisation and finally offering a tool for rapid response manufacturing procurement. </p>
+<p>On these stages from 2022 to 2024 workshops and talks had been given during different events in Africa, Europe and America.</p>
+<h1>Timeline.</h1>
+<h2> 2022:</h2>
+<h3>AfricaOSH Ghana.</h3>
+<p>Title: Introduction to the Open-Know-Where Standard.</p>
+<p>URL:<a href="https://docs.google.com/presentation/d/1h5rTkTJYvc8l3BX9DMj6yCsNMzSDSma7c0aeD5zMQX8/edit?usp=sharing">https://docs.google.com/presentation/d/1h5rTkTJYvc8l3BX9DMj6yCsNMzSDSma7c0aeD5zMQX8/edit?usp=sharing</a> </p>
+<p>Location: Yaoundé, Cameroon.</p>
+<p>Sponsored: NGDI, DAPSI.</p>
+<p>Date: 1st October, 2022.</p>
+<p>Type: Online.</p>
+<h2>2023:</h2>
+<h3>Re:publica23 Berlin.</h3>
+<p>Title: Distributing manufacturing for a just future.</p>
+<p>URL: <a href="https://re-publica.com/de/session/redistribute-distributed-manufacturing-just-future">https://re-publica.com/de/session/redistribute-distributed-manufacturing-just-future</a></p>
+<p>Location: Berlin, Germany.</p>
+<p>Sponsored: mAkE, NGDI DAPSI.</p>
+<p>Dates: 6th June 2023.</p>
+<p>Type: In Person.</p>
+<h3>MakerFaire Mexico City.</h3>
+<p>Title: Internet of Production Alliance, World Manufacturing Map.</p>
+<p>URL: <a href="https://makerfaire.com/yearbook/2023-projects/internet-of-production-alliance-world-manufacturing-map/">https://makerfaire.com/yearbook/2023-projects/internet-of-production-alliance-world-manufacturing-map/</a> </p>
+<p>Location: Mexico City, Mexico.</p>
+<p>Sponsored: mAkE, NGDI DAPSI.</p>
+<p>Date: 12th May, 2023.</p>
+<p>Type: In Person.</p>
+<h2>2024:</h2>
+<h3>Working group meeting 1.</h3>
+<p>Title: Session 1, OKW re-introduction and strategy.</p>
+<p>URL: <a href="https://bbb.m4h.network/b/ant-0a7-kwl-nf3">https://bbb.m4h.network/b/ant-0a7-kwl-nf3</a> </p>
+<p>Sponsored: mAkE.</p>
+<p>Date: Jan 2024.</p>
+<p>Type: Online.</p>
+<h3>Working group meeting 2.</h3>
+<p>Title: Session 2, Uses cases exploration, knowing the new community.</p>
+<p>URL:  <a href="https://bbb.m4h.network/b/ant-0a7-kwl-nf3">https://bbb.m4h.network/b/ant-0a7-kwl-nf3</a> </p>
+<p>Sponsored: mAkE.</p>
+<p>Date: 22nd Feb 2024.</p>
+<p>Type: Online.</p>
+<h3>Working group meeting 3.</h3>
+<p>Title: Session 3, MVP selection, data design choices.</p>
+<p>URL:  <a href="https://bbb.m4h.network/b/ant-0a7-kwl-nf3">https://bbb.m4h.network/b/ant-0a7-kwl-nf3</a> </p>
+<p>Sponsored: mAkE</p>
+<p>Date: 28th March 2024.</p>
+<p>Type: Online.</p>
+<h3>Re:publica24 Berlin.</h3>
+<p>Title: Engaging Communities, Collecting Data and Solving Problems.</p>
+<p>URL: <a href="https://re-publica.com/en/node/5392">https://re-publica.com/en/node/5392</a></p>
+<p>Location: Berlin, Germany.</p>
+<p>Sponsored: mAkE.</p>
+<p>Date: 29th May 2024.</p>
+<p>Type: In Person.</p>
+<h3>De-Radicalization Project European Union Horizon.</h3>
+<p>Title: Makerspaces for deradicalization and integration of vulnerable communities, FabLab Duhok, Iraq - Mexico collaboration case.</p>
+<p>URL: <a href="https://dradproject.com/">https://dradproject.com/</a> </p>
+<p>Location: Slovenia.</p>
+<p>Sponsored: Horizon Europe Science Fund.</p>
+<p>Date: May 2024.</p>
+<p>Type: Online.</p>
+<h3>African Maker Network &amp; African Open Source Hardware .</h3>
+<h3>Make Talks.</h3>
+<p>Title: From Local to Global: The Power of the Map of Machinery.</p>
+<p>URL: <a href="https://makeafricaeu.org/map-of-machinery/">https://makeafricaeu.org/map-of-machinery/</a> </p>
+<p>Location: Enkhuizen, The Netherlands.</p>
+<p>Sponsored: mAkE.</p>
+<p>Date: 2nd July 2024.</p>
+<p>Type: Online.</p>
+<h3>FabLab Network Conference 2024.</h3>
+<p>Title: Data collection for Distributed Manufacturing Resources.</p>
+<p>URL: <a href="https://fab24.fabevent.org/programs/schedule?day=2024-08-06&amp;title=data-collection-for-distributed-manufacturing-resources&amp;event=06965506-0852-46ae-b878-e2be38f38ab9">https://fab24.fabevent.org/programs/schedule?day=2024-08-06&amp;title=data-collection-for-distributed-manufacturing-resources&amp;event=06965506-0852-46ae-b878-e2be38f38ab9</a> </p>
+<p>Location: Puebla, Mexico.</p>
+<p>Sponsored: mAkE.</p>
+<p>Date: 6th August 2024.</p>
+<p>Type: In Person.</p>
+<p>Title: Worldwide FabLabs and their work as social integration communities for vulnerable groups.</p>
+<p>URL: <a href="https://fab24.fabevent.org/programs/schedule?day=2024-08-07&amp;title=worldwide-fablabs-and-their-work-as-social-integration-communities-for&amp;event=18b2cff3-95dd-46c3-93e7-6b92dd5e43e7">https://fab24.fabevent.org/programs/schedule?day=2024-08-07&amp;title=worldwide-fablabs-and-their-work-as-social-integration-communities-for&amp;event=18b2cff3-95dd-46c3-93e7-6b92dd5e43e7</a> </p>
+<p>Location: Puebla, Mexico.</p>
+<p>Sponsored: mAkE.</p>
+<p>Date: 7th August 2024.</p>
+<p>Type: In Person.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Disaster response Open database</title>
         <author>
