@@ -3,7 +3,7 @@
     <title>Open-Know-Where Initiative</title>
     <link href="https://map.internetofproduction.org/feed.xml" rel="self" />
     <link href="https://map.internetofproduction.org" />
-    <updated>2024-10-14T19:47:10-06:00</updated>
+    <updated>2024-11-05T00:27:37-06:00</updated>
     <author>
         <name>Antonio de Jesus Anaya Hernandez</name>
     </author>
@@ -1180,18 +1180,18 @@
         <updated>2023-12-19T19:47:37-06:00</updated>
             <summary>
                 <![CDATA[
-                    If you are using Firefox and/or you can't access the form here due to "Loading Error". Click and enter the form directly at: https://enketo.unhcr.org/x/gn0IrHmt This&hellip;
+                    If you are using Firefox and/or you can't access the form here due to "Loading Error". Click and enter the form directly at: https://enketo.unhcr.org/x/CfyppGLE This&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                 <p> </p>
-<p class="msg msg--highlight ">If you are using Firefox and/or you can't access the form here due to "Loading Error". Click and enter the form directly at: <br><a href="https://enketo.unhcr.org/x/gn0IrHmt">https://enketo.unhcr.org/x/gn0IrHmt</a> <br><br>This error is due to "service workers protection" policy that is enabled by default by Firefox. Bug information: <a href="https://discourse.mozilla.org/t/failed-to-register-update-a-serviceworker/102538">https://discourse.mozilla.org/t/failed-to-register-update-a-serviceworker/102538</a></p>
+<p class="msg msg--highlight ">If you are using Firefox and/or you can't access the form here due to "Loading Error". Click and enter the form directly at: <br><a href="https://enketo.unhcr.org/x/CfyppGLE">https://enketo.unhcr.org/x/CfyppGLE</a> <br><br>This error is due to "service workers protection" policy that is enabled by default by Firefox. Bug information: <a href="https://discourse.mozilla.org/t/failed-to-register-update-a-serviceworker/102538">https://discourse.mozilla.org/t/failed-to-register-update-a-serviceworker/102538</a></p>
 <div class="post__iframe">
                 <div 
                     class="pec-wrapper" 
                     data-consent-group-id="analytics">
-                    <iframe data-consent-overlay-added="true" loading="lazy" width="100%" height="100%" style="border: 0px #ffffff hidden;" data-consent-src="https://enketo.unhcr.org/x/gn0IrHmt" scrolling="yes" id="kobo_form" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"></iframe>
+                    <iframe data-consent-overlay-added="true" loading="lazy" width="100%" height="100%" style="border: 0px #ffffff hidden;" data-consent-src="https://enketo.unhcr.org/x/CfyppGLE" scrolling="yes" id="kobo_form" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"></iframe>
                     <div class="pec-overlay is-active" aria-hidden="false">
                         <div class="pec-overlay-inner">
                             <p></p>
@@ -1434,21 +1434,40 @@
         <updated>2023-05-15T11:43:06-06:00</updated>
             <summary>
                 <![CDATA[
-                    REV 2.1, 23/01/2024 Author: Antonio de Jesus Anaya Hernandez, DevOps Eng. CC BY-SA 4.0 2023-2024, The Internet of Production Alliance. INTRODUCTION What: This is the&hellip;
+                    REV 3.0, 04/11/2024 Author: Antonio de Jesus Anaya Hernandez, DevOps Eng. CC BY-SA 4.0 2023-2024, The Internet of Production Alliance. INTRODUCTION What: This is the&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <pre>REV 2.1, 23/01/2024<br>Author: Antonio de Jesus Anaya Hernandez, DevOps Eng. <br>CC BY-SA 4.0<br>2023-2024, The Internet of Production Alliance. </pre>
+                <pre>REV 3.0, 04/11/2024<br>Author: Antonio de Jesus Anaya Hernandez, DevOps Eng. <br>CC BY-SA 4.0<br>2023-2024, The Internet of Production Alliance. </pre>
 <h2 id="okwmapping">INTRODUCTION</h2>
 <p><strong>What:</strong> This is the front page of the <strong>Open-Know-Where Map of Manufacturing</strong> project to survey and collect data on machines, facilities, people, and materials enabling distributed manufacturing.<br><br><strong>Who:</strong> This is intended to be use by Makers and organisations around Maker-spaces, Fab-Labs, and innovation hubs within the Internet of Production Alliance and its projects.<br><br><strong>Purpose:</strong> The Internet of Production Alliance collects the data to form a database of machines, facilities, people, and materials by location, to be analysed and mapped for the Open-Know-Where initiative.</p>
 <p><strong>Data Processing:</strong> The data collected is processed by the DevOps office of the Internet of Production Alliance. </p>
 <p><strong>Data expiration:</strong> Data would be re-validated or discarded after 36 months from the initial date of data publishing, expected on 2024/02 TBA. </p>
 <p class="msg msg--info">Our data policy is found at <a href="https://map.internetofproduction.org/data-privacy-policy/index.html" target="_blank" rel="nofollow noopener noreferrer">https://map.internetofproduction.org/data-privacy-policy/index.html</a></p>
 <p class="msg msg--info">For any map related concerns and requests contact by email to: <a href="mailto:antonio.anaya@internetofproduction.org">antonio.anaya@internetofproduction.org</a></p>
-<h2>MAPS</h2>
+<h2>DISTRIBUTED MANUFACTURING MAP</h2>
+<h2><div class="post__iframe">
+                <div 
+                    class="pec-wrapper" 
+                    data-consent-group-id="analytics">
+                    <iframe data-consent-overlay-added="true" loading="lazy" width="100%" height="50%" style="border-radius: 10px; border: 0px #ffffff none;" data-consent-src="https://map.internetofproduction.org/okw_map_v1-1.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"></iframe>
+                    <div class="pec-overlay is-active" aria-hidden="false">
+                        <div class="pec-overlay-inner">
+                            <p></p>
+                            <button 
+                                class="pec-button" 
+                                onclick="window.publiiEmbedConsentGiven('analytics'); return false;">
+                                
+                            </button>
+                        </div>
+                    </div>
+                    <script>window.publiiEmbedConsentCheck('analytics');</script>
+                </div>
+                </div></h2>
+<h2>LEGACY MAPS</h2>
 <p>These map prototypes have been created following the needs of different projects and objectives:</p>
-<p>The Sloan Foundation map of distributed manufacturing and Open-Know-Where Standard Development, European Horizon for the mAkE African European Maker Ecosystem, and the Innovative Manufacturing in Africa I.M.A.<br><br>The value proposition of these maps is integrated by the collection of relevant data, the examination and proposition of a <a href="https://map.internetofproduction.org/data-schema-design-choices/index.html" target="_blank" rel="noopener noreferrer">technical data storage standard</a>, the exploration of data collection methods and the machine-human interaction with the data.</p>
+<p><br>The value proposition of these maps is integrated by the collection of relevant data, the examination and proposition of a <a href="https://map.internetofproduction.org/data-schema-design-choices/index.html" target="_blank" rel="noopener noreferrer">technical data storage standard</a>, the exploration of data collection methods and the machine-human interaction with the data.</p>
 <p>The maps have been proposed for a set of different identified <a href="https://map.internetofproduction.org/use-cases/index.html" target="_blank" rel="noopener noreferrer">use cases</a>. And the data collection aims to be a tool for the future understanding and developing of innovation and location of resources.</p>
 <p class="msg msg--highlight ">The current work is in constant review and development. Maps and data amounts will change, accordingly to new finds, regulations and privacy requests.</p>
 <p>GLOBAL (Sloan Foundation)<br><br><div class="post__iframe">
@@ -1521,13 +1540,6 @@
 <li><span style="text-decoration: underline;"><span style="color: #000000; text-decoration: underline;">"Field Ready Inc. and its partners",</span></span></li>
 <li><span style="text-decoration: underline;"><span style="color: #000000; text-decoration: underline;">"Makery",</span></span></li>
 <li><span style="text-decoration: underline;"><span style="color: #000000; text-decoration: underline;">"MakerTour",</span></span></li>
-<li>"Open-Know-Where Data Awards r1",</li>
-<li>"Open-Know-Where Data Awards r2",</li>
-<li>"IMA Innovative Manufacturing in Africa",</li>
-<li>"mAkE African European Maker Ecosystem".</li>
-</ol>
-<p>Yet to process:</p>
-<ol>
 <li>"Make, Makezine",</li>
 <li>"Bay Area Makerspaces UC Berkeley",</li>
 <li>"Bay Area Makerspaces Upbeatlab",</li>
@@ -1536,6 +1548,13 @@
 <li>"Vulca",</li>
 <li>"FabCity",</li>
 <li>"Univeristy of Michigan 3DLab"</li>
+</ol>
+<p>Yet to Process:</p>
+<ol>
+<li>"Open-Know-Where Data Awards r1",</li>
+<li>"Open-Know-Where Data Awards r2",</li>
+<li>"IMA Innovative Manufacturing in Africa",</li>
+<li>"mAkE African European Maker Ecosystem".</li>
 </ol>
 <p>Distribution by continent:</p>
 <ul>
