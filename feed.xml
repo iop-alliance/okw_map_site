@@ -3,7 +3,7 @@
     <title>Open-Know-Where Initiative</title>
     <link href="https://map.internetofproduction.org/feed.xml" rel="self" />
     <link href="https://map.internetofproduction.org" />
-    <updated>2024-11-05T00:43:07-06:00</updated>
+    <updated>2024-11-05T01:15:44-06:00</updated>
     <author>
         <name>Antonio de Jesus Anaya Hernandez</name>
     </author>
@@ -1185,8 +1185,7 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <p> </p>
-<p class="msg msg--highlight ">If you are using Firefox and/or you can't access the form here due to "Loading Error". Click and enter the form directly at: <br><a href="https://enketo.unhcr.org/x/CfyppGLE">https://enketo.unhcr.org/x/CfyppGLE</a> <br><br>This error is due to "service workers protection" policy that is enabled by default by Firefox. Bug information: <a href="https://discourse.mozilla.org/t/failed-to-register-update-a-serviceworker/102538">https://discourse.mozilla.org/t/failed-to-register-update-a-serviceworker/102538</a></p>
+                <p class="msg msg--highlight ">If you are using Firefox and/or you can't access the form here due to "Loading Error". Click and enter the form directly at: <br><a href="https://enketo.unhcr.org/x/CfyppGLE">https://enketo.unhcr.org/x/CfyppGLE</a> <br><br>This error is due to "service workers protection" policy that is enabled by default by Firefox. Bug information: <a href="https://discourse.mozilla.org/t/failed-to-register-update-a-serviceworker/102538">https://discourse.mozilla.org/t/failed-to-register-update-a-serviceworker/102538</a></p>
 <div class="post__iframe">
                 <div 
                     class="pec-wrapper" 
