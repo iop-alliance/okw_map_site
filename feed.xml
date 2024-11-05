@@ -3,7 +3,7 @@
     <title>Open-Know-Where Initiative</title>
     <link href="https://map.internetofproduction.org/feed.xml" rel="self" />
     <link href="https://map.internetofproduction.org" />
-    <updated>2024-11-05T00:27:37-06:00</updated>
+    <updated>2024-11-05T00:34:33-06:00</updated>
     <author>
         <name>Antonio de Jesus Anaya Hernandez</name>
     </author>
@@ -1451,7 +1451,7 @@
                 <div 
                     class="pec-wrapper" 
                     data-consent-group-id="analytics">
-                    <iframe data-consent-overlay-added="true" loading="lazy" width="100%" height="50%" style="border-radius: 10px; border: 0px #ffffff none;" data-consent-src="https://map.internetofproduction.org/okw_map_v1-1.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"></iframe>
+                    <iframe data-consent-overlay-added="true" loading="lazy" width="100%" height="50%" style="border-radius: 10px; border: 0px #ffffff none;" data-consent-src="https://map.internetofproduction.org/world.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"></iframe>
                     <div class="pec-overlay is-active" aria-hidden="false">
                         <div class="pec-overlay-inner">
                             <p></p>
