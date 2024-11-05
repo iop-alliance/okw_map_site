@@ -3,7 +3,7 @@
     <title>Open-Know-Where Initiative</title>
     <link href="https://map.internetofproduction.org/feed.xml" rel="self" />
     <link href="https://map.internetofproduction.org" />
-    <updated>2024-11-05T00:34:33-06:00</updated>
+    <updated>2024-11-05T00:43:07-06:00</updated>
     <author>
         <name>Antonio de Jesus Anaya Hernandez</name>
     </author>
@@ -1447,7 +1447,7 @@
 <p class="msg msg--info">Our data policy is found at <a href="https://map.internetofproduction.org/data-privacy-policy/index.html" target="_blank" rel="nofollow noopener noreferrer">https://map.internetofproduction.org/data-privacy-policy/index.html</a></p>
 <p class="msg msg--info">For any map related concerns and requests contact by email to: <a href="mailto:antonio.anaya@internetofproduction.org">antonio.anaya@internetofproduction.org</a></p>
 <h2>DISTRIBUTED MANUFACTURING MAP</h2>
-<h2><div class="post__iframe">
+<p><br><div class="post__iframe">
                 <div 
                     class="pec-wrapper" 
                     data-consent-group-id="analytics">
@@ -1464,7 +1464,7 @@
                     </div>
                     <script>window.publiiEmbedConsentCheck('analytics');</script>
                 </div>
-                </div></h2>
+                </div>
 <h2>LEGACY MAPS</h2>
 <p>These map prototypes have been created following the needs of different projects and objectives:</p>
 <p><br>The value proposition of these maps is integrated by the collection of relevant data, the examination and proposition of a <a href="https://map.internetofproduction.org/data-schema-design-choices/index.html" target="_blank" rel="noopener noreferrer">technical data storage standard</a>, the exploration of data collection methods and the machine-human interaction with the data.</p>
