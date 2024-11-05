@@ -3,7 +3,7 @@
     <title>Open-Know-Where Initiative</title>
     <link href="https://map.internetofproduction.org/feed.xml" rel="self" />
     <link href="https://map.internetofproduction.org" />
-    <updated>2024-11-05T01:15:44-06:00</updated>
+    <updated>2024-11-05T04:44:00-06:00</updated>
     <author>
         <name>Antonio de Jesus Anaya Hernandez</name>
     </author>
@@ -1190,7 +1190,7 @@
                 <div 
                     class="pec-wrapper" 
                     data-consent-group-id="analytics">
-                    <iframe data-consent-overlay-added="true" loading="lazy" width="100%" height="100%" style="border: 0px #ffffff hidden;" data-consent-src="https://enketo.unhcr.org/x/CfyppGLE" scrolling="yes" id="kobo_form" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"></iframe>
+                    <iframe data-consent-overlay-added="true" loading="lazy" width="800" height="600" data-consent-src="https://enketo.unhcr.org/i/CfyppGLE"></iframe>
                     <div class="pec-overlay is-active" aria-hidden="false">
                         <div class="pec-overlay-inner">
                             <p></p>
@@ -1440,9 +1440,9 @@
             <![CDATA[
                 <pre>REV 3.0, 04/11/2024<br>Author: Antonio de Jesus Anaya Hernandez, DevOps Eng. <br>CC BY-SA 4.0<br>2023-2024, The Internet of Production Alliance. </pre>
 <h2 id="okwmapping">INTRODUCTION</h2>
-<p><strong>What:</strong> This is the front page of the <strong>Open-Know-Where Map of Manufacturing</strong> project to survey and collect data on machines, facilities, people, and materials enabling distributed manufacturing.<br><br><strong>Who:</strong> This is intended to be use by Makers and organisations around Maker-spaces, Fab-Labs, and innovation hubs within the Internet of Production Alliance and its projects.<br><br><strong>Purpose:</strong> The Internet of Production Alliance collects the data to form a database of machines, facilities, people, and materials by location, to be analysed and mapped for the Open-Know-Where initiative.</p>
-<p><strong>Data Processing:</strong> The data collected is processed by the DevOps office of the Internet of Production Alliance. </p>
-<p><strong>Data expiration:</strong> Data would be re-validated or discarded after 36 months from the initial date of data publishing, expected on 2024/02 TBA. </p>
+<p><strong>What:</strong> This is the front page of the <strong>Open-Know-Where Initiative </strong>project. Showcasing the processes of surveying, data collection for machines, facilities, people, and materials and proposing a data governance for distributed manufacturing.<br><br><strong>Who:</strong> This is intended to be use by Makers and organisations around Maker-spaces, Fab-Labs, and innovation hubs within the Internet of Production Alliance and its projects.<br><br><strong>Purpose:</strong> The Internet of Production Alliance collects the data from multiple databases of machines, facilities, people, and materials, aggregating and mapping for the Open-Know-Where initiative Open Database project.</p>
+<p><strong>Data Processing:</strong> The data collected is processed by the DevOps officer of the Internet of Production Alliance.</p>
+<p><strong>Data expiration:</strong> Data would be re-validated or discarded after 48 months from the initial date of data publishing of the data entries from the time of collection by the Internet of Production Alliance.</p>
 <p class="msg msg--info">Our data policy is found at <a href="https://map.internetofproduction.org/data-privacy-policy/index.html" target="_blank" rel="nofollow noopener noreferrer">https://map.internetofproduction.org/data-privacy-policy/index.html</a></p>
 <p class="msg msg--info">For any map related concerns and requests contact by email to: <a href="mailto:antonio.anaya@internetofproduction.org">antonio.anaya@internetofproduction.org</a></p>
 <h2>DISTRIBUTED MANUFACTURING MAP</h2>
@@ -1464,9 +1464,9 @@
                     <script>window.publiiEmbedConsentCheck('analytics');</script>
                 </div>
                 </div>
-<h2>LEGACY MAPS</h2>
+<h3>LEGACY MAPS</h3>
 <p>These map prototypes have been created following the needs of different projects and objectives:</p>
-<p><br>The value proposition of these maps is integrated by the collection of relevant data, the examination and proposition of a <a href="https://map.internetofproduction.org/data-schema-design-choices/index.html" target="_blank" rel="noopener noreferrer">technical data storage standard</a>, the exploration of data collection methods and the machine-human interaction with the data.</p>
+<p>The value proposition of these maps is integrated by the collection of relevant data, the examination and proposition of a <a href="https://map.internetofproduction.org/data-schema-design-choices/index.html" target="_blank" rel="noopener noreferrer">technical data storage standard</a>, the exploration of data collection methods and the machine-human interaction with the data.</p>
 <p>The maps have been proposed for a set of different identified <a href="https://map.internetofproduction.org/use-cases/index.html" target="_blank" rel="noopener noreferrer">use cases</a>. And the data collection aims to be a tool for the future understanding and developing of innovation and location of resources.</p>
 <p class="msg msg--highlight ">The current work is in constant review and development. Maps and data amounts will change, accordingly to new finds, regulations and privacy requests.</p>
 <p>GLOBAL (Sloan Foundation)<br><br><div class="post__iframe">
@@ -1604,11 +1604,11 @@
 <ol>
 <li>While editing your page's source code, copy&amp;paste this "iframe" inside a "div" element.</li>
 </ol>
-<pre><code>&lt;iframe width="100%" height="50%" style="border-radius: 10px; border: 0px #ffffff none;" src="https://map.internetofproduction.org/world_map.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;</code></pre>
+<pre><code>&lt;iframe width="100%" height="50%" style="border-radius: 10px; border: 0px #ffffff none;" src="https://map.internetofproduction.org/world.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;</code></pre>
 <p class="msg msg--info">In the next version of the map generator you will be able to:</p>
 <ul>
 <li>Use different sources of information and select them.</li>
-<li>Parse the data by country, organization, type of machines and projects.</li>
+<li>Parse the data by country, organisation, type of machines and projects.</li>
 </ul>
 <p class="msg msg--highlight"><a href="https://airtable.com/shr6jR0EIZkfRdrFA" target="_blank" rel="noopener noreferrer">Let us know if you have any feedback.</a></p>
 <p>2023, The Internet of Production Alliance.</p>
