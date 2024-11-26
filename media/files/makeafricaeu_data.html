@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_dfed9281c7451f994c3c7dce47097044 {
+                #map_4fb8eec13e87c39f65fb9965552d0dd2 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
     
                 <style>
-                    #float_image_f515d7b6dcf6fa58b6236bacd7f2fc80 {
+                    #float_image_48de1ecd37a3e10622290d1dfd5ee903 {
                         position: absolute;
                         bottom: 3%;
                         left: 3%;
@@ -73,10 +73,10 @@
     <span style="color: #6c757d;">This map and its data is a work in progress.</span>
 </div>
     
-            <div class="folium-map" id="map_dfed9281c7451f994c3c7dce47097044" ></div>
+            <div class="folium-map" id="map_4fb8eec13e87c39f65fb9965552d0dd2" ></div>
         
     
-            <img id="float_image_f515d7b6dcf6fa58b6236bacd7f2fc80" alt="float_image"
+            <img id="float_image_48de1ecd37a3e10622290d1dfd5ee903" alt="float_image"
                  src="https://github.com/iop-alliance/data_reports/blob/main/assets/img/iopa_logo_okw_sm.png?raw=true"
                  style="z-index: 999999">
             </img>
@@ -85,8 +85,8 @@
 <script>
     
     
-            var map_dfed9281c7451f994c3c7dce47097044 = L.map(
-                "map_dfed9281c7451f994c3c7dce47097044",
+            var map_4fb8eec13e87c39f65fb9965552d0dd2 = L.map(
+                "map_4fb8eec13e87c39f65fb9965552d0dd2",
                 {
                     center: [26.487193886536385, 19.411319992570984],
                     crs: L.CRS.EPSG3857,
@@ -100,19 +100,19 @@
 
         
     
-            var tile_layer_83df7aab3b15941993919e0b76e7e978 = L.tileLayer(
-                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
-                {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012", "detectRetina": false, "maxNativeZoom": 15, "maxZoom": 15, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_dfed9281c7451f994c3c7dce47097044);
+            var tile_layer_e53077853a2f968edc740b7007a6b0ca = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Esri, DeLorme, NAVTEQ", "detectRetina": false, "maxNativeZoom": 15, "maxZoom": 15, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_4fb8eec13e87c39f65fb9965552d0dd2);
         
     
-            map_dfed9281c7451f994c3c7dce47097044.fitBounds(
+            map_4fb8eec13e87c39f65fb9965552d0dd2.fitBounds(
                 [[-33.9539, -17.4681586], [69.5763, 49.0938165]],
                 {}
             );
         
     
-            var fast_marker_cluster_51508ee5e802c75092f58b4063ce013e = (function(){
+            var fast_marker_cluster_f433731abe76506e66f45be87fc8e5d5 = (function(){
                 var callback = function createMarker(row) {
     var marker = L.marker(new L.LatLng(row[0], row[1]));
     var popup = L.popup({ maxWidth: '300' });
@@ -246,26 +246,26 @@ function createClusterIcon(cluster) {
                     marker.addTo(cluster);
                 }
 
-                cluster.addTo(map_dfed9281c7451f994c3c7dce47097044);
+                cluster.addTo(map_4fb8eec13e87c39f65fb9965552d0dd2);
                 return cluster;
             })();
         
     
-            var measure_control_547c645a309d8ed75504c2ec7c848b61 = new L.Control.Measure(
+            var measure_control_1ea89cb8fbc59dfd7fbf904a58276d4e = new L.Control.Measure(
                 {"position": "bottomright", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "meters", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
-            map_dfed9281c7451f994c3c7dce47097044.addControl(measure_control_547c645a309d8ed75504c2ec7c848b61);
+            map_4fb8eec13e87c39f65fb9965552d0dd2.addControl(measure_control_1ea89cb8fbc59dfd7fbf904a58276d4e);
 
         
     
-            var locate_control_e0eb88a663b2b78e29334c3b4f34e7c4 = L.control.locate(
+            var locate_control_a248fed60b879d2c85a009b7d63b3da6 = L.control.locate(
                 {"position": "topleft"}
-            ).addTo(map_dfed9281c7451f994c3c7dce47097044);
+            ).addTo(map_4fb8eec13e87c39f65fb9965552d0dd2);
             
         
     
             L.control.fullscreen(
                 {"forceSeparateButton": true, "position": "topright", "title": "Fullscreen", "titleCancel": "Exit"}
-            ).addTo(map_dfed9281c7451f994c3c7dce47097044);
+            ).addTo(map_4fb8eec13e87c39f65fb9965552d0dd2);
         
 </script>
 </html>
