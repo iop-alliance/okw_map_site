@@ -3,12 +3,38 @@
     <title>Open-Know-Where Initiative</title>
     <link href="https://map.internetofproduction.org/feed.xml" rel="self" />
     <link href="https://map.internetofproduction.org" />
-    <updated>2024-11-05T04:44:00-06:00</updated>
+    <updated>2024-11-27T09:50:57-06:00</updated>
     <author>
         <name>Antonio de Jesus Anaya Hernandez</name>
     </author>
     <id>https://map.internetofproduction.org</id>
 
+    <entry>
+        <title>data</title>
+        <author>
+            <name>Antonio de Jesus Anaya Hernandez</name>
+        </author>
+        <link href="https://map.internetofproduction.org/data/index.html"/>
+        <id>https://map.internetofproduction.org/data/index.html</id>
+
+        <updated>2024-11-27T09:50:57-06:00</updated>
+            <summary>
+                <![CDATA[
+                    Locations: https://map.internetofproduction.org/locations.csv Analytics: https://map.internetofproduction.org/analytics_24_11.pdf https://map.internetofproduction.org/analytics_24_11.csv License: ODbL v1
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><span class="TextRun SCXW1307758 BCX2" lang="EN-GB" xml:lang="EN-GB" data-contrast="auto"><span class="NormalTextRun SCXW1307758 BCX2">Locations:</span></span></p>
+<p><a href="https://map.internetofproduction.org/locations.csv">https://map.internetofproduction.org/locations.csv</a></p>
+<p>Analytics:</p>
+<p><a href="https://map.internetofproduction.org/analytics_24_11.pdf">https://map.internetofproduction.org/analytics_24_11.pdf</a></p>
+<p><a href="https://map.internetofproduction.org/analytics_24_11.pdf">https://map.internetofproduction.org/analytics_24_11.csv</a></p>
+<p>License:</p>
+<p>ODbL v1</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Workshops and talks</title>
         <author>
@@ -1419,199 +1445,6 @@
 </div>
 <h2 data-renderer-start-pos="39321">15. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</h2>
 <p data-renderer-start-pos="39390">Based on the applicable laws of your country, you may have the right to request access to the personal information we collect from you, change that information, or delete it. To request to review, update, or delete your personal information, please reach out and submit a data subject access request at 'info@internetofproduction.org.uk'</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>OPEN-KNOW-WHERE INITIATIVE</title>
-        <author>
-            <name>Antonio de Jesus Anaya Hernandez</name>
-        </author>
-        <link href="https://map.internetofproduction.org/open-know-where-2/index.html"/>
-        <id>https://map.internetofproduction.org/open-know-where-2/index.html</id>
-
-        <updated>2023-05-15T11:43:06-06:00</updated>
-            <summary>
-                <![CDATA[
-                    REV 3.0, 04/11/2024 Author: Antonio de Jesus Anaya Hernandez, DevOps Eng. CC BY-SA 4.0 2023-2024, The Internet of Production Alliance. INTRODUCTION What: This is the&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <pre>REV 3.0, 04/11/2024<br>Author: Antonio de Jesus Anaya Hernandez, DevOps Eng. <br>CC BY-SA 4.0<br>2023-2024, The Internet of Production Alliance. </pre>
-<h2 id="okwmapping">INTRODUCTION</h2>
-<p><strong>What:</strong> This is the front page of the <strong>Open-Know-Where Initiative </strong>project. Showcasing the processes of surveying, data collection for machines, facilities, people, and materials and proposing a data governance for distributed manufacturing.<br><br><strong>Who:</strong> This is intended to be use by Makers and organisations around Maker-spaces, Fab-Labs, and innovation hubs within the Internet of Production Alliance and its projects.<br><br><strong>Purpose:</strong> The Internet of Production Alliance collects the data from multiple databases of machines, facilities, people, and materials, aggregating and mapping for the Open-Know-Where initiative Open Database project.</p>
-<p><strong>Data Processing:</strong> The data collected is processed by the DevOps officer of the Internet of Production Alliance.</p>
-<p><strong>Data expiration:</strong> Data would be re-validated or discarded after 48 months from the initial date of data publishing of the data entries from the time of collection by the Internet of Production Alliance.</p>
-<p class="msg msg--info">Our data policy is found at <a href="https://map.internetofproduction.org/data-privacy-policy/index.html" target="_blank" rel="nofollow noopener noreferrer">https://map.internetofproduction.org/data-privacy-policy/index.html</a></p>
-<p class="msg msg--info">For any map related concerns and requests contact by email to: <a href="mailto:antonio.anaya@internetofproduction.org">antonio.anaya@internetofproduction.org</a></p>
-<h2>DISTRIBUTED MANUFACTURING MAP</h2>
-<p><br><div class="post__iframe">
-                <div 
-                    class="pec-wrapper" 
-                    data-consent-group-id="analytics">
-                    <iframe data-consent-overlay-added="true" loading="lazy" width="100%" height="50%" style="border-radius: 10px; border: 0px #ffffff none;" data-consent-src="https://map.internetofproduction.org/world.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"></iframe>
-                    <div class="pec-overlay is-active" aria-hidden="false">
-                        <div class="pec-overlay-inner">
-                            <p></p>
-                            <button 
-                                class="pec-button" 
-                                onclick="window.publiiEmbedConsentGiven('analytics'); return false;">
-                                
-                            </button>
-                        </div>
-                    </div>
-                    <script>window.publiiEmbedConsentCheck('analytics');</script>
-                </div>
-                </div>
-<h3>LEGACY MAPS</h3>
-<p>These map prototypes have been created following the needs of different projects and objectives:</p>
-<p>The value proposition of these maps is integrated by the collection of relevant data, the examination and proposition of a <a href="https://map.internetofproduction.org/data-schema-design-choices/index.html" target="_blank" rel="noopener noreferrer">technical data storage standard</a>, the exploration of data collection methods and the machine-human interaction with the data.</p>
-<p>The maps have been proposed for a set of different identified <a href="https://map.internetofproduction.org/use-cases/index.html" target="_blank" rel="noopener noreferrer">use cases</a>. And the data collection aims to be a tool for the future understanding and developing of innovation and location of resources.</p>
-<p class="msg msg--highlight ">The current work is in constant review and development. Maps and data amounts will change, accordingly to new finds, regulations and privacy requests.</p>
-<p>GLOBAL (Sloan Foundation)<br><br><div class="post__iframe">
-                <div 
-                    class="pec-wrapper" 
-                    data-consent-group-id="analytics">
-                    <iframe data-consent-overlay-added="true" loading="lazy" width="100%" height="50%" style="border-radius: 10px; border: 0px #ffffff none;" data-consent-src="https://map.internetofproduction.org/world_map.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe>
-                    <div class="pec-overlay is-active" aria-hidden="false">
-                        <div class="pec-overlay-inner">
-                            <p></p>
-                            <button 
-                                class="pec-button" 
-                                onclick="window.publiiEmbedConsentGiven('analytics'); return false;">
-                                
-                            </button>
-                        </div>
-                    </div>
-                    <script>window.publiiEmbedConsentCheck('analytics');</script>
-                </div>
-                </div>
-<p>mAkE (Horizon Europe)</p>
-<div class="post__iframe">
-                <div 
-                    class="pec-wrapper" 
-                    data-consent-group-id="analytics">
-                    <iframe data-consent-overlay-added="true" loading="lazy" width="100%" height="50%" style="border-radius: 10px; border: 0px #ffffff none;" data-consent-src="https://map.internetofproduction.org/makeafricaeu.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"></iframe>
-                    <div class="pec-overlay is-active" aria-hidden="false">
-                        <div class="pec-overlay-inner">
-                            <p></p>
-                            <button 
-                                class="pec-button" 
-                                onclick="window.publiiEmbedConsentGiven('analytics'); return false;">
-                                
-                            </button>
-                        </div>
-                    </div>
-                    <script>window.publiiEmbedConsentCheck('analytics');</script>
-                </div>
-                </div>
-<p>IMA (Innovative Manufacturing in Africa)</p>
-<div class="post__iframe">
-                <div 
-                    class="pec-wrapper" 
-                    data-consent-group-id="analytics">
-                    <iframe data-consent-overlay-added="true" loading="lazy" width="100%" height="50%" style="border-radius: 10px; border: 0px #ffffff none;" data-consent-src="https://map.internetofproduction.org/ima.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"></iframe>
-                    <div class="pec-overlay is-active" aria-hidden="false">
-                        <div class="pec-overlay-inner">
-                            <p></p>
-                            <button 
-                                class="pec-button" 
-                                onclick="window.publiiEmbedConsentGiven('analytics'); return false;">
-                                
-                            </button>
-                        </div>
-                    </div>
-                    <script>window.publiiEmbedConsentCheck('analytics');</script>
-                </div>
-                </div>
-<p> </p>
-<h2>DATASETS AND RECORDS</h2>
-<h3>SUMMARY</h3>
-<p>This is a summary of the data based on the analysis and classification reports found on the GitHub Repositories:</p>
-<h4>FACILITIES</h4>
-<p>Facilities identification and filtering requires that:<br>Facility is active, the data is truth, and has: facility name, contact information, or address, or GPS location captured.</p>
-<p>Processed:</p>
-<ol>
-<li><span style="text-decoration: underline;"><span style="color: #000000; text-decoration: underline;">"The Fab Foundation, FabLab Network and its partners",</span></span></li>
-<li><span style="text-decoration: underline;"><span style="color: #000000; text-decoration: underline;">"Make Works, FabLab Barcelona and its partners",</span></span></li>
-<li><span style="text-decoration: underline;"><span style="color: #000000; text-decoration: underline;">"Offene Werkstaetten, and its partners",</span></span></li>
-<li><span style="text-decoration: underline;"><span style="color: #000000; text-decoration: underline;">"Field Ready Inc. and its partners",</span></span></li>
-<li><span style="text-decoration: underline;"><span style="color: #000000; text-decoration: underline;">"Makery",</span></span></li>
-<li><span style="text-decoration: underline;"><span style="color: #000000; text-decoration: underline;">"MakerTour",</span></span></li>
-<li>"Make, Makezine",</li>
-<li>"Bay Area Makerspaces UC Berkeley",</li>
-<li>"Bay Area Makerspaces Upbeatlab",</li>
-<li>"sphere.diybio.org",</li>
-<li>"Hackerspaces.org",</li>
-<li>"Vulca",</li>
-<li>"FabCity",</li>
-<li>"Univeristy of Michigan 3DLab"</li>
-</ol>
-<p>Yet to Process:</p>
-<ol>
-<li>"Open-Know-Where Data Awards r1",</li>
-<li>"Open-Know-Where Data Awards r2",</li>
-<li>"IMA Innovative Manufacturing in Africa",</li>
-<li>"mAkE African European Maker Ecosystem".</li>
-</ol>
-<p>Distribution by continent:</p>
-<ul>
-<li><strong>Africa</strong>: 8391</li>
-<li><strong>Asia</strong>: 1580</li>
-<li><strong>Europe</strong>: 1568</li>
-<li><strong>North America</strong>: 357</li>
-<li><strong>South America</strong>: 276</li>
-<li><strong>Oceania</strong>: 23</li>
-</ul>
-<h4>MACHINERY</h4>
-<p>The most common machines found are 3D printers following to CNC milling machines, the "other" class comprises to a variety of machines from presses to air vacuum moulding machines. This preliminary classification depends on the classes and tags defined by the FabLab Network. Later on we identified the need of a Taxonomy for the classification of machines.</p>
-<ul>
-<li><span class="ui-provider xs xt ji xu xv xw xx xy xz ya yb yc yd ye yf yg yh yi yj yk yl ym yn yo yp yq yr ys yt yu yv yw yx yy yz" dir="ltr">World wide: 7488 [<a href="https://iop-alliance.github.io/data_reports/reports/machines_in_fablabs_world_readback.html" target="_blank" rel="noopener noreferrer">Analysis report</a>]</span></li>
-</ul>
-<figure class="post__image"><img loading="lazy"  src="https://map.internetofproduction.org/media/posts/4/Untitled.png" alt="Machine distribution graph" width="1336" height="967" sizes="(max-width: 768px) 100vw, 768px" srcset="https://map.internetofproduction.org/media/posts/4/responsive/Untitled-xs.png 300w ,https://map.internetofproduction.org/media/posts/4/responsive/Untitled-sm.png 480w ,https://map.internetofproduction.org/media/posts/4/responsive/Untitled-md.png 768w"></figure>
-<h3>COLLECTION</h3>
-<p>A GIT repository containing Jupyter notebooks designed for the collection and analysis of machinery and facilities data its available at: <br><a href="https://github.com/iop-alliance/okw_data_management">https://github.com/iop-alliance/okw_data_management</a>.</p>
-<p>The notebooks cover a range of topics, including data acquisition processes, machinery cataloguing, and data management.</p>
-<h3>PUBLICLY AVAILABLE SOURCES</h3>
-<p>Data in compliance with privacy regulations is available for usage and citation at: <a href="https://zenodo.org/communities/iopa">https://zenodo.org/communities/iopa</a></p>
-<h3 id="updateorremoval">UPDATE, OR REMOVAL</h3>
-<p>Please send an email to: <a href="mailto:antonio.anaya@internetofproduction.org">antonio.anaya@internetofproduction.org</a> with the following:</p>
-<ol>
-<li>Subject: data [update] or [removal] required</li>
-<li>Body: Name, location (city) of the record.</li>
-<li>Part: Applies only to a part of the information like ie. email, address.</li>
-<li>Complete: Applies to the whole record, for this send the record data using the form below and send the record to be replaced. ie. Previous record xx, xx, xx, xx, and New record. yy, yy, yy, yy.</li>
-</ol>
-<h3 id="datasubmission">SUBMISSION</h3>
-<p class="msg msg--success">At The Internet of Production Alliance, we are grateful for the time and effort of your contributions to this data collection exercise.</p>
-<ol>
-<li>Add your Facility using the "Add facility" form below. If your facility is already added on the map be aware of that we still need to update your information.</li>
-<li>Give us some feedback any step during the data filling process.</li>
-</ol>
-<p class="msg--highlight msg--success msg msg--info">Once we have your information, we will validate and show your data in the map.</p>
-<h3 id="forms">FORMS</h3>
-<p>A KoboToolBox survey is setup for data collection. With the following characteristics:</p>
-<ol>
-<li>Offline data submission is possible using the Kobo Collect tool.</li>
-<li>The survey includes a MACHINE INVENTORY apart with the catalogue of machines collected by different databases and vendors.</li>
-<li>For adding a capability to a facility at least one machine addition is required.</li>
-<li>Agreements for contact information are required in compliance with GDPR regulations and other data privacy regulations.</li>
-</ol>
-<p><a href="https://map.internetofproduction.org/data-submission/index.html" target="_blank" rel="nofollow noopener noreferrer" class="btn btn--green">Add Facility and machinery.</a></p>
-<h2>USAGE</h2>
-<h3 id="howtoaddmaptoyourpage">HOW TO ADD THE OKW MAP TO YOUR PAGE</h3>
-<ol>
-<li>While editing your page's source code, copy&amp;paste this "iframe" inside a "div" element.</li>
-</ol>
-<pre><code>&lt;iframe width="100%" height="50%" style="border-radius: 10px; border: 0px #ffffff none;" src="https://map.internetofproduction.org/world.html" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;</code></pre>
-<p class="msg msg--info">In the next version of the map generator you will be able to:</p>
-<ul>
-<li>Use different sources of information and select them.</li>
-<li>Parse the data by country, organisation, type of machines and projects.</li>
-</ul>
-<p class="msg msg--highlight"><a href="https://airtable.com/shr6jR0EIZkfRdrFA" target="_blank" rel="noopener noreferrer">Let us know if you have any feedback.</a></p>
-<p>2023, The Internet of Production Alliance.</p>
             ]]>
         </content>
     </entry>
