@@ -3,7 +3,7 @@
     <title>Open-Know-Where Initiative</title>
     <link href="https://map.internetofproduction.org/feed.xml" rel="self" />
     <link href="https://map.internetofproduction.org" />
-    <updated>2024-11-27T22:20:14-06:00</updated>
+    <updated>2024-11-27T22:34:53-06:00</updated>
     <author>
         <name>Antonio de Jesus Anaya Hernandez</name>
     </author>
@@ -20,13 +20,13 @@
         <updated>2024-11-27T22:15:38-06:00</updated>
             <summary>
                 <![CDATA[
-                    List of machinery and inventory. Form submission: Link form: https://airtable.com/app8XtvEq4CSA0g35/shrwH1gxqOT5aA4mN Link source: https://airtable.com/app8XtvEq4CSA0g35/shrz9MMr3mo9cAg2G
+                    List of machinery and inventory from MiR: Form submission: Link form: https://airtable.com/app8XtvEq4CSA0g35/shrwH1gxqOT5aA4mN Link source: https://airtable.com/app8XtvEq4CSA0g35/shrz9MMr3mo9cAg2G Title: A WikiFactory Workshop for Open Hardware Projects. Objective: This&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>List of machinery and inventory.</p>
-<p>Form submission: </p>
+                <h1>List of machinery and inventory from MiR:</h1>
+<h2>Form submission: </h2>
 <p>Link form: <a href="https://airtable.com/app8XtvEq4CSA0g35/shrwH1gxqOT5aA4mN">https://airtable.com/app8XtvEq4CSA0g35/shrwH1gxqOT5aA4mN</a></p>
 <div class="post__iframe">
                 <div 
@@ -66,6 +66,96 @@
                     <script>window.publiiEmbedConsentCheck('analytics');</script>
                 </div>
                 </div>
+<h1>Hardware documentation workshop outline:</h1>
+<h2><strong>Online Workshop Proposal: Project Documentation with WikiFactory</strong></h2>
+<p> </p>
+<p><strong>Title: A WikiFactory Workshop for Open Hardware Projects.</strong></p>
+<p><strong>Objective:</strong></p>
+<p> </p>
+<p><span style="font-weight: 400;">This 2-hour online workshop aims to guide participants through effective project documentation using WikiFactory, aligned with best practices from:</span></p>
+<p><span style="font-weight: 400;"> </span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><a href="https://www.internetofproduction.org/openknowhow"><span style="font-weight: 400;">IOPA “Open-Know-How”</span></a></li>
+<li style="font-weight: 400;" aria-level="1"><a href="https://fabacademy.org/"><span style="font-weight: 400;">“Fab Academy”</span></a></li>
+<li style="font-weight: 400;" aria-level="1"><a href="https://openhardware.space/"><span style="font-weight: 400;">“Open Hardware Makers”</span></a></li>
+</ul>
+<p> </p>
+<p><span style="font-weight: 400;">Participants will learn essential documentation practices to enhance collaboration, share knowledge, and contribute to the world-wide open hardware community.</span></p>
+<p> </p>
+<p><strong>Key Topics:</strong></p>
+<p> </p>
+<ol>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Introduction to Open Hardware Documentation Standards:</span>
+<ul>
+<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">Overview of Open-Know-How, Fab Academy, Open Hardware Makers, and Open Source Hardware development recommendations.</span></li>
+<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">The importance of comprehensive project documentation in the open hardware ecosystem.</span></li>
+</ul>
+</li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Navigating WikiFactory:</span>
+<ul>
+<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">A walkthrough of WikiFactory's interface and features.</span></li>
+<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">Understanding the structure of a well-documented project on WikiFactory.</span></li>
+</ul>
+</li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Essential Elements of Project Documentation:</span>
+<ul>
+<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">Documentation components recommended by Open-Know-How and Fab Academy.</span></li>
+<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">Incorporating key information: bill of materials, schematics, CAD files, firmware, and more.</span></li>
+</ul>
+</li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Creating Effective Project Pages:</span>
+<ul>
+<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">Step-by-step guide to creating a project page on WikiFactory.</span></li>
+<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">Best practices for organizing content and making it accessible.</span></li>
+</ul>
+</li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Collaborative Editing:</span>
+<ul>
+<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">Utilizing WikiFactory's collaborative editing features.</span></li>
+<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">Understanding version control for iterative development.</span></li>
+</ul>
+</li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Incorporating Multimedia and Descriptive Content:</span>
+<ul>
+<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">Enhancing documentation with images, videos, and detailed descriptions.</span></li>
+<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">Telling a compelling story through project documentation.</span></li>
+</ul>
+</li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Interactive Q&amp;A and Troubleshooting:</span>
+<ul>
+<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">Addressing participant questions and challenges.</span></li>
+<li style="font-weight: 400;" aria-level="2"><span style="font-weight: 400;">Troubleshooting common issues encountered during documentation.</span></li>
+</ul>
+</li>
+</ol>
+<p> </p>
+<p><strong>Workshop Format:</strong></p>
+<p> </p>
+<p><span style="font-weight: 400;">The workshop will be conducted through an online platform, featuring live demonstrations, interactive discussions, and Q&amp;A sessions. Participants will be encouraged to create and edit a simple project page during the workshop, providing a hands-on learning experience.</span></p>
+<p> </p>
+<p><strong>Target Audience:</strong></p>
+<p> </p>
+<p><span style="font-weight: 400;">Makers, hardware enthusiasts, technical writers from the Makers in residency cohort. No prior experience with WikiFactory is required.</span></p>
+<p> </p>
+<p><span style="font-weight: 400;">Benefits for Participants:</span></p>
+<p> </p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Gain proficiency in using WikiFactory for open hardware documentation.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Understand the principles of effective documentation following recognized standards.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Contribute meaningfully to collaborative projects within the open hardware community.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Build a foundation for sharing knowledge and fostering innovation.</span></li>
+</ul>
+<p> </p>
+<p><strong>Workshop Duration: 2 hours</strong></p>
+<p> </p>
+<p><strong>Requirements: </strong></p>
+<p> </p>
+<p><span style="font-weight: 400;">Participants will need a computer with internet access. A WikiFactory account is recommended but not mandatory for attending the workshop.</span></p>
+<p> </p>
+<p><strong>Conclusion:</strong></p>
+<p> </p>
+<p><span style="font-weight: 400;">By the end of this workshop, participants will be equipped with the skills and knowledge to document their open hardware projects effectively on WikiFactory. Embracing the principles of Open-Know-How and related standards, they will play a vital role in advancing the culture of open collaboration within the global hardware community.</span></p>
+<p><br><span style="font-weight: 400;">Note: For practicality we chose </span><a href="https://wikifactory.com/"><span style="font-weight: 400;">wikifactory</span></a><span style="font-weight: 400;">, although a platform agnostic approach could be used, like documentation on git or using </span><a href="https://gitbuilding.io/"><span style="font-weight: 400;">gitbuilding.</span></a></p>
             ]]>
         </content>
     </entry>
